@@ -20,7 +20,7 @@
 							<li class="nav-item dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="about.html">About Us</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::ABOUT) }}">About Us</a></li>
 									<li><a href="team.html">Our People</a></li>
 									<li><a href="testimonials.html">Testimonials</a></li>
 									<li><a href="faq.html">Faq</a></li>
@@ -31,8 +31,8 @@
 							<li class="nav-item dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="projects.html">Projects All</a></li>
-									<li><a href="projects-single.html">Projects Single</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::PROJECTS) }}">Projects All</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::PROJECTS_SINGLE) }}">Projects Single</a></li>
 								</ul>
 							</li>
 

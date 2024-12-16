@@ -33,5 +33,9 @@ Route::get('/projects-single', function () {
 	return view('pages.projects-single');
 })->name(RouteName::PROJECTS_SINGLE);
 
+Route::get('/about', function () {
+	return view('pages.about');
+})->name(RouteName::ABOUT);
+
 Route::post('/contact-us', [ContactUsController::class, 'store']);
 Route::post('/newsletter', [NewsletterController::class, 'store']);

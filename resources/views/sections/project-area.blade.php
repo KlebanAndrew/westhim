@@ -144,7 +144,7 @@
 
 			<div class="col-12">
 				<div class="general-btn text-center">
-					<a class="btn btn-primary" href="{{ route(\App\Enums\RouteName::SERVICES) }}">View All Projects</a>
+					<a class="btn btn-primary" href="{{ route(\App\Enums\RouteName::PROJECTS) }}">View All Projects</a>
 				</div>
 			</div>
 
