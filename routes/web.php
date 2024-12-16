@@ -41,5 +41,9 @@ Route::get('/team', function () {
 	return view('pages.team');
 })->name(RouteName::TEAM);
 
+Route::get('/faq', function () {
+	return view('pages.faq');
+})->name(RouteName::FAQ);
+
 Route::post('/contact-us', [ContactUsController::class, 'store']);
 Route::post('/newsletter', [NewsletterController::class, 'store']);

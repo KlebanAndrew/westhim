@@ -67,7 +67,7 @@
 						<ul class="list-unstyled mb-0">
 							<li><a href="{{ route(\App\Enums\RouteName::ABOUT) }}">About</a></li>
 							<li><a href="{{ route(\App\Enums\RouteName::TEAM) }}">Our people</a></li>
-							<li><a href="faq.html">Faq</a></li>
+							<li><a href="{{ route(\App\Enums\RouteName::FAQ) }}">Faq</a></li>
 							<li><a href="news-left-sidebar.html">Blog</a></li>
 							<li><a href="pricing.html">Pricing</a></li>
 						</ul>
