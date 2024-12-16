@@ -45,5 +45,9 @@ Route::get('/faq', function () {
 	return view('pages.faq');
 })->name(RouteName::FAQ);
 
+Route::get('/pricing', function () {
+	return view('pages.pricing');
+})->name(RouteName::PRICING);
+
 Route::post('/contact-us', [ContactUsController::class, 'store']);
 Route::post('/newsletter', [NewsletterController::class, 'store']);

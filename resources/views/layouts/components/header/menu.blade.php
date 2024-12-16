@@ -24,7 +24,7 @@
 									<li><a href="{{ route(\App\Enums\RouteName::TEAM) }}">Our People</a></li>
 									<li><a href="testimonials.html">Testimonials</a></li>
 									<li><a href="{{ route(\App\Enums\RouteName::FAQ) }}">Faq</a></li>
-									<li><a href="pricing.html">Pricing</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::PRICING) }}">Pricing</a></li>
 								</ul>
 							</li>
 
