@@ -11,4 +11,5 @@ final class RouteName
 	public const PROJECTS = 'projects';
 	public const PROJECTS_SINGLE = 'projects_single';
 	public const ABOUT = 'about';
+	public const TEAM = 'team';
 }

@@ -37,5 +37,9 @@ Route::get('/about', function () {
 	return view('pages.about');
 })->name(RouteName::ABOUT);
 
+Route::get('/team', function () {
+	return view('pages.team');
+})->name(RouteName::TEAM);
+
 Route::post('/contact-us', [ContactUsController::class, 'store']);
 Route::post('/newsletter', [NewsletterController::class, 'store']);
