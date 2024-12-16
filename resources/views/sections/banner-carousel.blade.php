@@ -8,7 +8,7 @@
 						<h3 class="slide-sub-title" data-animation-in="slideInRight">Construction Industry</h3>
 						<p data-animation-in="slideInLeft" data-duration-in="1.2">
 							<a href="{{ route(\App\Enums\RouteName::SERVICES) }}" class="slider btn btn-primary">Our Services</a>
-							<a href="contact.html" class="slider btn btn-primary border">Contact Now</a>
+							<a href="{{ route(\App\Enums\RouteName::CONTACT) }}" class="slider btn btn-primary border">Contact Now</a>
 						</p>
 					</div>
 				</div>

@@ -16,7 +16,7 @@
 					</div>
 
 					<div class="col-md-7 newsletter-form">
-						<form action="#" method="post">
+						<form action="/newsletter" method="post">
 							<div class="form-group">
 								<label for="newsletter-email" class="content-hidden">Newsletter Email</label>
 								<input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Your your email and hit enter" autocomplete="off">

@@ -2,6 +2,7 @@
 
 use App\Enums\RouteName;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\NewsletterController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,3 +26,4 @@ Route::get('/contact', function () {
 })->name(RouteName::CONTACT);
 
 Route::post('/contact-us', [ContactUsController::class, 'store']);
+Route::post('/newsletter', [NewsletterController::class, 'store']);

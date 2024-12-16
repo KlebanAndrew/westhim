@@ -3,7 +3,7 @@
 		<div class="logo-area">
 			<div class="row align-items-center">
 				<div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-					<a class="d-block" href="index.html">
+					<a class="d-block" href="{{ route(\App\Enums\RouteName::HOME) }}">
 						<img loading="lazy" src="{{ URL::asset('images/logo.png') }}" alt="Constra">
 					</a>
 				</div><!-- logo end -->
@@ -22,7 +22,7 @@
 							<div class="info-box">
 								<div class="info-box-content">
 									<p class="info-box-title">Email Us</p>
-									<p class="info-box-subtitle">office@Constra.com</p>
+									<p class="info-box-subtitle">office@westhim.com</p>
 								</div>
 							</div>
 						</li>
@@ -35,7 +35,7 @@
 							</div>
 						</li>
 						<li class="header-get-a-quote">
-							<a class="btn btn-primary" href="contact.html">Get A Quote</a>
+							<a class="btn btn-primary" href="{{ route(\App\Enums\RouteName::CONTACT) }}">Get A Quote</a>
 						</li>
 					</ul><!-- Ul end -->
 				</div><!-- header right end -->

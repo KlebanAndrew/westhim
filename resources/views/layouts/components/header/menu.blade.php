@@ -12,7 +12,7 @@
 							<li class="nav-item dropdown active">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li class="active"><a href="index.html">Home One</a></li>
+									<li class="active"><a href="{{ route(\App\Enums\RouteName::HOME) }}">Home One</a></li>
 									<li><a href="index-2.html">Home Two</a></li>
 								</ul>
 							</li>
@@ -39,8 +39,8 @@
 							<li class="nav-item dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="services.html">Services All</a></li>
-									<li><a href="service-single.html">Services Single</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::SERVICES) }}">Services All</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Services Single</a></li>
 								</ul>
 							</li>
 
@@ -69,7 +69,7 @@
 								</ul>
 							</li>
 
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="{{ route(\App\Enums\RouteName::CONTACT) }}">Contact</a></li>
 						</ul>
 					</div>
 				</nav>
