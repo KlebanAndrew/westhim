@@ -15,7 +15,7 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon1.png') }}" alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="#">Home Construction</a></h3>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Home Construction</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
 					</div>
 				</div><!-- Service 1 end -->
@@ -25,7 +25,7 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon2.png') }}" alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="#">Building Remodels</a></h3>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Building Remodels</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
 					</div>
 				</div><!-- Service 2 end -->
@@ -35,7 +35,7 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon3.png') }}"  alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="#">Interior Design</a></h3>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Interior Design</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
 					</div>
 				</div><!-- Service 3 end -->
@@ -52,7 +52,7 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon4.png') }}" alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="#">Exterior Design</a></h3>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Exterior Design</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
 					</div>
 				</div><!-- Service 4 end -->
@@ -62,7 +62,7 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon5.png') }}" alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="#">Renovation</a></h3>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Renovation</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
 					</div>
 				</div><!-- Service 5 end -->
@@ -72,7 +72,7 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon6.png') }}" alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="#">Safety Management</a></h3>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Safety Management</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
 					</div>
 				</div><!-- Service 6 end -->
