@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\RouteName;
+use App\Http\Controllers\ContactUsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,3 +23,5 @@ Route::get('/services-single', function () {
 Route::get('/contact', function () {
 	return view('pages.contact');
 })->name(RouteName::CONTACT);
+
+Route::post('/contact-us', [ContactUsController::class, 'store']);

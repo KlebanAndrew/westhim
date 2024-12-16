@@ -1,7 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-	@include('sections.banner-area')
+	@include(
+	'sections.banner-area',
+	 [
+		 'title' => 'Service',
+		 'breadcrumbItems' => [
+			 ['title' => 'Home', 'link' => route(\App\Enums\RouteName::HOME)],
+			 ['title' => 'Services', 'link' => route(\App\Enums\RouteName::SERVICES)],
+			 ['title' => 'All Services', 'link' => ''],
+		]
+	 ]
+	)
 
 	<section id="main-container" class="main-container pb-2">
 		<div class="container">
