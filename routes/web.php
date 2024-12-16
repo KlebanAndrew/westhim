@@ -25,5 +25,13 @@ Route::get('/contact', function () {
 	return view('pages.contact');
 })->name(RouteName::CONTACT);
 
+Route::get('/projects', function () {
+	return view('pages.projects');
+})->name(RouteName::PROJECTS);
+
+Route::get('/projects-single', function () {
+	return view('pages.projects-single');
+})->name(RouteName::PROJECTS_SINGLE);
+
 Route::post('/contact-us', [ContactUsController::class, 'store']);
 Route::post('/newsletter', [NewsletterController::class, 'store']);
