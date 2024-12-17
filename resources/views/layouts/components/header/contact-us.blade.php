@@ -35,7 +35,16 @@
 							</div>
 						</li>
 						<li class="header-get-a-quote">
-							<a class="btn btn-primary" href="{{ route(\App\Enums\RouteName::CONTACT) }}">Get A Quote</a>
+							<ul>
+								@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+									<li>
+										<a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+											{{ $properties['native'] }}
+										</a>
+									</li>
+								@endforeach
+							</ul>
+{{--							<a class="btn btn-primary" href="{{ route(\App\Enums\RouteName::CONTACT) }}">Get A Quote</a>--}}
 						</li>
 					</ul><!-- Ul end -->
 				</div><!-- header right end -->

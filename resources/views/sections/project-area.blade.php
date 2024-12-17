@@ -47,7 +47,7 @@
 							<div class="project-item-info">
 								<div class="project-item-info-content">
 									<h3 class="project-item-title">
-										<a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Capital Teltway Building</a>
+										<a href="{{ route(\App\Enums\RouteName::PROJECTS_SINGLE) }}">Capital Teltway Building</a>
 									</h3>
 									<p class="project-cat">Commercial, Interiors</p>
 								</div>
@@ -64,7 +64,7 @@
 							<div class="project-item-info">
 								<div class="project-item-info-content">
 									<h3 class="project-item-title">
-										<a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Ghum Touch Hospital</a>
+										<a href="{{ route(\App\Enums\RouteName::PROJECTS_SINGLE) }}">Ghum Touch Hospital</a>
 									</h3>
 									<p class="project-cat">Healthcare</p>
 								</div>
@@ -81,7 +81,7 @@
 							<div class="project-item-info">
 								<div class="project-item-info-content">
 									<h3 class="project-item-title">
-										<a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">TNT East Facility</a>
+										<a href="{{ route(\App\Enums\RouteName::PROJECTS_SINGLE) }}">TNT East Facility</a>
 									</h3>
 									<p class="project-cat">Government</p>
 								</div>
@@ -98,7 +98,7 @@
 							<div class="project-item-info">
 								<div class="project-item-info-content">
 									<h3 class="project-item-title">
-										<a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Narriot Headquarters</a>
+										<a href="{{ route(\App\Enums\RouteName::PROJECTS_SINGLE) }}">Narriot Headquarters</a>
 									</h3>
 									<p class="project-cat">Infrastructure</p>
 								</div>
@@ -115,7 +115,7 @@
 							<div class="project-item-info">
 								<div class="project-item-info-content">
 									<h3 class="project-item-title">
-										<a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Kalas Metrorail</a>
+										<a href="{{ route(\App\Enums\RouteName::PROJECTS_SINGLE) }}">Kalas Metrorail</a>
 									</h3>
 									<p class="project-cat">Infrastructure</p>
 								</div>
@@ -132,7 +132,7 @@
 							<div class="project-item-info">
 								<div class="project-item-info-content">
 									<h3 class="project-item-title">
-										<a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Ancraft Avenue House</a>
+										<a href="{{ route(\App\Enums\RouteName::PROJECTS_SINGLE) }}">Ancraft Avenue House</a>
 									</h3>
 									<p class="project-cat">Residential</p>
 								</div>
