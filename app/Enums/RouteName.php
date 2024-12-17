@@ -14,4 +14,5 @@ final class RouteName
 	public const TEAM = 'team';
 	public const FAQ = 'faq';
 	public const PRICING = 'pricing';
+	public const TESTIMONIALS = 'testimonials';
 }
