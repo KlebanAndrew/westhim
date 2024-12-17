@@ -63,9 +63,9 @@
 							<li class="nav-item dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
-									<li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
-									<li><a href="news-single.html">News Single</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::NEWS_LEFT_SIDEBAR) }}">News Left Sidebar</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::NEWS_RIGHT_SIDEBAR) }}">News Right Sidebar</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::NEWS_SINGLE) }}">News Single</a></li>
 								</ul>
 							</li>
 

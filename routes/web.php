@@ -61,5 +61,17 @@ Route::get('/typography', function () {
 	return view('pages.typography');
 })->name(RouteName::TYPOGRAPHY);
 
+Route::get('/news-single', function () {
+	return view('pages.news-single');
+})->name(RouteName::NEWS_SINGLE);
+
+Route::get('/news-left-sidebar', function () {
+	return view('pages.news-left-sidebar');
+})->name(RouteName::NEWS_LEFT_SIDEBAR);
+
+Route::get('/news-right-sidebar', function () {
+	return view('pages.news-right-sidebar');
+})->name(RouteName::NEWS_RIGHT_SIDEBAR);
+
 Route::post('/contact-us', [ContactUsController::class, 'store']);
 Route::post('/newsletter', [NewsletterController::class, 'store']);
