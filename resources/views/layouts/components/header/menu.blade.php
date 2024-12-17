@@ -47,8 +47,8 @@
 							<li class="nav-item dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="typography.html">Typography</a></li>
-									<li><a href="404.html">404</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::TYPOGRAPHY) }}">Typography</a></li>
+									<li><a href="{{ route(\App\Enums\RouteName::NOT_FOUND) }}">404</a></li>
 									<li class="dropdown-submenu">
 										<a href="#!" class="dropdown-toggle" data-toggle="dropdown">Parent Menu</a>
 										<ul class="dropdown-menu">

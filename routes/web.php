@@ -53,5 +53,13 @@ Route::get('/testimonials', function () {
 	return view('pages.testimonials');
 })->name(RouteName::TESTIMONIALS);
 
+Route::get('/not-found', function () {
+	return view('pages.404');
+})->name(RouteName::NOT_FOUND);
+
+Route::get('/typography', function () {
+	return view('pages.typography');
+})->name(RouteName::TYPOGRAPHY);
+
 Route::post('/contact-us', [ContactUsController::class, 'store']);
 Route::post('/newsletter', [NewsletterController::class, 'store']);

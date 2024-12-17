@@ -15,4 +15,6 @@ final class RouteName
 	public const FAQ = 'faq';
 	public const PRICING = 'pricing';
 	public const TESTIMONIALS = 'testimonials';
+	public const NOT_FOUND = 'not_found';
+	public const TYPOGRAPHY = 'typography';
 }
