@@ -1,0 +1,27 @@
+<?php
+
+return [
+	'home' => 'Home',
+	'company' => 'Company',
+	'about_us' => 'About Us',
+	'our_people' => 'Our People',
+	'testimonials' => 'Testimonials',
+	'faq' => 'Faq',
+	'pricing' => 'Pricing',
+	'projects' => 'Projects',
+	'projects_all' => 'Projects All',
+	'projects_single' => 'Projects Single',
+	'services' => 'Services',
+	'services_all' => 'Services All',
+	'services_single' => 'Services Single',
+	'features' => 'Features',
+	'typography' => 'Typography',
+	'404' => '404',
+	'parent_menu' => 'Parent Menu',
+	'child_menu' => 'Child Menu',
+	'news' => 'News',
+	'news_left_sidebar' => 'News Left Sidebar',
+	'news_right_sidebar' => 'News Left Sidebar',
+	'news_single' => 'News Single',
+	'contact' => 'Contact',
+];

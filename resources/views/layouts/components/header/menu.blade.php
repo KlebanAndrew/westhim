@@ -1,75 +1,104 @@
+@php use App\Enums\RouteName; @endphp
 <div class="site-navigation">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<nav class="navbar navbar-expand-lg navbar-dark p-0">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+							aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 
 					<div id="navbar-collapse" class="collapse navbar-collapse">
 						<ul class="nav navbar-nav mr-auto">
 							<li class="nav-item dropdown active">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
+								<a href="#" class="nav-link dropdown-toggle"
+								   data-toggle="dropdown">{{ trans('menu.home') }}<i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li class="active"><a href="{{ route(\App\Enums\RouteName::HOME) }}">Home One</a></li>
-									<li><a href="index-2.html">Home Two</a></li>
+									<li class="active"><a
+											href="{{ route(RouteName::HOME) }}">{{ trans('menu.home') }}</a></li>
 								</ul>
 							</li>
 
 							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i class="fa fa-angle-down"></i></a>
+								<a href="#" class="nav-link dropdown-toggle"
+								   data-toggle="dropdown">{{ trans('menu.company') }} <i
+										class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="{{ route(\App\Enums\RouteName::ABOUT) }}">About Us</a></li>
-									<li><a href="{{ route(\App\Enums\RouteName::TEAM) }}">Our People</a></li>
-									<li><a href="{{ route(\App\Enums\RouteName::TESTIMONIALS) }}">Testimonials</a></li>
-									<li><a href="{{ route(\App\Enums\RouteName::FAQ) }}">Faq</a></li>
-									<li><a href="{{ route(\App\Enums\RouteName::PRICING) }}">Pricing</a></li>
+									<li><a href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.about_us') }}</a></li>
+									<li><a href="{{ route(RouteName::TEAM) }}">{{ trans('menu.our_people') }}</a></li>
+									<li>
+										<a href="{{ route(RouteName::TESTIMONIALS) }}">{{ trans('menu.testimonials') }}</a>
+									</li>
+									<li><a href="{{ route(RouteName::FAQ) }}">{{ trans('menu.faq') }}</a></li>
+									<li><a href="{{ route(RouteName::PRICING) }}">{{ trans('menu.pricing') }}</a></li>
 								</ul>
 							</li>
 
 							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <i class="fa fa-angle-down"></i></a>
+								<a href="#" class="nav-link dropdown-toggle"
+								   data-toggle="dropdown">{{ trans('menu.projects') }} <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="{{ route(\App\Enums\RouteName::PROJECTS) }}">Projects All</a></li>
-									<li><a href="{{ route(\App\Enums\RouteName::PROJECTS_SINGLE) }}">Projects Single</a></li>
+									<li><a href="{{ route(RouteName::PROJECTS) }}">{{ trans('menu.projects_all') }}</a>
+									</li>
+									<li>
+										<a href="{{ route(RouteName::PROJECTS_SINGLE) }}">{{ trans('menu.projects_single') }}</a>
+									</li>
 								</ul>
 							</li>
 
 							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
+								<a href="#" class="nav-link dropdown-toggle"
+								   data-toggle="dropdown">{{ trans('menu.services') }} <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="{{ route(\App\Enums\RouteName::SERVICES) }}">Services All</a></li>
-									<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Services Single</a></li>
+									<li><a href="{{ route(RouteName::SERVICES) }}">{{ trans('menu.services_all') }}</a>
+									</li>
+									@foreach($services as $service)
+										<li>
+											<a href="{{ route(RouteName::SERVICES_SINGLE, ['slug' => $service->slug]) }}">{{ $service->singleText->name }}</a>
+										</li>
+									@endforeach
 								</ul>
 							</li>
 
 							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
+								<a href="#" class="nav-link dropdown-toggle"
+								   data-toggle="dropdown">{{ trans('menu.features') }} <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="{{ route(\App\Enums\RouteName::TYPOGRAPHY) }}">Typography</a></li>
-									<li><a href="{{ route(\App\Enums\RouteName::NOT_FOUND) }}">404</a></li>
+									<li><a href="{{ route(RouteName::TYPOGRAPHY) }}">{{ trans('menu.typography') }}</a>
+									</li>
+									<li><a href="{{ route(RouteName::NOT_FOUND) }}">{{ trans('menu.404') }}</a></li>
 									<li class="dropdown-submenu">
-										<a href="#!" class="dropdown-toggle" data-toggle="dropdown">Parent Menu</a>
+										<a href="#!" class="dropdown-toggle"
+										   data-toggle="dropdown">{{ trans('menu.parent_menu') }}</a>
 										<ul class="dropdown-menu">
-											<li><a href="#!">Child Menu 1</a></li>
-											<li><a href="#!">Child Menu 2</a></li>
-											<li><a href="#!">Child Menu 3</a></li>
+											<li><a href="#!">{{ trans('menu.child_menu') }}</a></li>
+											<li><a href="#!">{{ trans('menu.child_menu') }}</a></li>
+											<li><a href="#!">{{ trans('menu.child_menu') }}</a></li>
 										</ul>
 									</li>
 								</ul>
 							</li>
 
 							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>
+								<a href="#" class="nav-link dropdown-toggle"
+								   data-toggle="dropdown">{{ trans('menu.news') }} <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="{{ route(\App\Enums\RouteName::NEWS_LEFT_SIDEBAR) }}">News Left Sidebar</a></li>
-									<li><a href="{{ route(\App\Enums\RouteName::NEWS_RIGHT_SIDEBAR) }}">News Right Sidebar</a></li>
-									<li><a href="{{ route(\App\Enums\RouteName::NEWS_SINGLE) }}">News Single</a></li>
+									<li>
+										<a href="{{ route(RouteName::NEWS_LEFT_SIDEBAR) }}">{{ trans('menu.news_left_sidebar') }}</a>
+									</li>
+									<li>
+										<a href="{{ route(RouteName::NEWS_RIGHT_SIDEBAR) }}">{{ trans('menu.news_right_sidebar') }}</a>
+									</li>
+									<li>
+										<a href="{{ route(RouteName::NEWS_SINGLE) }}">{{ trans('menu.news_single') }}</a>
+									</li>
 								</ul>
 							</li>
 
-							<li class="nav-item"><a class="nav-link" href="{{ route(\App\Enums\RouteName::CONTACT) }}">Contact</a></li>
+							<li class="nav-item"><a class="nav-link"
+													href="{{ route(RouteName::CONTACT) }}">{{ trans('menu.contact') }}</a>
+							</li>
 						</ul>
 					</div>
 				</nav>

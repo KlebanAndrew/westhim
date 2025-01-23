@@ -13,24 +13,24 @@
 						<li>
 							<div class="info-box">
 								<div class="info-box-content">
-									<p class="info-box-title">Call Us</p>
-									<p class="info-box-subtitle">(+9) 847-291-4353</p>
+									<p class="info-box-title">{{ trans('header.contact_us.call_us') }}</p>
+									<p class="info-box-subtitle">{{ trans('header.contact_us.phone') }}</p>
 								</div>
 							</div>
 						</li>
 						<li>
 							<div class="info-box">
 								<div class="info-box-content">
-									<p class="info-box-title">Email Us</p>
-									<p class="info-box-subtitle">office@westhim.com</p>
+									<p class="info-box-title">{{ trans('header.contact_us.email_us') }}</p>
+									<p class="info-box-subtitle">{{ trans('header.contact_us.email') }}</p>
 								</div>
 							</div>
 						</li>
 						<li class="last">
 							<div class="info-box last">
 								<div class="info-box-content">
-									<p class="info-box-title">Global Certificate</p>
-									<p class="info-box-subtitle">ISO 9001:2017</p>
+									<p class="info-box-title">{{ trans('header.contact_us.global_certificate') }}</p>
+									<p class="info-box-subtitle">{{ trans('header.contact_us.iso_certificate_name') }}</p>
 								</div>
 							</div>
 						</li>

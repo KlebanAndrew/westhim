@@ -3,6 +3,7 @@
 use App\Enums\RouteName;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -22,9 +23,11 @@ Route::prefix(LaravelLocalization::setLocale())
 		return view('pages.services');
 	})->name(RouteName::SERVICES);
 
-	Route::get('/services-single', function () {
-		return view('pages.services-single');
-	})->name(RouteName::SERVICES_SINGLE);
+//	Route::get('/services-single', function () {
+//		return view('pages.services-single');
+//	})->name(RouteName::SERVICES_SINGLE);
+	
+	Route::get('/services/{slug}', [ServiceController::class, 'show'])->name(RouteName::SERVICES_SINGLE);
 
 	Route::get('/contact', function () {
 		return view('pages.contact');

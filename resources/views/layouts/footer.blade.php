@@ -34,11 +34,11 @@
 				<div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
 					<h3 class="widget-title">Services</h3>
 					<ul class="list-arrow">
-						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Pre-Construction</a></li>
-						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">General Contracting</a></li>
-						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Construction Management</a></li>
-						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Design and Build</a></li>
-						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Self-Perform Construction</a></li>
+						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Pre-Construction</a></li>
+						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">General Contracting</a></li>
+						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Construction Management</a></li>
+						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Design and Build</a></li>
+						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Self-Perform Construction</a></li>
 					</ul>
 				</div><!-- Col end -->
 			</div><!-- Row end -->

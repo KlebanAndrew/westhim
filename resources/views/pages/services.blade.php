@@ -27,9 +27,9 @@
 								<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon1.png') }}" alt="service-icon">
 							</div>
 							<div class="ts-service-info">
-								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Zero Harm Everyday</a></h3>
+								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Zero Harm Everyday</a></h3>
 								<p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
 							</div>
 						</div>
 					</div><!-- Service1 end -->
@@ -45,9 +45,9 @@
 								<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon2.png') }}" alt="service-icon">
 							</div>
 							<div class="ts-service-info">
-								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Virtual Construction</a></h3>
+								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Virtual Construction</a></h3>
 								<p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
 							</div>
 						</div>
 					</div><!-- Service2 end -->
@@ -63,9 +63,9 @@
 								<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon3.png') }}" alt="service-icon">
 							</div>
 							<div class="ts-service-info">
-								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">Build To Last</a></h3>
+								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Build To Last</a></h3>
 								<p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
 							</div>
 						</div>
 					</div><!-- Service3 end -->
@@ -81,9 +81,9 @@
 								<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon4.png') }}" alt="service-icon">
 							</div>
 							<div class="ts-service-info">
-								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">EXTERIOR DESIGN</a></h3>
+								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">EXTERIOR DESIGN</a></h3>
 								<p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
 							</div>
 						</div>
 					</div><!-- Service1 end -->
@@ -99,9 +99,9 @@
 								<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon5.png') }}" alt="service-icon">
 							</div>
 							<div class="ts-service-info">
-								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">RENOVATION</a></h3>
+								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">RENOVATION</a></h3>
 								<p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
 							</div>
 						</div>
 					</div><!-- Service2 end -->
@@ -117,9 +117,9 @@
 								<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon6.png') }}" alt="service-icon">
 							</div>
 							<div class="ts-service-info">
-								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}">SAFETY MANAGEMENT</a></h3>
+								<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">SAFETY MANAGEMENT</a></h3>
 								<p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
+								<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Learn more</a>
 							</div>
 						</div>
 					</div><!-- Service3 end -->
