@@ -11,13 +11,8 @@
 
 					<div id="navbar-collapse" class="collapse navbar-collapse">
 						<ul class="nav navbar-nav mr-auto">
-							<li class="nav-item dropdown active">
-								<a href="#" class="nav-link dropdown-toggle"
-								   data-toggle="dropdown">{{ trans('menu.home') }}<i class="fa fa-angle-down"></i></a>
-								<ul class="dropdown-menu" role="menu">
-									<li class="active"><a
-											href="{{ route(RouteName::HOME) }}">{{ trans('menu.home') }}</a></li>
-								</ul>
+							<li class="nav-item @if(Route::currentRouteName() === RouteName::HOME) active @endif"><a class="nav-link"
+													href="{{ route(RouteName::HOME) }}">{{ trans('menu.home') }}</a>
 							</li>
 
 							<li class="nav-item dropdown">
@@ -25,13 +20,13 @@
 								   data-toggle="dropdown">{{ trans('menu.company') }} <i
 										class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.about_us') }}</a></li>
-									<li><a href="{{ route(RouteName::TEAM) }}">{{ trans('menu.our_people') }}</a></li>
-									<li>
+									<li class="@if(Route::currentRouteName() === RouteName::ABOUT) active @endif"><a href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.about_us') }}</a></li>
+									<li class="@if(Route::currentRouteName() === RouteName::TEAM) active @endif"><a href="{{ route(RouteName::TEAM) }}">{{ trans('menu.our_people') }}</a></li>
+									<li class="@if(Route::currentRouteName() === RouteName::TESTIMONIALS) active @endif">
 										<a href="{{ route(RouteName::TESTIMONIALS) }}">{{ trans('menu.testimonials') }}</a>
 									</li>
-									<li><a href="{{ route(RouteName::FAQ) }}">{{ trans('menu.faq') }}</a></li>
-									<li><a href="{{ route(RouteName::PRICING) }}">{{ trans('menu.pricing') }}</a></li>
+									<li class="@if(Route::currentRouteName() === RouteName::FAQ) active @endif"><a href="{{ route(RouteName::FAQ) }}">{{ trans('menu.faq') }}</a></li>
+									<li class="@if(Route::currentRouteName() === RouteName::PRICING) active @endif"><a href="{{ route(RouteName::PRICING) }}">{{ trans('menu.pricing') }}</a></li>
 								</ul>
 							</li>
 
@@ -60,25 +55,7 @@
 									@endforeach
 								</ul>
 							</li>
-
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle"
-								   data-toggle="dropdown">{{ trans('menu.features') }} <i class="fa fa-angle-down"></i></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="{{ route(RouteName::TYPOGRAPHY) }}">{{ trans('menu.typography') }}</a>
-									</li>
-									<li><a href="{{ route(RouteName::NOT_FOUND) }}">{{ trans('menu.404') }}</a></li>
-									<li class="dropdown-submenu">
-										<a href="#!" class="dropdown-toggle"
-										   data-toggle="dropdown">{{ trans('menu.parent_menu') }}</a>
-										<ul class="dropdown-menu">
-											<li><a href="#!">{{ trans('menu.child_menu') }}</a></li>
-											<li><a href="#!">{{ trans('menu.child_menu') }}</a></li>
-											<li><a href="#!">{{ trans('menu.child_menu') }}</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
+							
 
 							<li class="nav-item dropdown">
 								<a href="#" class="nav-link dropdown-toggle"
@@ -96,8 +73,16 @@
 								</ul>
 							</li>
 
-							<li class="nav-item"><a class="nav-link"
-													href="{{ route(RouteName::CONTACT) }}">{{ trans('menu.contact') }}</a>
+							<li class="nav-item @if(Route::currentRouteName() === RouteName::FAQ) active @endif">
+								<a class="nav-link" href="{{ route(RouteName::FAQ) }}">{{ trans('menu.faq') }}</a>
+							</li>
+			
+							<li class="nav-item @if(Route::currentRouteName() === RouteName::ABOUT) active @endif">
+								<a class="nav-link" href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.contact') }}</a>
+							</li>
+
+							<li class="nav-item @if(Route::currentRouteName() === RouteName::HOME) active @endif">
+								<a class="nav-link" href="{{ route(RouteName::HOME) }}">{{ trans('menu.about_us') }}</a>
 							</li>
 						</ul>
 					</div>

@@ -13,7 +13,7 @@
 	
 @yield('content')
 
-@include('layouts.footer')
+<x-footer/>
 </div><!-- Body inner end -->
 @include('layouts.includes.javascript')
 </body>

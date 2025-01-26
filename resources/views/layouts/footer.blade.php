@@ -1,12 +1,13 @@
+@php use App\Enums\RouteName; @endphp
 <footer id="footer" class="footer bg-overlay">
 	<div class="footer-main">
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-lg-4 col-md-6 footer-widget footer-about">
-					<h3 class="widget-title">About Us</h3>
-					<img loading="lazy" class="footer-logo" src="{{ URL::asset('images/footer-logo.png') }}" alt="Constra">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt ut
-						labore et dolore magna aliqua.</p>
+					<h3 class="widget-title">{{ trans('menu.about_us') }}</h3>
+					<img loading="lazy" class="footer-logo" src="{{ URL::asset('images/footer-logo.png') }}" alt="Пресмаш">
+					<p>Виготовлення брикетувальних машин, пресів, сонячних батарей та каркасів.</p>
+					<p>"ПРЕСМАШ" спеціалізується на проектуванні, виготовленні і ремонті механічних пресів зусиллям від 250 до 4000 кН відкритого і закритого типів, простої і подвійної дії, призначених для різноманітних операцій холодної штамповки.</p>
 					<div class="footer-social">
 						<ul>
 							<li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
@@ -21,24 +22,22 @@
 				</div><!-- Col end -->
 
 				<div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
-					<h3 class="widget-title">Working Hours</h3>
+					<h3 class="widget-title">Замовити калькуляцію</h3>
 					<div class="working-hours">
-						We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency, with our
-						Hotline and Contact form.
-						<br><br> Monday - Friday: <span class="text-right">10:00 - 16:00 </span>
-						<br> Saturday: <span class="text-right">12:00 - 15:00</span>
-						<br> Sunday and holidays: <span class="text-right">09:00 - 12:00</span>
+						Телефонуйте за вказаними номерами  +38 (050) 33-86-509 або заповнюйте електронну форму онлайн і ми вам зателефонуємо самі.
+						<br><br> Пн - Пт: <span class="text-right">10:00 - 16:00 </span>
+						<br> Сб: <span class="text-right">12:00 - 15:00</span>
 					</div>
 				</div><!-- Col end -->
 
 				<div class="col-lg-3 col-md-6 mt-5 mt-lg-0 footer-widget">
-					<h3 class="widget-title">Services</h3>
+					<h3 class="widget-title">{{ trans('general.our_services') }}</h3>
 					<ul class="list-arrow">
-						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Pre-Construction</a></li>
-						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">General Contracting</a></li>
-						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Construction Management</a></li>
-						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Design and Build</a></li>
-						<li><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Self-Perform Construction</a></li>
+						@foreach($services as $service)
+							<li>
+								<a href="{{ route(RouteName::SERVICES_SINGLE, ['slug' => $service->slug]) }}">{{ $service->singleText->name }}</a>
+							</li>
+						@endforeach
 					</ul>
 				</div><!-- Col end -->
 			</div><!-- Row end -->
@@ -62,17 +61,6 @@
 					</div>
 				</div>
 
-				<div class="col-md-12">
-					<div class="footer-menu text-center">
-						<ul class="list-unstyled mb-0">
-							<li><a href="{{ route(\App\Enums\RouteName::ABOUT) }}">About</a></li>
-							<li><a href="{{ route(\App\Enums\RouteName::TEAM) }}">Our people</a></li>
-							<li><a href="{{ route(\App\Enums\RouteName::FAQ) }}">Faq</a></li>
-							<li><a href="{{ route(\App\Enums\RouteName::NEWS_LEFT_SIDEBAR) }}">Blog</a></li>
-							<li><a href="{{ route(\App\Enums\RouteName::PRICING) }}">Pricing</a></li>
-						</ul>
-					</div>
-				</div>
 			</div><!-- Row end -->
 
 			<div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
