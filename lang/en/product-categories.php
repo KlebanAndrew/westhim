@@ -1,0 +1,14 @@
+<?php
+use App\Enums\ProductCategory;
+
+return [
+	ProductCategory::PRESS_KC => 'MECHANICAL PRESSES KC SERIES',
+	ProductCategory::PRESS_KT => 'MECHANICAL PRESS SERIES КТ',
+	ProductCategory::PRESS_KG => 'MECHANICAL PRESS SERIES КГ',
+	ProductCategory::PRESS_KY => 'MECHANICAL PRESS SERIES КУ',
+	ProductCategory::PRESS_KU => 'MECHANICAL PRESS SERIES КИ',
+	ProductCategory::PRESS_KV => 'MECHANICAL PRESS SERIES КВ (COLD CRANK)',
+	ProductCategory::BRICK_MACHINE => 'BRIQUETTING MACHINES',
+	ProductCategory::YVT => 'PRESSING TECHNOLOGY INSTALLATIONS',
+	ProductCategory::SOLAR_SYSTEMS => 'ROTARY SOLAR BATTERIES AND FRAMEWORKS',
+];

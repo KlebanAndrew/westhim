@@ -8,8 +8,8 @@ final class RouteName
 	public const SERVICES = 'services';
 	public const SERVICES_SINGLE = 'services_single';
 	public const CONTACT = 'contact';
-	public const PROJECTS = 'projects';
-	public const PROJECTS_SINGLE = 'projects_single';
+	public const PRODUCTS = 'products';
+	public const PRODUCTS_SINGLE = 'products_single';
 	public const ABOUT = 'about';
 	public const TEAM = 'team';
 	public const FAQ = 'faq';

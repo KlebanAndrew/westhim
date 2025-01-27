@@ -11,8 +11,9 @@
 
 					<div id="navbar-collapse" class="collapse navbar-collapse">
 						<ul class="nav navbar-nav mr-auto">
-							<li class="nav-item @if(Route::currentRouteName() === RouteName::HOME) active @endif"><a class="nav-link"
-													href="{{ route(RouteName::HOME) }}">{{ trans('menu.home') }}</a>
+							<li class="nav-item @if(Route::currentRouteName() === RouteName::HOME) active @endif"><a
+									class="nav-link"
+									href="{{ route(RouteName::HOME) }}">{{ trans('menu.home') }}</a>
 							</li>
 
 							<li class="nav-item dropdown">
@@ -22,13 +23,17 @@
 									{{ trans('menu.company') }} <i class="fa fa-angle-down"></i>
 								</a>
 								<ul class="dropdown-menu" role="menu">
-									<li class="@if(Route::currentRouteName() === RouteName::ABOUT) active @endif"><a href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.about_us') }}</a></li>
-									<li class="@if(Route::currentRouteName() === RouteName::TEAM) active @endif"><a href="{{ route(RouteName::TEAM) }}">{{ trans('menu.our_people') }}</a></li>
+									<li class="@if(Route::currentRouteName() === RouteName::ABOUT) active @endif"><a
+											href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.about_us') }}</a></li>
+									<li class="@if(Route::currentRouteName() === RouteName::TEAM) active @endif"><a
+											href="{{ route(RouteName::TEAM) }}">{{ trans('menu.our_people') }}</a></li>
 									<li class="@if(Route::currentRouteName() === RouteName::TESTIMONIALS) active @endif">
 										<a href="{{ route(RouteName::TESTIMONIALS) }}">{{ trans('menu.testimonials') }}</a>
 									</li>
-									<li class="@if(Route::currentRouteName() === RouteName::FAQ) active @endif"><a href="{{ route(RouteName::FAQ) }}">{{ trans('menu.faq') }}</a></li>
-									<li class="@if(Route::currentRouteName() === RouteName::PRICING) active @endif"><a href="{{ route(RouteName::PRICING) }}">{{ trans('menu.pricing') }}</a></li>
+									<li class="@if(Route::currentRouteName() === RouteName::FAQ) active @endif"><a
+											href="{{ route(RouteName::FAQ) }}">{{ trans('menu.faq') }}</a></li>
+									<li class="@if(Route::currentRouteName() === RouteName::PRICING) active @endif"><a
+											href="{{ route(RouteName::PRICING) }}">{{ trans('menu.pricing') }}</a></li>
 								</ul>
 							</li>
 
@@ -36,18 +41,18 @@
 								<a href="#" class="nav-link dropdown-toggle"
 								   data-toggle="dropdown">{{ trans('menu.projects') }} <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="{{ route(RouteName::PROJECTS) }}">{{ trans('menu.projects_all') }}</a>
+									<li><a href="{{ route(RouteName::PRODUCTS) }}">{{ trans('menu.projects_all') }}</a>
 									</li>
 									<li>
-										<a href="{{ route(RouteName::PROJECTS_SINGLE) }}">{{ trans('menu.projects_single') }}</a>
+										<a href="{{ route(RouteName::PRODUCTS_SINGLE) }}">{{ trans('menu.projects_single') }}</a>
 									</li>
 								</ul>
 							</li>
 
 							<li class="nav-item dropdown @if(Route::currentRouteName() === RouteName::SERVICES || Route::currentRouteName() === RouteName::SERVICES_SINGLE) active @endif">
-								<a href="{{ route(RouteName::SERVICES) }}" 
+								<a href="{{ route(RouteName::SERVICES) }}"
 								   class="nav-link dropdown-toggle"
-								   >{{ trans('menu.services') }} <i class="fa fa-angle-down"></i></a>
+								>{{ trans('menu.services') }} <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
 									@foreach($services as $service)
 										<li>
@@ -56,7 +61,7 @@
 									@endforeach
 								</ul>
 							</li>
-							
+
 
 							<li class="nav-item dropdown">
 								<a href="#" class="nav-link dropdown-toggle"
@@ -77,7 +82,7 @@
 							<li class="nav-item @if(Route::currentRouteName() === RouteName::FAQ) active @endif">
 								<a class="nav-link" href="{{ route(RouteName::FAQ) }}">{{ trans('menu.faq') }}</a>
 							</li>
-			
+
 							<li class="nav-item @if(Route::currentRouteName() === RouteName::ABOUT) active @endif">
 								<a class="nav-link" href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.contact') }}</a>
 							</li>

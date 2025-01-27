@@ -10,6 +10,7 @@ return [
 	'pricing' => 'Ціни',
 	'projects' => 'Проекти',
 	'projects_all' => 'Всі Проекти',
+	'products' => 'Продукти',
 	'projects_single' => 'Один Проект',
 	'services' => 'Сервіси',
 	'services_all' => 'Всі Сервіси',

@@ -13,7 +13,7 @@
 		 'breadcrumbItems' => [
 			 ['title' => 'Домашня', 'link' => route(RouteName::HOME)],
 			 ['title' => 'Сервіси', 'link' => route(RouteName::SERVICES)],
-			 ['title' => 'Лазерна різка листового металу', 'link' => ''],
+			 ['title' => $service->singleText->name, 'link' => ''],
 		]
 	 ]
 	)

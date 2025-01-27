@@ -4,6 +4,7 @@ use App\Enums\RouteName;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
@@ -30,13 +31,11 @@ Route::prefix(LaravelLocalization::setLocale())
 		return view('pages.contact');
 	})->name(RouteName::CONTACT);
 
-	Route::get('/projects', function () {
-		return view('pages.projects');
-	})->name(RouteName::PROJECTS);
+	Route::get('/products', [ProductController::class, 'index'])->name(RouteName::PRODUCTS);
 
 	Route::get('/projects-single', function () {
 		return view('pages.projects-single');
-	})->name(RouteName::PROJECTS_SINGLE);
+	})->name(RouteName::PRODUCTS_SINGLE);
 
 	Route::get('/about', function () {
 		return view('pages.about');
