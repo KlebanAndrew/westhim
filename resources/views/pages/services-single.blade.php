@@ -9,7 +9,7 @@
 	@include(
 	'sections.banner-area',
 	 [
-		 'title' => 'Сервіси',
+		 'title' => 'Послуги',
 		 'breadcrumbItems' => [
 			 ['title' => 'Домашня', 'link' => route(RouteName::HOME)],
 			 ['title' => 'Послуги', 'link' => route(RouteName::SERVICES)],

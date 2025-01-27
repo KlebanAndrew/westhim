@@ -15,38 +15,10 @@
 									class="nav-link"
 									href="{{ route(RouteName::HOME) }}">{{ trans('menu.home') }}</a>
 							</li>
-
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle"
-								   data-toggle="dropdown"
-								>
-									{{ trans('menu.company') }} <i class="fa fa-angle-down"></i>
-								</a>
-								<ul class="dropdown-menu" role="menu">
-									<li class="@if(Route::currentRouteName() === RouteName::ABOUT) active @endif"><a
-											href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.about_us') }}</a></li>
-									<li class="@if(Route::currentRouteName() === RouteName::TEAM) active @endif"><a
-											href="{{ route(RouteName::TEAM) }}">{{ trans('menu.our_people') }}</a></li>
-									<li class="@if(Route::currentRouteName() === RouteName::TESTIMONIALS) active @endif">
-										<a href="{{ route(RouteName::TESTIMONIALS) }}">{{ trans('menu.testimonials') }}</a>
-									</li>
-									<li class="@if(Route::currentRouteName() === RouteName::FAQ) active @endif"><a
-											href="{{ route(RouteName::FAQ) }}">{{ trans('menu.faq') }}</a></li>
-									<li class="@if(Route::currentRouteName() === RouteName::PRICING) active @endif"><a
-											href="{{ route(RouteName::PRICING) }}">{{ trans('menu.pricing') }}</a></li>
-								</ul>
-							</li>
-
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle"
-								   data-toggle="dropdown">{{ trans('menu.projects') }} <i class="fa fa-angle-down"></i></a>
-								<ul class="dropdown-menu" role="menu">
-									<li><a href="{{ route(RouteName::PRODUCTS) }}">{{ trans('menu.projects_all') }}</a>
-									</li>
-									<li>
-										<a href="{{ route(RouteName::PRODUCTS_SINGLE, ['slug' => 'kc_3537']) }}">{{ trans('menu.projects_single') }}</a>
-									</li>
-								</ul>
+							
+							<li class="nav-item @if(Route::currentRouteName() === RouteName::PRODUCTS) active @endif"><a
+									class="nav-link"
+									href="{{ route(RouteName::PRODUCTS) }}">{{ trans('menu.products') }}</a>
 							</li>
 
 							<li class="nav-item dropdown @if(Route::currentRouteName() === RouteName::SERVICES || Route::currentRouteName() === RouteName::SERVICES_SINGLE) active @endif">
@@ -62,33 +34,16 @@
 								</ul>
 							</li>
 
-
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle"
-								   data-toggle="dropdown">{{ trans('menu.news') }} <i class="fa fa-angle-down"></i></a>
-								<ul class="dropdown-menu" role="menu">
-									<li>
-										<a href="{{ route(RouteName::NEWS_LEFT_SIDEBAR) }}">{{ trans('menu.news_left_sidebar') }}</a>
-									</li>
-									<li>
-										<a href="{{ route(RouteName::NEWS_RIGHT_SIDEBAR) }}">{{ trans('menu.news_right_sidebar') }}</a>
-									</li>
-									<li>
-										<a href="{{ route(RouteName::NEWS_SINGLE) }}">{{ trans('menu.news_single') }}</a>
-									</li>
-								</ul>
-							</li>
-
 							<li class="nav-item @if(Route::currentRouteName() === RouteName::FAQ) active @endif">
 								<a class="nav-link" href="{{ route(RouteName::FAQ) }}">{{ trans('menu.faq') }}</a>
 							</li>
 
-							<li class="nav-item @if(Route::currentRouteName() === RouteName::ABOUT) active @endif">
-								<a class="nav-link" href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.contact') }}</a>
+							<li class="nav-item @if(Route::currentRouteName() === RouteName::CONTACT) active @endif">
+								<a class="nav-link" href="{{ route(RouteName::CONTACT) }}">{{ trans('menu.contact') }}</a>
 							</li>
 
-							<li class="nav-item @if(Route::currentRouteName() === RouteName::HOME) active @endif">
-								<a class="nav-link" href="{{ route(RouteName::HOME) }}">{{ trans('menu.about_us') }}</a>
+							<li class="nav-item @if(Route::currentRouteName() === RouteName::ABOUT) active @endif">
+								<a class="nav-link" href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.about_us') }}</a>
 							</li>
 						</ul>
 					</div>
