@@ -4,7 +4,7 @@
 			<div class="col-lg-6">
 				<div class="ts-intro">
 					<h2 class="into-title">Переваги</h2>
-					<h3 class="into-sub-title">We deliver landmark projects</h3>
+					<h3 class="into-sub-title">Ми пропонуємо</h3>
 					<p></p>
 				</div><!-- Intro box end -->
 
