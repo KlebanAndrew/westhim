@@ -4,6 +4,7 @@ use App\Enums\RouteName;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\App;
@@ -18,60 +19,18 @@ Route::prefix(LaravelLocalization::setLocale())
 	Route::get('/home', [HomeController::class, 'show'])->name(RouteName::HOME);
 
 	Route::get('/services', [ServiceController::class, 'index'])->name(RouteName::SERVICES);
-
-//	Route::get('/services-single', function () {
-//		return view('pages.services-single');
-//	})->name(RouteName::SERVICES_SINGLE);
-	
 	Route::get('/services/{slug}', [ServiceController::class, 'show'])->name(RouteName::SERVICES_SINGLE);
 
-	Route::get('/contact', function () {
-		return view('pages.contact');
-	})->name(RouteName::CONTACT);
-
 	Route::get('/products', [ProductController::class, 'index'])->name(RouteName::PRODUCTS);
-
 	Route::get('/products/{slug}', [ProductController::class, 'show'])->name(RouteName::PRODUCTS_SINGLE);
 
-	Route::get('/about', function () {
-		return view('pages.about');
-	})->name(RouteName::ABOUT);
-
-	Route::get('/team', function () {
-		return view('pages.team');
-	})->name(RouteName::TEAM);
-
-	Route::get('/faq', function () {
-		return view('pages.faq');
-	})->name(RouteName::FAQ);
-
-	Route::get('/pricing', function () {
-		return view('pages.pricing');
-	})->name(RouteName::PRICING);
-
-	Route::get('/testimonials', function () {
-		return view('pages.testimonials');
-	})->name(RouteName::TESTIMONIALS);
+	Route::get('/contact', [PagesController::class, 'contact'])->name(RouteName::CONTACT);
+	Route::get('/about', [PagesController::class, 'about'])->name(RouteName::ABOUT);
+	Route::get('/faq', [PagesController::class, 'faq'])->name(RouteName::FAQ);
 
 	Route::get('/not-found', function () {
 		return view('errors.404');
 	})->name(RouteName::NOT_FOUND);
-
-	Route::get('/typography', function () {
-		return view('pages.typography');
-	})->name(RouteName::TYPOGRAPHY);
-
-	Route::get('/news-single', function () {
-		return view('pages.news-single');
-	})->name(RouteName::NEWS_SINGLE);
-
-	Route::get('/news-left-sidebar', function () {
-		return view('pages.news-left-sidebar');
-	})->name(RouteName::NEWS_LEFT_SIDEBAR);
-
-	Route::get('/news-right-sidebar', function () {
-		return view('pages.news-right-sidebar');
-	})->name(RouteName::NEWS_RIGHT_SIDEBAR);
 });
 
 Route::post('/contact-us', [ContactUsController::class, 'store']);

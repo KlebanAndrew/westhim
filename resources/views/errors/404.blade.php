@@ -4,10 +4,9 @@
 	@include(
 	'sections.banner-area',
 	 [
-		 'title' => 'Features',
+		 'title' => 'Не знайдено',
 		 'breadcrumbItems' => [
-			 ['title' => 'Home', 'link' => route(\App\Enums\RouteName::HOME)],
-			 ['title' => 'Features', 'link' => ''],
+			 ['title' => 'Домашня', 'link' => route(\App\Enums\RouteName::HOME)],
 			 ['title' => '404', 'link' => ''],
 		]
 	 ]
@@ -24,11 +23,10 @@
 							<h2><strong>404</strong></h2>
 						</div>
 						<div class="error-message">
-							<h3>Oops... Page Not Found!</h3>
+							<h3>Oops... Сторінку не знайдено!</h3>
 						</div>
 						<div class="error-body">
-							Try using the button below to go to main page of the site <br>
-							<a href="{{ route(\App\Enums\RouteName::HOME) }}" class="btn btn-primary">Back to Home Page</a>
+							<a href="{{ route(\App\Enums\RouteName::HOME) }}" class="btn btn-primary">Повернутись на головну</a>
 						</div>
 					</div>
 				</div>

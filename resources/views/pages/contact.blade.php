@@ -4,11 +4,10 @@
 	@include(
 	'sections.banner-area',
 	 [
-		 'title' => 'Contact',
+		 'title' => 'Контакти',
 		 'breadcrumbItems' => [
-			 ['title' => 'Home', 'link' => route(\App\Enums\RouteName::HOME)],
-			 ['title' => 'Company', 'link' => '#'],
-			 ['title' => 'Contact Us', 'link' => ''],
+			 ['title' => 'Домашня', 'link' => route(\App\Enums\RouteName::HOME)],
+			 ['title' => 'Контакти', 'link' => ''],
 		]
 	 ]
 	)
@@ -18,8 +17,8 @@
 
 			<div class="row text-center">
 				<div class="col-12">
-					<h2 class="section-title">Reaching our Office</h2>
-					<h3 class="section-sub-title">Find Our Location</h3>
+					<h2 class="section-title">Наші контакти</h2>
+					<h3 class="section-sub-title">Зв'язатися з нами</h3>
 				</div>
 			</div>
 			<!--/ Title row end -->
@@ -31,8 +30,8 @@
             <i class="fas fa-map-marker-alt mr-0"></i>
           </span>
 						<div class="ts-service-box-content">
-							<h4>Visit Our Office</h4>
-							<p>9051 Constra Incorporate, Ukraine</p>
+							<h4>Нага адреса</h4>
+							<p>Україна, 76495, м. Івано – Франківськ вул. Автоливмашівська1Б а</p>
 						</div>
 					</div>
 				</div><!-- Col 1 end -->
@@ -43,8 +42,8 @@
             <i class="fa fa-envelope mr-0"></i>
           </span>
 						<div class="ts-service-box-content">
-							<h4>Email Us</h4>
-							<p>main@westhim.com</p>
+							<h4>Емейл</h4>
+							<p>office@westhim.com</p>
 						</div>
 					</div>
 				</div><!-- Col 2 end -->
@@ -55,8 +54,8 @@
             <i class="fa fa-phone-square mr-0"></i>
           </span>
 						<div class="ts-service-box-content">
-							<h4>Call Us</h4>
-							<p>(+9) 847-291-4353</p>
+							<h4>Телефон</h4>
+							<p>+38 050 33-86-509</p>
 						</div>
 					</div>
 				</div><!-- Col 3 end -->
@@ -66,45 +65,45 @@
 			<div class="gap-60"></div>
 
 			<div class="google-map">
-				<div id="map" class="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="images/marker.png" data-marker-name="Constra"></div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.6109201220097!2d24.737579215903743!3d48.88469330680805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4730c40b0c808345%3A0x1b492ebe2b5adb32!2z0YPQuy4g0JDQstGC0L7Qu9C40LLQvNCw0YjQtdCy0YHQutCw0Y8sINCl0YDQuNC_0LvQuNC9LCDQmNCy0LDQvdC-LdCk0YDQsNC90LrQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDc2NDk1!5e0!3m2!1sru!2sua!4v1547723675964" width="100%" height="610px" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 
 			<div class="gap-40"></div>
 
 			<div class="row">
 				<div class="col-md-12">
-					<h3 class="column-title">We love to hear</h3>
+					<h3 class="column-title">Зв'язатись з нами</h3>
 					<form id="contact-form" action="/contact-us" method="post" role="form">
 						<div class="error-container"></div>
 						<div class="row">
 							<div class="col-md-4">
 								<div class="form-group">
-									<label>Name</label>
+									<label>Ім'я</label>
 									<input class="form-control form-control-name" name="name" id="name" placeholder="" type="text" required>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label>Email</label>
+									<label>Емейл</label>
 									<input class="form-control form-control-email" name="email" id="email" placeholder="" type="email"
 										   required>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label>Subject</label>
+									<label>Телефон</label>
 									<input class="form-control form-control-subject" name="subject" id="subject" placeholder="" required>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label>Message</label>
+							<label>Повідомлення</label>
 							<textarea class="form-control form-control-message" name="message" id="message" placeholder="" rows="10"
 									  required></textarea>
 						</div>
 						<div class="text-right"><br>
 							<input type="hidden" name="_token" value="{{ csrf_token() }}" />
-							<button class="btn btn-primary solid blank" type="submit">Send Message</button>
+							<button class="btn btn-primary solid blank" type="submit">Надіслати</button>
 						</div>
 					</form>
 				</div>
