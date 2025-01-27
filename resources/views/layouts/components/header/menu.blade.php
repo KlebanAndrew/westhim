@@ -17,8 +17,10 @@
 
 							<li class="nav-item dropdown">
 								<a href="#" class="nav-link dropdown-toggle"
-								   data-toggle="dropdown">{{ trans('menu.company') }} <i
-										class="fa fa-angle-down"></i></a>
+								   data-toggle="dropdown"
+								>
+									{{ trans('menu.company') }} <i class="fa fa-angle-down"></i>
+								</a>
 								<ul class="dropdown-menu" role="menu">
 									<li class="@if(Route::currentRouteName() === RouteName::ABOUT) active @endif"><a href="{{ route(RouteName::ABOUT) }}">{{ trans('menu.about_us') }}</a></li>
 									<li class="@if(Route::currentRouteName() === RouteName::TEAM) active @endif"><a href="{{ route(RouteName::TEAM) }}">{{ trans('menu.our_people') }}</a></li>
@@ -42,12 +44,11 @@
 								</ul>
 							</li>
 
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle"
-								   data-toggle="dropdown">{{ trans('menu.services') }} <i class="fa fa-angle-down"></i></a>
+							<li class="nav-item dropdown @if(Route::currentRouteName() === RouteName::SERVICES || Route::currentRouteName() === RouteName::SERVICES_SINGLE) active @endif">
+								<a href="{{ route(RouteName::SERVICES) }}" 
+								   class="nav-link dropdown-toggle"
+								   >{{ trans('menu.services') }} <i class="fa fa-angle-down"></i></a>
 								<ul class="dropdown-menu" role="menu">
-									<li><a href="{{ route(RouteName::SERVICES) }}">{{ trans('menu.services_all') }}</a>
-									</li>
 									@foreach($services as $service)
 										<li>
 											<a href="{{ route(RouteName::SERVICES_SINGLE, ['slug' => $service->slug]) }}">{{ $service->singleText->name }}</a>
