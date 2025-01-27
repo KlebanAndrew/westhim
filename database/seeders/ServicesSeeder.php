@@ -2,9 +2,12 @@
 
 namespace Database\Seeders;
 
+use App\Enums\FileType;
+use App\Models\File;
 use App\Models\Service;
 use App\Models\ServiceText;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Arr;
 
 class ServicesSeeder extends Seeder
 {
@@ -62,9 +65,12 @@ class ServicesSeeder extends Seeder
 						]
 					],
 					'price_conditions_text' => 'Ціни є приблизними. Кінцева ціна вираховується після отримання креслення.',
-					
 				],
-			]
+			],
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/1.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/2.jpg'],
+			],
 		],
 		[
 			'slug' => 'laser_pipe_cut',
@@ -116,6 +122,10 @@ class ServicesSeeder extends Seeder
 					'price_conditions_text' => 'Ціни є приблизними. Кінцева ціна вираховується після отримання креслення.',
 				],
 			],
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/laser_pipe_cut/1.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/laser_pipe_cut/2.jpg'],
+			]
 		],
 		[
 			'slug' => 'metal_bending',
@@ -141,7 +151,12 @@ class ServicesSeeder extends Seeder
 					],
 					'price_conditions_text' => 'Ціни є приблизними. Кінцева ціна вираховується після отримання технічного завдання в форматі PDF.',
 				],
-			]
+			],
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/metal_bending/1.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/metal_bending/2.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/metal_bending/3.jpg'],
+			],
 		],
 		[
 			'slug' => 'powder_coating',
@@ -166,7 +181,11 @@ class ServicesSeeder extends Seeder
 					],
 					'price_conditions_text' => 'При обрахуванні ціни площа заокруглюється до м² в вищу сторону.',
 				],
-			]
+			],
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/powder_coating/1.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/powder_coating/2.jpg'],
+			],
 		],
 		[
 			'slug' => 'milling',
@@ -190,7 +209,11 @@ class ServicesSeeder extends Seeder
 					],
 					'price_conditions_text' => 'На жаль, розрахунок ціни можливий виключно за чітким технічним завданням у форматі PDF.',
 				],
-			]
+			],
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/milling/1.webp'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/milling/2.webp'],
+			],
 		],
 		[
 			'slug' => 'turning_work',
@@ -213,7 +236,11 @@ class ServicesSeeder extends Seeder
 					],
 					'price_conditions_text' => 'На жаль, розрахунок ціни можливий виключно за чітким технічним завданням у форматі PDF.',
 				],
-			]
+			],
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/1.webp'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/2.webp'],
+			],
 		],
 		[
 			'slug' => 'welding',
@@ -237,7 +264,11 @@ class ServicesSeeder extends Seeder
 					],
 					'price_conditions_text' => 'На жаль, розрахунок ціни можливий виключно за чітким технічним завданням у форматі PDF.',
 				],
-			]
+			],
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/1.webp'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/2.jpg'],
+			],
 		],
 	];
 
@@ -261,6 +292,15 @@ class ServicesSeeder extends Seeder
 				$serviceText->price_conditions_text = $text['price_conditions_text'];
 				$serviceText->service()->associate($service);
 				$serviceText->save();
+			}
+			
+			foreach (Arr::get($serviceData, 'files', []) as $fileData) {
+				$file = new File();
+				$file->path = $fileData['path'];
+				$file->type = $fileData['type'];
+				
+				$file->fileable()->associate($service);
+				$file->save();
 			}
 		}
 	}

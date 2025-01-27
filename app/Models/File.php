@@ -10,8 +10,9 @@ class File extends Model
 	protected $table = 'files';
 
 	protected $fillable = [
-		'slug',
-		'category',
+		'path',
+		'type',
+		'alter_text',
 	];
 
 	public function fileable(): MorphTo

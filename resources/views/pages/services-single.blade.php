@@ -37,25 +37,6 @@
 							</ul>
 						</div><!-- Widget end -->
 
-						<div class="widget">
-							<div class="quote-item quote-border">
-								<div class="quote-text-border">
-									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-									richardson ad squid.
-								</div>
-
-								<div class="quote-item-footer">
-									<img loading="lazy" class="testimonial-thumb"
-										 src="{{ URL::asset('images/clients/testimonial1.png') }}" alt="testimonial">
-									<div class="quote-item-info">
-										<h3 class="quote-author">Weldon Cash</h3>
-										<span class="quote-subtext">CEO, First Choice Group</span>
-									</div>
-								</div>
-							</div><!-- Quote item end -->
-
-						</div><!-- Widget end -->
-
 					</div><!-- Sidebar end -->
 				</div><!-- Sidebar Col end -->
 
@@ -73,15 +54,12 @@
 						<div class="gap-40"></div>
 
 						<div id="page-slider" class="page-slider">
-							<div class="item">
-								<img loading="lazy" class="img-fluid"
-									 src="{{ URL::asset("images/services/laser_pipe_cut/1.jpg") }}" alt="project-slider-image"/>
-							</div>
-
-							<div class="item">
-								<img loading="lazy" class="img-fluid"
-									 src="{{ URL::asset('images/services/laser_pipe_cut/2.jpg') }}" alt="project-slider-image"/>
-							</div>
+							@foreach($service->files as $file)
+								<div class="item">
+									<img loading="lazy" class="img-fluid"
+										 src="{{ URL::asset($file->path) }}" alt="{{ $file->alter_text ?? 'project-slider-image' }}"/>
+								</div>
+							@endforeach
 						</div><!-- Page slider end -->
 
 						<div class="gap-40"></div>

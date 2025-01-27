@@ -26,7 +26,7 @@ class Product extends Model
 		return $this->hasOne(ProductText::class);
 	}
 
-	public function image(): MorphMany
+	public function files(): MorphMany
 	{
 		return $this->morphMany(File::class, 'fileable');
 	}

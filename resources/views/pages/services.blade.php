@@ -20,7 +20,7 @@
 					<div class="col-lg-4 col-md-6 mb-5">
 						<div class="ts-service-box">
 							<div class="ts-service-image-wrapper">
-								<img loading="lazy" class="w-100" src="{{ URL::asset('images/services/service1.jpg') }}" alt="service-image">
+									<img loading="lazy" class="w-100" src="{{ URL::asset($service->files->first()?->path ?? 'images/image-not-found.jpg') }}" alt="service-image">
 							</div>
 							<div class="d-flex">
 								<div class="ts-service-box-img">

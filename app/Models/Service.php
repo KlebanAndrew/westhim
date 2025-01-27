@@ -25,7 +25,7 @@ class Service extends Model
 		return $this->hasOne(ServiceText::class);
 	}
 
-	public function image(): MorphMany
+	public function files(): MorphMany
 	{
 		return $this->morphMany(File::class, 'fileable');
 	}
