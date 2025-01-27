@@ -4,11 +4,11 @@
 	@include(
 	'sections.banner-area',
 	 [
-		 'title' => 'Service',
+		 'title' => 'Продукти',
 		 'breadcrumbItems' => [
-			 ['title' => 'Home', 'link' => route(\App\Enums\RouteName::HOME)],
-			 ['title' => 'Project', 'link' => ''],
-			 ['title' => 'All Projects', 'link' => ''],
+			 ['title' => 'Домашня', 'link' => route(\App\Enums\RouteName::HOME)],
+			 ['title' => 'Продукти', 'link' => route(\App\Enums\RouteName::PRODUCTS)],
+			 ['title' => $product->singleText->name, 'link' => ''],
 		]
 	 ]
 	)
@@ -20,7 +20,7 @@
 				<div class="col-lg-8">
 					<div id="page-slider" class="page-slider small-bg">
 						<div class="item">
-							<img loading="lazy" class="img-fluid" src="{{ URL::asset('images/projects/project5.jpg') }}" alt="project-image" />
+							<img loading="lazy" class="img-fluid" src="{{ URL::asset('images/products/kc_3537/kc3537.jpg') }}" alt="project-image" />
 						</div>
 
 						<div class="item">
@@ -31,39 +31,16 @@
 
 				<div class="col-lg-4 mt-5 mt-lg-0">
 
-					<h3 class="column-title mrt-0">Capital Teltway Building</h3>
-					<p>Morbi turpis nisl, auctor ut nisl vel, pellentesque euismod nunc nunc accumsan imperdiet.</p>
+					<h3 class="column-title mrt-0">{{ $product->singleText->name }}</h3>
+					<p>{{ $product->singleText->description }}</p>
 
 					<ul class="project-info list-unstyled">
-						<li>
-							<p class="project-info-label">Client</p>
-							<p class="project-info-content">Pransbay Powers Authority</p>
-						</li>
-						<li>
-							<p class="project-info-label">Architect</p>
-							<p class="project-info-content">Dlarke Pelli Incorp</p>
-						</li>
-						<li>
-							<p class="project-info-label">Location</p>
-							<p class="project-info-content">McLean, VA</p>
-						</li>
-						<li>
-							<p class="project-info-label">Size</p>
-							<p class="project-info-content">65,000 SF</p>
-						</li>
-						<li>
-							<p class="project-info-label">Year Completed</p>
-							<p class="project-info-content">2015</p>
-						</li>
-						<li>
-							<p class="project-info-label">Categories</p>
-							<p class="project-info-content">Commercial, Interiors</p>
-						</li>
-						<li>
-							<p class="project-link">
-								<a class="btn btn-primary" target="_blank" href="#">View Project</a>
-							</p>
-						</li>
+						@foreach($product->singleText->characteristics as $characteristic)
+							<li>
+								<p class="project-info-label">{{ $characteristic['name'] }}</p>
+								<p class="project-info-content">{{ $characteristic['value'] }}</p>
+							</li>
+						@endforeach
 					</ul>
 
 				</div><!-- Content col end -->

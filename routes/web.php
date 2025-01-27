@@ -31,9 +31,7 @@ Route::prefix(LaravelLocalization::setLocale())
 
 	Route::get('/products', [ProductController::class, 'index'])->name(RouteName::PRODUCTS);
 
-	Route::get('/projects-single', function () {
-		return view('pages.projects-single');
-	})->name(RouteName::PRODUCTS_SINGLE);
+	Route::get('/products/{slug}', [ProductController::class, 'show'])->name(RouteName::PRODUCTS_SINGLE);
 
 	Route::get('/about', function () {
 		return view('pages.about');

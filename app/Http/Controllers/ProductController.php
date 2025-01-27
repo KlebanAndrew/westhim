@@ -14,7 +14,7 @@ class ProductController
 	{
 	}
 
-	public function index()
+	public function index(): View
 	{
 		$products = $this->productService->getListForLocalization(LaravelLocalization::getCurrentLocale());
 		$categories = $products->pluck('category');
@@ -24,11 +24,8 @@ class ProductController
 
 	public function show(string $slug): View
 	{
-		$products = $this->productService->getListOfRandomElementsForLocalization(LaravelLocalization::getCurrentLocale(), 6);
-
 		$product = $this->productService->getBySlug($slug);
-		$categories = ProductCategory::values();
 
-		return view('pages.projects-single', ['product' => $product, 'products' => $products, 'categories' => $categories]);
+		return view('pages.projects-single', ['product' => $product]);
 	}
 }

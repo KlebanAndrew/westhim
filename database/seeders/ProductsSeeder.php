@@ -5,8 +5,6 @@ namespace Database\Seeders;
 use App\Enums\ProductCategory;
 use App\Models\Product;
 use App\Models\ProductText;
-use App\Models\Service;
-use App\Models\ServiceText;
 use Illuminate\Database\Seeder;
 
 class ProductsSeeder extends Seeder

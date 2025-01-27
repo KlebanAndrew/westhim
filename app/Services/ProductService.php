@@ -3,14 +3,12 @@
 namespace App\Services;
 
 use App\Models\Product;
-use App\Models\Service;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\DB;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class ProductService
 {
-	public function getBySlug(string $slug): Service
+	public function getBySlug(string $slug): Product
 	{
 		return Product::where('slug', $slug)
 			->with(['singleText' => fn($query) => $query->where('locale', LaravelLocalization::getCurrentLocale())])

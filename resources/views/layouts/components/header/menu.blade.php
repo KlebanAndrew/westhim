@@ -44,7 +44,7 @@
 									<li><a href="{{ route(RouteName::PRODUCTS) }}">{{ trans('menu.projects_all') }}</a>
 									</li>
 									<li>
-										<a href="{{ route(RouteName::PRODUCTS_SINGLE) }}">{{ trans('menu.projects_single') }}</a>
+										<a href="{{ route(RouteName::PRODUCTS_SINGLE, ['slug' => 'kc_3537']) }}">{{ trans('menu.projects_single') }}</a>
 									</li>
 								</ul>
 							</li>
