@@ -17,7 +17,7 @@ class ProductController
 	public function index(): View
 	{
 		$products = $this->productService->getListForLocalization(LaravelLocalization::getCurrentLocale());
-		$categories = $products->pluck('category');
+		$categories = $products->unique('category')->pluck('category');
 
 		return view('pages.projects', ['products' => $products, 'categories' => $categories]);
 	}
