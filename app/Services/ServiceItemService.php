@@ -15,10 +15,11 @@ class ServiceItemService
 			->firstOrFail();
 	}
 
-	public function getListForLocalization(string $locale): Collection
+	public function getListForLocalization(string $locale, int $limit = null): Collection
 	{
 		return Service::query()
 			->with(['singleText' => fn($query) => $query->where('locale', $locale)])
+			->when($limit !== null, function ($query) use ($limit) {$query->limit($limit);})
 			->get();
 	}
 }

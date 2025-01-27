@@ -13,6 +13,13 @@ class ServiceController
 	{
 	}
 
+	public function index(): View
+	{
+		$services = $this->serviceItemService->getListForLocalization(LaravelLocalization::getCurrentLocale(), 6);
+
+		return view('pages.services', ['services' => $services]);
+	}
+
 	public function show(string $slug): View
 	{
 		$services = $this->serviceItemService->getListForLocalization(LaravelLocalization::getCurrentLocale());
@@ -22,4 +29,3 @@ class ServiceController
 		return view('pages.services-single', ['service' => $service, 'services' => $services]);
 	}
 }
-

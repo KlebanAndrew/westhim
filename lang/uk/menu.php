@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\View\View;
+
 return [
 	'home' => 'Домашня',
 	'company' => 'Наша компанія',
@@ -12,9 +14,9 @@ return [
 	'projects_all' => 'Всі Проекти',
 	'products' => 'Продукти',
 	'projects_single' => 'Один Проект',
-	'services' => 'Сервіси',
-	'services_all' => 'Всі Сервіси',
-	'services_single' => 'Один Сервіс',
+	'services' => 'Послуги',
+	'services_all' => 'Всі Послуги',
+	'services_single' => 'Одна Послуга',
 	'features' => 'Фічі',
 	'typography' => 'типографія',
 	'404' => '404',

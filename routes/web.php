@@ -17,9 +17,7 @@ Route::prefix(LaravelLocalization::setLocale())
 	Route::get('/', [HomeController::class, 'show']);
 	Route::get('/home', [HomeController::class, 'show'])->name(RouteName::HOME);
 
-	Route::get('/services', function () {
-		return view('pages.services');
-	})->name(RouteName::SERVICES);
+	Route::get('/services', [ServiceController::class, 'index'])->name(RouteName::SERVICES);
 
 //	Route::get('/services-single', function () {
 //		return view('pages.services-single');
