@@ -11,14 +11,20 @@ class ServiceItemService
 	public function getBySlug(string $slug): Service
 	{
 		return Service::where('slug', $slug)
-			->with(['singleText' => fn($query) => $query->where('locale', LaravelLocalization::getCurrentLocale())])
+			->with([
+				'files',
+				'singleText' => fn($query) => $query->where('locale', LaravelLocalization::getCurrentLocale()),
+			])
 			->firstOrFail();
 	}
 
 	public function getListForLocalization(string $locale, int $limit = null): Collection
 	{
 		return Service::query()
-			->with(['singleText' => fn($query) => $query->where('locale', $locale)])
+			->with([
+				'files',
+				'singleText' => fn($query) => $query->where('locale', $locale),
+				])
 			->when($limit !== null, function ($query) use ($limit) {$query->limit($limit);})
 			->get();
 	}

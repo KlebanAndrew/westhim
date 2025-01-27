@@ -11,7 +11,10 @@ class ProductService
 	public function getBySlug(string $slug): Product
 	{
 		return Product::where('slug', $slug)
-			->with(['singleText' => fn($query) => $query->where('locale', LaravelLocalization::getCurrentLocale())])
+			->with([
+				'files',
+				'singleText' => fn($query) => $query->where('locale', LaravelLocalization::getCurrentLocale()),
+			])
 			->firstOrFail();
 	}
 
@@ -19,7 +22,10 @@ class ProductService
 	{
 		return Product::query()
 			->orderByRaw("RANDOM( )")
-			->with(['singleText' => fn($query) => $query->where('locale', $locale)])
+			->with([
+				'files',
+				'singleText' => fn($query) => $query->where('locale', $locale),
+			])
 			->limit($limit)
 			->get();
 	}
@@ -27,7 +33,10 @@ class ProductService
 	public function getListForLocalization(string $locale): Collection
 	{
 		return Product::query()
-			->with(['singleText' => fn($query) => $query->where('locale', $locale)])
+			->with([
+				'files',
+				'singleText' => fn($query) => $query->where('locale', $locale),
+			])
 			->get();
 	}
 }

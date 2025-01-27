@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Product extends Model
 {
@@ -23,5 +24,10 @@ class Product extends Model
 	public function singleText(): HasOne
 	{
 		return $this->hasOne(ProductText::class);
+	}
+
+	public function image(): MorphMany
+	{
+		return $this->morphMany(File::class, 'fileable');
 	}
 }
