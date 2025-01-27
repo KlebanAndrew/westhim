@@ -7,7 +7,7 @@
 	@include('sections.facts')
 	@include('sections.service-area')
 	@include('sections.project-area')
-	@include('sections.content')
+{{--	@include('sections.content')--}}
 	@include('sections.subscribe')
-	@include('sections.news')
+{{--	@include('sections.news')--}}
 @endsection

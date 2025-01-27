@@ -2,6 +2,7 @@
 
 use App\Enums\RouteName;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\App;
@@ -11,13 +12,9 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 Route::prefix(LaravelLocalization::setLocale())
 	->middleware(['localeCookieRedirect', 'localizationRedirect', 'localeViewPath'])
 	->group(function() {
-	Route::get('/', function () {
-		return view('index');
-	});
-	
-	Route::get('/home', function () {
-		return view('pages.home');
-	})->name(RouteName::HOME);
+
+	Route::get('/', [HomeController::class, 'show']);
+	Route::get('/home', [HomeController::class, 'show'])->name(RouteName::HOME);
 
 	Route::get('/services', function () {
 		return view('pages.services');

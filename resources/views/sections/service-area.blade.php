@@ -2,8 +2,8 @@
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-12">
-				<h2 class="section-title">We Are Specialists In</h2>
-				<h3 class="section-sub-title">What We Do</h3>
+				<h2 class="section-title">Ми спеціалісти</h2>
+				<h3 class="section-sub-title">Наші сервіси</h3>
 			</div>
 		</div>
 		<!--/ Title row end -->
@@ -15,8 +15,8 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon1.png') }}" alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Home Construction</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => $services[0]->slug]) }}">{{ $services[0]->singleText->name }}</a></h3>
+						<p>{{ $services[0]->singleText->description }}</p>
 					</div>
 				</div><!-- Service 1 end -->
 
@@ -25,8 +25,8 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon2.png') }}" alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Building Remodels</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => $services[1]->slug]) }}">{{ $services[1]->singleText->name }}</a></h3>
+						<p>{{ $services[1]->singleText->description }}</p>
 					</div>
 				</div><!-- Service 2 end -->
 
@@ -35,8 +35,8 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon3.png') }}"  alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Interior Design</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => $services[2]->slug]) }}">{{ $services[2]->singleText->name }}</a></h3>
+						<p>{{ $services[2]->singleText->description }}</p>
 					</div>
 				</div><!-- Service 3 end -->
 
@@ -52,8 +52,8 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon4.png') }}" alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Exterior Design</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => $services[3]->slug]) }}">{{ $services[3]->singleText->name }}</a></h3>
+						<p>{{ $services[3]->singleText->description }}</p>
 					</div>
 				</div><!-- Service 4 end -->
 
@@ -62,8 +62,8 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon5.png') }}" alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Renovation</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => $services[4]->slug]) }}">{{ $services[4]->singleText->name }}</a></h3>
+						<p>{{ $services[4]->singleText->description }}</p>
 					</div>
 				</div><!-- Service 5 end -->
 
@@ -72,8 +72,8 @@
 						<img loading="lazy" src="{{ URL::asset('images/icon-image/service-icon6.png') }}" alt="service-icon">
 					</div>
 					<div class="ts-service-box-info">
-						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => 'laser_cut']) }}">Safety Management</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
+						<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => $services[5]->slug]) }}">{{ $services[5]->singleText->name }}</a></h3>
+						<p>{{ $services[5]->singleText->description }}</p>
 					</div>
 				</div><!-- Service 6 end -->
 			</div><!-- Col end -->

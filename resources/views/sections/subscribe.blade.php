@@ -3,23 +3,23 @@
 		<div class="row">
 			<div class="col-lg-4">
 				<div class="subscribe-call-to-acton">
-					<h3>Can We Help?</h3>
-					<h4>(+9) 847-291-4353</h4>
+					<h3>Зв'язатись з нами</h3>
+					<h4>+38 (050) 43-32-050</h4>
 				</div>
 			</div><!-- Col end -->
 
 			<div class="col-lg-8">
 				<div class="ts-newsletter row align-items-center">
 					<div class="col-md-5 newsletter-introtext">
-						<h4 class="text-white mb-0">Newsletter Sign-up</h4>
-						<p class="text-white">Latest updates and news</p>
+						<h4 class="text-white mb-0">Зв'язатись з нами</h4>
+						<a href="mailto:office@westhim.com" class="text-white">office@westhim.com</a>
 					</div>
 
 					<div class="col-md-7 newsletter-form">
-						<form action="/newsletter" method="post">
+						<form action="/subscribe" method="post">
 							<div class="form-group">
-								<label for="newsletter-email" class="content-hidden">Newsletter Email</label>
-								<input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Your your email and hit enter" autocomplete="off">
+								<label for="newsletter-email" class="content-hidden">Залишити емейл</label>
+								<input type="email" name="email" id="newsletter-email" class="form-control form-control-lg" placeholder="Напишіть емейл і натисніть enter" autocomplete="off">
 							</div>
 						</form>
 					</div>
