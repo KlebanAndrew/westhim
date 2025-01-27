@@ -4,11 +4,10 @@
 	@include(
 	'sections.banner-area',
 	 [
-		 'title' => 'Faq',
+		 'title' => 'Питання і відповіді',
 		 'breadcrumbItems' => [
-			 ['title' => 'Home', 'link' => route(\App\Enums\RouteName::HOME)],
-			 ['title' => 'Company', 'link' => ''],
-			 ['title' => 'Faq', 'link' => ''],
+			 ['title' => 'Домашня', 'link' => route(\App\Enums\RouteName::HOME)],
+			 ['title' => 'Питання і відповіді', 'link' => ''],
 		]
 	 ]
 	)
@@ -18,7 +17,7 @@
 
 			<div class="row">
 				<div class="col-lg-8">
-					<h3 class="border-title border-left mar-t0">Construction general</h3>
+					<h3 class="border-title border-left mar-t0">Питання і відповіді</h3>
 
 					<div class="accordion accordion-group accordion-classic" id="construction-accordion">
 						<div class="card">
@@ -26,7 +25,7 @@
 								<h2 class="mb-0">
 									<button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
 											aria-expanded="true" aria-controls="collapseOne">
-										Does the law require head protection on construction sites?
+										Чи можна замовити калькуляцію?
 									</button>
 								</h2>
 							</div>
@@ -34,8 +33,7 @@
 							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
 								 data-parent="#construction-accordion">
 								<div class="card-body">
-									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-									moon officia aute, non cupidata
+									Так можна. Безкоштовна калькуляція виробництва, нового обладнання або ремонтних чи модернізаційних робіт ковальсько-пресового та металорізального обладнання.
 								</div>
 							</div>
 						</div>
@@ -44,16 +42,15 @@
 								<h2 class="mb-0">
 									<button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
 											data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										What are the first aid requirements for sites?
+										Як з вами зв'язатись?
 									</button>
 								</h2>
 							</div>
 							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#construction-accordion">
 								<div class="card-body">
-									Anemi nim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat.
-									Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-									Excepteur sint occaecat cupid henderit in voluptate velit esse cillu oris nisi ut aliquip ex ea com
-									matat.
+									Телефонуйте за вказаними номерами  +38 (050) 33-86-509 або заповнюйте електронну форму онлайн і ми вам зателефонуємо самі.
+									Додатвкову інформаціб можна знайти тут - 
+									<a style="color: blue; text-decoration:underline" href="{{ route(\App\Enums\RouteName::CONTACT) }}">Контакти</a>
 								</div>
 							</div>
 						</div>
@@ -62,78 +59,17 @@
 								<h2 class="mb-0">
 									<button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
 											data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-										What is an appointed person?
+										Ваші реквізити?
 									</button>
 								</h2>
 							</div>
 							<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
 								 data-parent="#construction-accordion">
 								<div class="card-body">
-									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-									industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-									scrambled it to make a type specimen book.
-								</div>
-							</div>
-						</div>
-					</div>
-					<!--/ Accordion end -->
-
-					<div class="gap-40"></div>
-
-					<h3 class="border-title border-left">Safety</h3>
-
-					<div class="accordion accordion-group accordion-classic" id="safety-accordion">
-						<div class="card">
-							<div class="card-header p-0 bg-transparent" id="headingFour">
-								<h2 class="mb-0">
-									<button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseFour"
-											aria-expanded="true" aria-controls="collapseFour">
-										Mauris rhoncus pretium porttitor cras scelerisque commodo odio ?
-									</button>
-								</h2>
-							</div>
-
-							<div id="collapseFour" class="collapse show" aria-labelledby="headingFour"
-								 data-parent="#safety-accordion">
-								<div class="card-body">
-									Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-									moon officia aute, non cupidata
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header p-0 bg-transparent" id="headingFive">
-								<h2 class="mb-0">
-									<button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-											data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-										What are the first aid requirements for sites?
-									</button>
-								</h2>
-							</div>
-							<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#safety-accordion">
-								<div class="card-body">
-									Anemi nim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat.
-									Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-									Excepteur sint occaecat cupid henderit in voluptate velit esse cillu oris nisi ut aliquip ex ea com
-									matat.
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-header p-0 bg-transparent" id="headingSix">
-								<h2 class="mb-0">
-									<button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
-											data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-										What is an appointed person?
-									</button>
-								</h2>
-							</div>
-							<div id="collapseSix" class="collapse" aria-labelledby="headingSix"
-								 data-parent="#safety-accordion">
-								<div class="card-body">
-									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-									industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-									scrambled it to make a type specimen book.
+									"ПРЕСМАШ"
+									Україна, 76495, м. Івано–Франківськ вул. Автоливмашівська
+									Приймальня:
+									Телефон/факс: +38 (050) 43-32-050, +38 (050) 33-86-509
 								</div>
 							</div>
 						</div>
@@ -146,41 +82,20 @@
 
 					<div class="sidebar sidebar-right">
 						<div class="widget recent-posts">
-							<h3 class="widget-title">Recent Posts</h3>
+							<h3 class="widget-title">Наші продукти</h3>
 							<ul class="list-unstyled">
-								<li class="d-flex align-items-center">
-									<div class="posts-thumb">
-										<a href="#"><img loading="lazy" alt="news-image" src="{{ URL::asset('images/news/news1.jpg') }}"></a>
-									</div>
-									<div class="post-info">
-										<h4 class="entry-title">
-											<a href="#">We Just Completes $17.6 Million Medical Clinic In Mid-missouri</a>
-										</h4>
-									</div>
-								</li><!-- 1st post end-->
-
-								<li class="d-flex align-items-center">
-									<div class="posts-thumb">
-										<a href="#"><img loading="lazy" alt="news-img" src="{{ URL::asset('images/news/news2.jpg') }}"></a>
-									</div>
-									<div class="post-info">
-										<h4 class="entry-title">
-											<a href="#">Thandler Airport Water Reclamation Facility Expansion Project Named</a>
-										</h4>
-									</div>
-								</li><!-- 2nd post end-->
-
-								<li class="d-flex align-items-center">
-									<div class="posts-thumb">
-										<a href="#"><img loading="lazy" alt="news-img" src="{{ URL::asset('images/news/news3.jpg') }}"></a>
-									</div>
-									<div class="post-info">
-										<h4 class="entry-title">
-											<a href="#">Silicon Bench And Cornike Begin Construction Solar Facilities</a>
-										</h4>
-									</div>
-								</li><!-- 3rd post end-->
-
+								@foreach($products as $product)
+									<li class="d-flex align-items-center">
+										<div class="posts-thumb">
+											<a href="{{ route(\App\Enums\RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug]) }}"><img loading="lazy" alt="news-image" src="{{ URL::asset('images/news/news1.jpg') }}"></a>
+										</div>
+										<div class="post-info">
+											<h4 class="entry-title">
+												<a href="{{ route(\App\Enums\RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug]) }}">{{ $product->singleText->name }}</a>
+											</h4>
+										</div>
+									</li><!-- 1st post end-->
+								@endforeach
 							</ul>
 
 						</div><!-- Recent post end -->
