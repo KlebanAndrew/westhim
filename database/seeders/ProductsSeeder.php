@@ -2,955 +2,234 @@
 
 namespace Database\Seeders;
 
+use App\Enums\FileType;
+use App\Enums\Locale;
 use App\Enums\ProductCategory;
+use App\Models\File;
 use App\Models\Product;
 use App\Models\ProductText;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Arr;
 
 class ProductsSeeder extends Seeder
 {
 	protected $products = [
-		// KC
+		// BRICK_MACHINES
 		[
-			'slug' => 'kc_3537',
-			'category' => ProductCategory::PRESS_KC,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kc_3537',
-					'name' => 'ПРЕС КС3537 ДВОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ',
-					'description' => 'Прес призначений для виготовлення з листового матеріалу середніх великих деталей, що вимагають вирубки, гнуття, формовки, неглибокого витягування та інших операцій холодного штампування.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '5,0 / 500'],
-						['name' => 'Хід повзуна,мм', 'value' => '250'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '32'],
-						['name' => 'Частота поодиноких включень,1/хв', 'value' => '20'],
-						['name' => 'Відстань між столом і повзуном в його нижньому положенні, мм', 'value' => '750'],
-						['name' => 'Товщина підштампової плити**, мм', 'value' => '220'],
-						['name' => 'Зусилля верхнього виштовхувача, т.с.', 'value' => '40'],
-						['name' => 'Сумарне зусилля пневмоподушок*, т.с.', 'value' => '60'],
-						['name' => 'Робочий хід пневмоподушок, мм', 'value' => '120'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '250'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '2500x1400'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '2500x1300'],
-						['name' => 'Розмір вікон в стійках (ширина х висота), мм', 'value' => '1320х800'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '47,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '5640x3500x6475'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '86500'],
-					],
-					'notes' => [
-						'* Діаметр отвору в столі і розташування в столі, можливе згідно технічного завдання Замовника',
-						'** Повзун і підштампова плита, можливо виконати згідно з ескізу Замовника',
-					],
-				],
+			'slug' => ProductCategory::BRICK_MACHINES,
+			'category' => ProductCategory::BRICK_MACHINES,
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/1.jpg'],
 			],
-		],
-		[
-			'slug' => 'kc_3036',
-			'category' => ProductCategory::PRESS_KC,
 			'texts' => [
 				[
-					'locale' => 'uk',
-					'sku' => 'kc_3537',
-					'name' => 'Прес КС3036',
-					'description' => '',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '3500'],
-						['name' => 'Хід повзуна,мм', 'value' => '65'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '21'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '600'],
-						['name' => 'Відстань між столом і повзуном в його нижньому положенні, мм', 'value' => '750'],
-						['name' => 'Товщина плити, мм', 'value' => '110'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '100'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '2100х600'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '1700х450'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '33,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2900x3300x3615'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '2750'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kc_2124',
-			'category' => ProductCategory::PRESS_KC,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kc_2124',
-					'name' => 'ПРЕС КС2124 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ ОДНОСТОЯКОВИЙ З ПЕРПЕНДИКУЛЯРНИМ ВАЛОМ',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '250'],
-						['name' => 'Хід повзуна,мм', 'value' => '0...90'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '160'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '255'],
-						['name' => 'Товщина плити, мм', 'value' => '75'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '55'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '500x350'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '350x280'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '2.2'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '830x1400x2200'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '1800'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kc_2126',
-			'category' => ProductCategory::PRESS_KC,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kc_2126',
-					'name' => 'ПРЕС КC2126 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ З ПЕРПЕНДИКУЛЯРНИМ ВАЛОМ',
+					'locale' => Locale::UA,
+					'short_title' => 'Брикетувальні преси від ВЕСТХІМ',
+					'title' => 'Брикетувальні преси від ВЕСТХІМ: рішення для тих, хто працює з відходами',
 					'description' => '
-					Наявність 8-ми напрямних забезпечує високу геометричну точність преса. Завдяки збільшеної робочій зоні на пресі можна виконувати багатоперехідне послідовне штампування.
-					Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.
+					<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Щодня у вас накопичуються кубометри тирси, стружки, соломи чи тріски? Відходи займають простір, створюють безлад і ускладнюють логістику?</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>ВЕСТХІМ пропонує комплексне рішення — преси для брикетування тирси, деревини, біомаси та інших матеріалів, які перетворюють проблему зберігання на джерело доходу.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми проєктуємо та виготовляємо брикетувальні преси під конкретні технічні умови замовника. Враховуємо тип сировини, продуктивність, доступну потужність, розміри приміщення, спосіб подачі, охолодження та формування брикетів. Кожен </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>прес для виготовлення паливних брикетів</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> створюється не "зі стелі", а під реальні задачі бізнесу.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наші продукти — це:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Преси для тирси</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> — ідеальні для деревообробки, меблевого виробництва, пилорам.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Преси для паливних брикетів </span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>— як для внутрішнього використання, так і для комерційного продажу.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Брикетні станки,</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> що працюють з біомасою: солома, очерет, лушпиння, шелуха, сільськогосподарські залишки.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Виготовлення брикетувальних машин</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> з автоматичною подачею, гідравлікою та системами охолодження — для великих підприємств.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Преси для виготовлення брикетів з тирси</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> з варіантами управління — ручне, напівавтоматичне або повністю автоматизоване.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми пропонуємо стандартні моделі та розробку під ключ. Це можуть бути брекетувальні преси для дрібносерійного виробництва або потужні </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>обладнання для пресування</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> з добовою продуктивністю понад 1 т.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>В результаті ви отримуєте </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>прес для брикетування</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, який відповідає саме вашим потребам — без компромісів.</span></span></span></span></span></span></span></span></span></span></span></span><br></p>
 					',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '400'],
-						['name' => 'Хід повзуна,мм', 'value' => '0...90'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '130'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '360'],
-						['name' => 'Товщина плити, мм', 'value' => '80'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '65'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '800x500'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '620x470'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '4,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '1500x1000x2300'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '3200'],
+					'sections' => [
+						[
+							'title' => 'Технічні характеристики',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наші преси для виготовлення паливних брикетів проєктуються інженерами з реальним досвідом роботи в галузі. Ми враховуємо:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Фракцію сировини (дрібна тирса чи змішана стружка).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Початкову та кінцеву вологість.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Рівень тиску, що забезпечує міцність брикету.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Оптимальну температуру та швидкість пресування.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Форму та розміри брикетів (циліндричні, прямокутні, PINI-KAY тощо).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Систему охолодження та обслуговування.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Потужність та енергоефективність.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Прес брикетувальний</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> повинен бути не просто потужним — а точним, стабільним і безпечним. І саме такі преси виготовляє ВЕСТХІМ.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Для кого наші преси:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Пилорами, меблеві виробництва, столярні цехи.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Аграрні підприємства з великою кількістю рослинних залишків.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Компанії, що продають паливні брикети на внутрішньому чи європейському ринку.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Промислові об’єкти з деревною або металічною стружкою.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Організації, які прагнуть перейти на енергоефективне опалення.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наявність преса для паливних брикетів — це прямий шлях до оптимізації простору, зниження витрат і створення нового продукту з залишків.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чому це вигідно:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Менше витрат на утилізацію відходів.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Економія простору на складі.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Створення додаткового товару — паливних брикетів.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Потенціал для продажу чи опалення власних приміщень.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Швидка окупність преса — від 6 місяців.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми допоможемо підібрати </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>прес для виготовлення брикетів (ціна</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> + характеристики) відповідно до ваших завдань. Працюємо прозоро: ви точно знаєте, що купуєте.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
+							'
+						],
+						[
+							'title' => 'Ціни та комплектація',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми не використовуємо модель “один прес — одна ціна”. Для нас важливо створити оптимальний брикетувальний прес, а не просто продати типове рішення.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Ціна на прес брикетувальний залежить </span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>від:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Типу сировини.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Продуктивності.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Складності управління.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наявності систем охолодження.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Бажаної форми брикету.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Умов доставки й пуску.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Для кожного клієнта готуємо персональний кошторис із чіткими цифрами. Без прихованих платежів.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
+							',
+						],
+						[
+							'title' => 'Як ми працюємо',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ви залишаєте заявку. Ми зв’язуємось і з’ясовуємо технічні параметри. Підбираємо або проєктуємо прес брикетувальний. Узгоджуємо строки та вартість</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Виготовляємо, тестуємо, доставляємо та запускаємо в експлуатацію.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У вас не просто буде </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>прес для брикетів</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>. У вас буде рішення, яке працює.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
+							',
+						],
+						[
+							'title' => 'ВЕСТХІМ — український виробник, який знає свою справу',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми виготовляємо брекетувальні преси на власному виробництві. Маємо інженерів, які не лише читають креслення, а й розуміють, що таке пил, волога, перепади температур і нестабільна сировина. У нас немає маркетингових обіцянок — лише перевірена техніка, що працює роками.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Залишайте заявку просто зараз та отримайте прес для виготовлення паливних брикетів, який справді вартий своєї ціни.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
+							'
+						]
 					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kc_2128',
-			'category' => ProductCategory::PRESS_KC,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kc_2128',
-					'name' => 'ПРЕС КC2128 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ З ПЕРПЕНДИКУЛЯРНИМ ВАЛОМ',
-					'description' => 'Наявність 8-ми напрямних забезпечує високу геометричну точність преса. Завдяки збільшеної робочій зоні на пресі можна виконувати багатоперехідне послідовне штампування. Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '630'],
-						['name' => 'Хід повзуна,мм', 'value' => '10...130'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '130'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '405'],
-						['name' => 'Товщина плити, мм', 'value' => '85'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '80'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '900x560'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '680x500'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '7,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '1120x1650x2480'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '5760'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kc_2132',
-			'category' => ProductCategory::PRESS_KC,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kc_2132',
-					'name' => 'ПРЕС КC2132 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ З ПЕРПЕНДИКУЛЯРНИМ ВАЛОМ',
-					'description' => 'Наявність 8-ми напрямних забезпечує високу геометричну точність преса. Завдяки збільшеної робочій зоні на пресі можна виконувати багатоперехідне послідовне штампування. Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '1600'],
-						['name' => 'Хід повзуна,мм', 'value' => '20...180'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '60'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '530'],
-						['name' => 'Товщина плити, мм', 'value' => '110'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '120'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1120x750'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '900x650'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '15,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2085x1400x3020'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '11200'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kc_2130',
-			'category' => ProductCategory::PRESS_KC,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kc_2130',
-					'name' => 'ПРЕС КC2130 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ З ПЕРПЕНДИКУЛЯРНИМ ВАЛОМ',
-					'description' => 'Наявність 8-ми напрямних забезпечує високу геометричну точність преса. Завдяки збільшеної робочій зоні на пресі можна виконувати багатоперехідне послідовне штампування. Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '1000'],
-						['name' => 'Хід повзуна,мм', 'value' => '20...180'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '72'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '480'],
-						['name' => 'Товщина плити, мм', 'value' => '100'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '100'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1000x670'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '780x570'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '10,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '1925x1285x2880'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '9500'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kc_2134',
-			'category' => ProductCategory::PRESS_KC,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kc_2134',
-					'name' => 'ПРЕС КC2134 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ З ПЕРПЕНДИКУЛЯРНИМ ВАЛОМ',
-					'description' => 'Наявність 8-ми напрямних забезпечує високу геометричну точність преса. Завдяки збільшеної робочій зоні на пресі можна виконувати багатоперехідне послідовне штампування. Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '2500'],
-						['name' => 'Хід повзуна,мм', 'value' => '20...220'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '50'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '580'],
-						['name' => 'Товщина плити, мм', 'value' => '110'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '125'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1400x900'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '1100x800'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '25,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2435x1615x3240'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '17900'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kc_3135',
-			'category' => ProductCategory::PRESS_KC,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kc_3135',
-					'name' => 'ПРЕС КC3135 ДВОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ',
-					'description' => 'Наявність 8-ми напрямних забезпечує високу геометричну точність преса. Завдяки збільшеної робочій зоні на пресі можна виконувати багатоперехідне послідовне штампування. Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '3150'],
-						['name' => 'Хід повзуна,мм', 'value' => '250'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '40'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '730'],
-						['name' => 'Товщина плити, мм', 'value' => '140'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '250'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '2500x1200'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '2240x1100'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '25,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2800x2725x3460'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '30000'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-
-		// KT
-		[
-			'slug' => 'kt_2124',
-			'category' => ProductCategory::PRESS_KT,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kt_2124',
-					'name' => 'ПРЕС КT2124 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '10000'],
-						['name' => 'Хід повзуна,мм', 'value' => '170'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '32'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '610'],
-						['name' => 'Товщина плити, мм', 'value' => '140'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '16'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '800x800'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '740x740'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '25,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2950x1950x4090'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '25000'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kt_2126',
-			'category' => ProductCategory::PRESS_KT,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kt_2126',
-					'name' => 'ПРЕС КT2126 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '400'],
-						['name' => 'Хід повзуна,мм', 'value' => '10...110'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '130'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '355'],
-						['name' => 'Товщина плити, мм', 'value' => '80'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '65'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '650x460'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '400x300'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '3,2'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '1400x1000x2480'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '3380'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kt_2130',
-			'category' => ProductCategory::PRESS_KT,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kt_2130',
-					'name' => 'ПРЕС КT2130 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '1000'],
-						['name' => 'Хід повзуна,мм', 'value' => '20...180'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '71'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '480'],
-						['name' => 'Товщина плити, мм', 'value' => '100'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '100'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1000x670'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '650x550'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '10,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '1950x1340x3260'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '9900'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kt_8336',
-			'category' => ProductCategory::PRESS_KT,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kt_8336',
-					'name' => 'ПРЕС КТ8336 ХОЛОДНОШТАМПУВАЛЬНИЙ КРИВОШИПНО-КОЛІННИЙ ЧЕКАННИЙ ПРОСТОЇ ДІЇ',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '4000'],
-						['name' => 'Хід повзуна,мм', 'value' => '130'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '50'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '475'],
-						['name' => 'Товщина плити, мм', 'value' => '100'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '12'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '500x500'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '500x500'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '25,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2120x1435x2860'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '9100'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kt_8340',
-			'category' => ProductCategory::PRESS_KT,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kt_8340',
-					'name' => 'ПРЕС КТ8340 ХОЛОДНОШТАМПУВАЛЬНИЙ КРИВОШИПНО-КОЛІННИЙ ЧЕКАННИЙ ПРОСТОЇ ДІЇ',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '10000'],
-						['name' => 'Хід повзуна,мм', 'value' => '170'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '32'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '610'],
-						['name' => 'Товщина плити, мм', 'value' => '140'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '16'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '800x800'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '740x740'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '25,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2950x1950x4090'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '25000'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-
-		// KG
-		[
-			'slug' => 'kg_5530',
-			'category' => ProductCategory::PRESS_KG,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kg_5530',
-					'name' => 'ПРЕС КГ5530 ОДНОКРИВОШИПНИЙ ДВІЙНОЇ ДІЇ ЗАКРИТИЙ',
-					'description' => 'На пресі, крім глибокої витяжки, можна одночасно виконувати вирубку по контуру. Для забезпечення притискання заготовки при витяжці і виштовшування готового виробу зі штампу, після закінчення технологічної операції, прес може оснащуватись гідропневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '100 / 63'],
-						['name' => 'Хід повзуна,мм', 'value' => '400 / 250'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '20, 25, 30'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '560 / 500'],
-						['name' => 'Товщина плити, мм', 'value' => '120'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '120х120'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '800x800'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '500x500, 800х1020'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '25,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2400x2770x5350'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '21000'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kg_2134',
-			'category' => ProductCategory::PRESS_KG,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kg_2134',
-					'name' => 'ПРЕС КГ2134 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '2500'],
-						['name' => 'Хід повзуна,мм', 'value' => '25...200'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '61'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '560'],
-						['name' => 'Товщина плити, мм', 'value' => '125'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '140'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1120x750'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '860x540'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '25,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2700x2500x4300'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '21800'],
-					],
-					'notes' => [
-						'Прес є базовим для автоматизованого комплекса обладнання для холодного штампування деталей з листового матеріалу.',
-					],
-				],
-			],
-		],
-		[
-			'slug' => 'kg_2132',
-			'category' => ProductCategory::PRESS_KG,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kg_2132',
-					'name' => 'ПРЕС КГ2132 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ВІДКРИТИЙ',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '1600'],
-						['name' => 'Хід повзуна,мм', 'value' => '25...160'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '71'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '480'],
-						['name' => 'Товщина плити, мм', 'value' => '110'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '120'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1000x670'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '580x460'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '16,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2100x2340x3700'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '12300'],
-					],
-					'notes' => [
-						'Прес є базовим для автоматизованого комплекса обладнання для холодного штампування деталей з листового матеріалу.',
-					],
-				],
-			],
-		],
-		[
-			'slug' => 'kg_9534',
-			'category' => ProductCategory::PRESS_KG,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kg_9534',
-					'name' => 'ПРЕС КГ9534 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ЗАКРИТИЙ',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '2500'],
-						['name' => 'Хід повзуна,мм', 'value' => '320'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '45'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '530'],
-						['name' => 'Товщина плити, мм', 'value' => '140'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '140'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '800x800'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '670x630'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '25,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2400x2500x4850'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '18600'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kg_2540',
-			'category' => ProductCategory::PRESS_KG,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kg_2540',
-					'name' => 'ПРЕС КГ2540',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '10000'],
-						['name' => 'Хід повзуна,мм', 'value' => '400'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '20'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '730'],
-						['name' => 'Товщина плити, мм', 'value' => '260'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '200'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1250x1250'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '1265x1250'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '90,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '4310x3870x6790'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '78000'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kg_9536',
-			'category' => ProductCategory::PRESS_KG,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kg_9536',
-					'name' => 'ПРЕС КГ9536 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ЗАКРИТИЙ ОБРІЗНИЙ',
-					'description' => 'Конструкція преса передбачає можливість встановлення механізмів автоматичної подачі матеріала. Для забезпечення притискання листової заготовки при витяжці і виштовхуванні готового виробу зі штампу, після закінчення технологічної операції, прес може бути оснащений пневмоподушкою.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '4000'],
-						['name' => 'Хід повзуна,мм', 'value' => '400'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '25'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '470'],
-						['name' => 'Товщина плити, мм', 'value' => '140'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '160'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1000x1000'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '1000x1000'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '43,3'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '3480x3160x5942'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '32500'],
-					],
-					'notes' => [],
+					'seo_title' => 'Прес для брикетування купити за вигідною ціною Івано-Франківськ, Україна',
+					'seo_description' => 'Замовити брикетувальні преси від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
 				],
 			],
 		],
 		
-		// KY
+		// Mechanical Presses
 		[
-			'slug' => 'ky_3535',
-			'category' => ProductCategory::PRESS_KY,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'ky_3535',
-					'name' => 'ПРЕС КУ3535 ДВОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ЗАКРИТИЙ',
-					'description' => 'Прес призначений для виготовлення з листового матеріалу середніх великих деталей, що вимагають вирубки, гнуття, формовки, неглибокого витягування та інших операцій холодного штампування.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '315'],
-						['name' => 'Хід повзуна,мм', 'value' => '400'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '25'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '470'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '250'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '2500x1250'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '1000x1000'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '47,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '4556x2900x5855'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '50900'],
-					],
-					'notes' => [],
-				],
+			'slug' => ProductCategory::MECHANICAL_PRESSES,
+			'category' => ProductCategory::MECHANICAL_PRESSES,
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/2.jpg'],
 			],
-		],
-		[
-			'slug' => 'ky_3537',
-			'category' => ProductCategory::PRESS_KY,
 			'texts' => [
 				[
-					'locale' => 'uk',
-					'sku' => 'ky_3537',
-					'name' => 'ПРЕС КУ3537 ДВОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ЗАКРИТИЙ',
-					'description' => 'Прес призначений для виготовлення з листового матеріалу середніх великих деталей, що вимагають вирубки, гнуття, формовки, неглибокого витягування та інших операцій холодного штампування.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '5,0 / 500'],
-						['name' => 'Хід повзуна,мм', 'value' => '280'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '25'],
-						['name' => 'Частота поодиноких включень,1/хв', 'value' => '16'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '570'],
-						['name' => 'Товщина підштампової плити**, мм', 'value' => '220'],
-						['name' => 'Зусилля верхнього виштовхувача, т.с.', 'value' => '40'],
-						['name' => 'Сумарне зусилля пневмоподушок*, т.с.', 'value' => '55'],
-						['name' => 'Робочий хід пневмоподушок, мм', 'value' => '100'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '100'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '2550x1320'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '2400x1300'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '45,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '3700x1700x5000'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '50000'],
+					'locale' => Locale::UA,
+					'short_title' => 'Механічні преси від ВЕСТХІМ',
+					'title' => 'Механічні преси від ВЕСТХІМ: потужність, яка працює на вас',
+					'description' => '
+					<span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Механічний прес</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> — це серце багатьох виробничих процесів. Від штампування деталей до гнуття, пробивання, вирубки — саме</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"> преси механічні </span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>забезпечують швидкість, точність і стабільність у серійному виробництві. Якщо ви шукаєте надійне обладнання, яке не підведе — вам до ВЕСТХІМ.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми займаємося проектуванням механічних пресів, їх виготовленням, модернізацією та ремонтом. Працюємо з пресами відкритого та закритого типу, простої та подвійної дії. Зусилля обладнання — від 250 до 4000 кН. Це дозволяє використовувати наші </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">механічні преси</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> як у легкій промисловості, так і на підприємствах важкого машинобудування.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Що ми виготовляємо:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Преси механічні з колінчастим приводом — для точних та швидких операцій штампування.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Преси з двома точками зусилля — ідеальні для великогабаритних заготовок.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Універсальні механічні преси, які легко інтегруються в існуючі виробничі лінії.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Індивідуальні розробки під конкретні технічні умови.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Усе обладнання виготовляється на нашому власному виробництві. Ми контролюємо якість на кожному етапі: від креслень до остаточного складання та тестування.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Якщо вам потрібно </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">виготовлення механічних пресів</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> під нестандартні задачі — ми беремося за роботу, яку не виконує масовий ринок.</span></span></span></span></span></span>
+					',
+					'sections' => [
+						[
+							'title' => 'Проектування — наша сильна сторона',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Механіка — це розрахунки, динаміка, навантаження, температурні режими та умови експлуатації. Тому ми починаємо з головного — </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">проектування механічних пресів</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, яке виконується нашими інженерами з урахуванням наступниого:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>типу операції (штампування, гнуття, вирубка, пробивання);</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>характеристик матеріалу;</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>умов роботи (температура, вологість, зміна навантаження);</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>потреби у швидкості та точності;</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>можливості інтеграції в діюче виробництво.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми створюємо рішення, які відповідають вашим технічним та економічним вимогам. Тому, коли ви звертаєтесь до ВЕСТХІМ, ви отримуєте механічний прес, що працює, а не просто «прес по каталогу».</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><br></span></span></span></span></span></span></p>
+							'
+						],
+						[
+							'title' => 'Чому обирають нас',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми знаємо, що таке важке машинобудування не з чуток — за плечима понад 10 років практики. Усе, що ми робимо, — від першої ідеї до запуску обладнання — відбувається в одному циклі, під нашим контролем. За якість відповідаємо власною виробничою базою, де нічого не залишається на «удачу». Даємо гарантію і завжди поруч із сервісом, коли потрібно. А головне — не женемося за масовістю. Ми вміємо створювати як типові, так і унікальні механічні преси, які точно відповідають вашим умовам.</span></span></span></span></span></span><br></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми вирішуємо технічні задачі, а не просто виробляємо серійну продукцію.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Механічні преси ВЕСТХІМ — це надійність, ресурс і результат, на який можна розраховувати.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Преси механічн</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">і купити — як це зробити:</span></span></span></p><ol><li style="list-style-type:decimal"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Залиште заявку — ми зв’яжемося для уточнення задачі.</span></span></span></span></span></span></li><li style="list-style-type:decimal"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Отримаєте технічне рішення та кошторис.</span></span></span></span></span></span></li><li style="list-style-type:decimal"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Погоджуємо строк, конфігурацію, комплектацію.</span></span></span></span></span></span></li><li style="list-style-type:decimal"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Виготовляємо, тестуємо, доставляємо.</span></span></span></span></span></span></li><li style="list-style-type:decimal"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Запускаємо в експлуатацію з повним супроводом.</span></span></span></span></span></span></li></ol><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми працюємо по всій Україні та виконуємо замовлення на експорт. Якщо ви хочете </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">преси механічні купити</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> без ризиків — обирайте виробника, який сам відповідає за результат.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Зв’яжіться з нами вже сьогодні — підберемо </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">прес механічний</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, який підходить саме вам.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>ВЕСТХІМ — українська якість, перевірена практикою.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							'
+						],
 					],
-					'notes' => [
-						'* Діаметр отвору в столі і розташування в столі, можливе згідно технічного завдання Замовника',
-						'** Повзун і підштампова плита, можливо виконати згідно з ескізу Замовника',
-					],
+					'seo_title' => 'Механічний прес купити за найкращою ціною Івано-Франківськ, Україна',
+					'seo_description' => 'Замовити механічні преси від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
 				],
 			],
 		],
 		
-		// KY
+		// Hydraulic Presses
 		[
-			'slug' => 'ku_2534',
-			'category' => ProductCategory::PRESS_KU,
+			'slug' => ProductCategory::HYDRAULIC_PRESSES,
+			'category' => ProductCategory::HYDRAULIC_PRESSES,
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/1.jpg'],
+			],
 			'texts' => [
 				[
-					'locale' => 'uk',
-					'sku' => 'ku_2534',
-					'name' => 'ПРЕС КИ2534 ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ЗАКРИТИЙ',
-					'description' => 'Прес призначений для холодного штампування металу.',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '2500'],
-						['name' => 'Хід повзуна,мм', 'value' => '200'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '45'],
-						['name' => 'Найбільша відстань між підштамповою плитою і повзуном в його нижньому положенні і при найбільшому ході,мм', 'value' => '560'],
-						['name' => 'Товщина підштампової плити, мм', 'value' => '140'],
-						['name' => 'Сумарне зусилля пневмоподушок, т.с.', 'value' => '125'],
-						['name' => 'Робочий хід пневмоподушок, мм', 'value' => '65'],
-						['name' => 'Величина регулювання відстані між столом і повзуном, мм', 'value' => '140'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '800х1050'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '800х630'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '25,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2190х1855х3690'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '12400'],
+					'locale' => Locale::UA,
+					'short_title' => 'Гідравлічні преси від ВЕСТХІМ',
+					'title' => 'Гідравлічні преси від ВЕСТХІМ: коли потрібно зусилля, що не підведе',
+					'description' => '
+					<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Є завдання, які механіка не витягує. Є матеріали, що потребують стабільного тиску без ударного навантаження. І є рішення, яке в таких випадках працює краще за всі інші — </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">гідравлічний прес</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>. Якщо ви шукаєте потужність, точність і повний контроль над процесом, тоді саме час </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">купити прес гідравлічний</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> у виробника, який розуміє, для чого його створює.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>ВЕСТХІМ проєктує, виготовляє і запускає в роботу гідравлічні преси різного формату. У нас замовляють обладнання для виробництва, СТО, ремонтних майстерень, металообробних та будівельних підприємств. Працюємо під завдання — з урахуванням усіх технічних і просторових нюансів.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+					',
+					'sections' => [
+						[
+							'title' => 'Для чого потрібен гідравлічний прес',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У гідравліці головне — сила і керованість. Там, де механічний привід дає ударне навантаження, прес гідравлічний забезпечує рівномірний і потужний тиск упродовж усього циклу. Це ідеальне рішення для:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Випробування деталей під навантаженням.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Формування, гнуття, вирівнювання, спресування.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Робіт на СТО — встановлення/зняття підшипників, сайлентблоків, шківів.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Виробничих процесів, де потрібна велика сила при малому зусиллі оператора.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Тому</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"> прес гідравлічний для СТО</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> — це не розкіш, а мастхев для кожної майстерні. А електрогідравлічні моделі — це рівень вище: автоматизація, швидкість, зручність.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							'
+						],
+						[
+							'title' => 'Які преси ми виробляємо',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У нашому асортименті базові&nbsp; та індивідуальні моделі. Власне виробництво дозволяє гнучко реагувати на запит замовника, тож у нас можна:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Купити </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">гідравлічний прес </span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>настільний, підлоговий або вбудований.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Замовити прес гідравлічний 40 т, 63 т, 100 т або інше зусилля — залежно від задач.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Встановити електропривод з кнопковим керуванням, педаллю або сенсорною панеллю.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Додати манометр, упори, столик, змінні інструменти.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Отримати </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">прес гідравлічний з електроприводом</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, який працює у напівавтоматичному режимі.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Обрати модель з одноступеневим або двоступеневим циліндром.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми розробляємо </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">гідравлічні преси</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, які підходять до конкретного процесу, матеріалу, бюджету і простору.</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span style="background-color:#ffff00"><span><span><span> </span></span></span></span>Купити прес гідравлічний</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> у ВЕСТХІМ — це отримати рішення, яке не доведеться доробляти самому.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							'
+						]
 					],
-					'notes' => [],
+					'seo_title' => 'Купити прес гідравлічний за доступною ціною Івано-Франківськ, Україна',
+					'seo_description' => 'Замовити гідравлічні преси від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
 				],
 			],
 		],
 		
-		// KV
+		// Vats
 		[
-			'slug' => 'kv_0038',
-			'category' => ProductCategory::PRESS_KV,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kv_0038',
-					'name' => 'ПРЕС МЕХАНІЧНИЙ СЕРІЇ КВ0038 (КРИВОШИПНІ ХОЛОДНОГО)',
-					'description' => '',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '630'],
-						['name' => 'Хід повзуна,мм', 'value' => '300'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '25'],
-						['name' => 'Закрита висота,мм', 'value' => '700'],
-						['name' => 'Регулювання закритої висоти,мм', 'value' => '20'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1250х1250'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '1000х1140'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '3870х3150х5900'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '64000'],
-					],
-					'notes' => [],
-				],
+			'slug' => ProductCategory::VATS,
+			'category' => ProductCategory::VATS,
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/1.jpg'],
 			],
-		],
-		[
-			'slug' => 'kv_0036',
-			'category' => ProductCategory::PRESS_KV,
 			'texts' => [
 				[
-					'locale' => 'uk',
-					'sku' => 'kv_0036',
-					'name' => 'ПРЕС МЕХАНІЧНИЙ СЕРІЇ КВ0036 (КРИВОШИПНІ ХОЛОДНОГО)',
-					'description' => '',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '4000'],
-						['name' => 'Хід повзуна,мм', 'value' => '230'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '25'],
-						['name' => 'Закрита висота,мм', 'value' => '700'],
-						['name' => 'Регулювання закритої висоти,мм', 'value' => '16'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1000х1250'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '900х940'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2600х2270х4400'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '37450'],
+					'locale' => Locale::UA,
+					'short_title' => 'Чани від ВЕСТХІМ',
+					'title' => 'Чани від ВЕСТХІМ: метал, що дарує тепло і відновлення',
+					'description' => '
+					<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Щось у нас змінилося. Ми знову почали цінувати речі, які справді працюють. Чисте повітря, гаряча вода, дрова, спокій і тиша — все, що дає змогу розслабитись по-справжньому. У цьому контексті</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"> чан</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"> — не просто ємність для купання. Це сучасна відповідь на втому, стрес і постійний поспіх. Це відпочинок, якого хочеться повторити.</span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>ВЕСТХІМ виготовляє надійні, довговічні чани з металу для приватного та комерційного використання. Ми — виробники, а не посередники, тож маємо змогу створювати конструкції з урахуванням усіх побажань. Товщина металу, діаметр, місткість, форма, тип підігріву — усе під контролем. Якщо ви плануєте </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">купити чан</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, який служитиме багато років — ми знаємо, як це зробити правильно.</span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чан — це більше, ніж гаряча ванна:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Це простір, де тіло відновлюється, а думки стихають.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Це спосіб провести вечір із близькими не перед телевізором, а під зорями.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Це спокій, який не продається в аптеках.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>І якщо ви давно хотіли </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">чан купити</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, настав той самий момент.</span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+					',
+					'sections' => [
+						[
+							'title' => 'Навіщо вам чан',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Звичка доглядати за собою — це не про розкіш, а про здоров’я. Чан із гарячою водою на дровах — це:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Природна термотерапія: покращує кровообіг, знижує м’язову напругу.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Глибоке розслаблення — без шуму, хімії й зайвого.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ідеальний варіант відпочинку взимку, восени й навесні.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Унікальний досвід для гостей приватних садиб, готелів, SPA-комплексів.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Простота у догляді та використанні.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Недарма сього</span></span></span></span>дн</span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif">і чани купити</span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"> хочут<span style="color:#000000"><span><span><span>ь не лише власники готелів у Карпатах. Вони з’являються біля дач, на задньому дворі, в заміських будинках, біля лазень і саун по всій Україні. Це працює. І це справді подобається людям.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							',
+						],
+						[
+							'title' => 'Які чани ми виготовляємо',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми створюємо чани, які поєднують продуману форму, якісні матеріали та функціональність. Пропонуємо:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Класичні круглі чани з вогнищем знизу.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Овальні та шестигранні варіанти — для незвичного дизайну.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чани на компанію від 2 до 10 осіб.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чани з обшивкою (дерев’яною, композитною, кам’яною).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чани з виносною топкою — для безпечного підігріву.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Інтеграцію з SPA-зоною або сауною.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Варіанти обробки — від шліфованої сталі до декоративної ковки. При потребі можемо підготувати чан під ключ: з ізоляцією, драбинкою, лавками, підсвічуванням і готовою основою</span></span></span></span></span></span><br></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							',
+						],
+						[
+							'title' => 'Надійність металу — наша перевага',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми працюємо з металом щодня — не як художники, а як інженери. Тому можемо гарантувати:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Якісне зварювання, яке витримає не один сезон.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Оптимальну товщину металу для рівномірного прогрівання.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Антикорозійний захист для тривалого використання.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Зручну ергономіку: плавний захід, комфортне сидіння, правильна глибина.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Мінімальне теплове споживання за рахунок точного розрахунку об’єму.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Багато виробників економлять на матеріалах. Ми — ні. Для нас чан — це виріб, який повинен прослужити роками, а не сезон. Саме тому ті, хто вже мав досвід, повертаються до нас, щоб замовити наступний.</span></span></span></span></span></span>&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;<br></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							',
+						],
+						[
+							'title' => 'Купити чан — вигідно',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ви отримаєте не лише задоволення, а й цілком практичні вигоди:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Підвищення цінності вашого готелю, садиби чи будинку.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Вигідна інвестиція — окупність у комерційному використанні 2–3 місяці.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Доступність у використанні — розтопили й насолоджуйтесь.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Екологічність — без хімії, без електрики (або з мінімальним споживанням).</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>А головне —&nbsp; на </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">чан ціна </span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">не така висока, як здається. Ми працюємо без посередників, тому маємо змогу формувати адекватні й чесні</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"> ціни на чани</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, без маркетингової націнки.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Пишіть або телефонуйте — відповімо на всі запитання і підберемо саме той чан, про який ви думали. Без зайвого пафосу. Просто гаряча вода, хороша сталь — і трохи задоволення.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							',
+						]
 					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kv_0034',
-			'category' => ProductCategory::PRESS_KV,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kv_0034',
-					'name' => 'ПРЕС МЕХАНІЧНИЙ СЕРІЇ КВ0034 (КРИВОШИПНІ ХОЛОДНОГО)',
-					'description' => '',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '2500'],
-						['name' => 'Хід повзуна,мм', 'value' => '200'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '40'],
-						['name' => 'Закрита висота,мм', 'value' => '490'],
-						['name' => 'Регулювання закритої висоти,мм', 'value' => '16'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '800х800'],
-						['name' => 'Розміри повзуна (ширина х глибина),мм', 'value' => '730х740'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2840х1950х4090'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '21500'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kv_2532',
-			'category' => ProductCategory::PRESS_KV,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kv_2532',
-					'name' => 'ПРЕСС ОДНОШИПНИЙ ЗАКРИТИЙ КВ2532',
-					'description' => '',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '1600'],
-						['name' => 'Хід повзуна,мм', 'value' => '160'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '60'],
-						['name' => 'Частота одиночних ходів повзуна,1/хв', 'value' => '30'],
-						['name' => 'Хід повзуна до його крайнього нижнього положення, на якому прес розвиває номіняльне зусилля,мм', 'value' => '12'],
-						['name' => 'Відстань між підштамповою плитою і повзуном в його нижньому положенні при верхньому положенні регулювання,мм', 'value' => '360'],
-						['name' => 'Величина регулювання відстані між підштамповою плитою і повзуном,мм', 'value' => '120'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '800х800'],
-						['name' => 'Ширина вікон в стійках,мм', 'value' => '500'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '26,5'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2500х2700х4100'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '13500'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kv_2539',
-			'category' => ProductCategory::PRESS_KV,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kv_2539',
-					'name' => 'ПРЕСС ОДНОШИПНИЙ ЗАКРИТИЙ КВ2539',
-					'description' => '',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '800'],
-						['name' => 'Хід повзуна,мм', 'value' => '400'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '30'],
-						['name' => 'Частота одиночних ходів повзуна,1/хв', 'value' => '30'],
-						['name' => 'Хід повзуна до його крайнього нижнього положення, на якому прес розвиває номіняльне зусилля,мм', 'value' => '12'],
-						['name' => 'Відстань між підштамповою плитою і повзуном в його нижньому положенні при верхньому положенні регулювання,мм', 'value' => '850'],
-						['name' => 'Величина регулювання відстані між підштамповою плитою і повзуном,мм', 'value' => '185'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1650х1250'],
-						['name' => 'Розмір повзуна (ширина х глибина),мм', 'value' => '1250х1000'],
-						['name' => 'Ширина вікон в стійках,мм', 'value' => '600'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '90,0'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2500х3800х7400'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '77000'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kv_2538',
-			'category' => ProductCategory::PRESS_KV,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kv_2538',
-					'name' => 'ПРЕС ОДНОКРИВОШИПНИЙ ПРОСТОЇ ДІЇ ЗАКРИТИЙ ЗУСИЛЛЯМ 6300 КН МОДЕЛІ КВ2538',
-					'description' => '',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '6300'],
-						['name' => 'Хід повзуна,мм', 'value' => '320'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '25'],
-						['name' => 'Частота одиночних ходів повзуна,1/хв', 'value' => '19'],
-						['name' => 'Хід повзуна до його крайнього нижнього положення, на якому прес розвиває номіняльне зусилля,мм', 'value' => '12'],
-						['name' => 'Відстань між підштамповою плитою і повзуном в його нижньому положенні при верхньому положенні регулювання,мм', 'value' => '800'],
-						['name' => 'Величина регулювання відстані між підштамповою плитою і повзуном,мм', 'value' => '180'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1250х1250'],
-						['name' => 'Розмір повзуна (ширина х глибина),мм', 'value' => '1000х1000'],
-						['name' => 'Ширина вікон в стійках,мм', 'value' => '870'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '50б2'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '3650х3100х6550'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kv_2536',
-			'category' => ProductCategory::PRESS_KV,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kv_2536',
-					'name' => 'ПРЕСС ОДНОШИПНИЙ ЗАКРИТИЙ КВ2536',
-					'description' => '',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '4000'],
-						['name' => 'Хід повзуна,мм', 'value' => '250'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '32'],
-						['name' => 'Частота одиночних ходів повзуна,1/хв', 'value' => '24'],
-						['name' => 'Хід повзуна до його крайнього нижнього положення, на якому прес розвиває номіняльне зусилля,мм', 'value' => '12'],
-						['name' => 'Відстань між підштамповою плитою і повзуном в його нижньому положенні при верхньому положенні регулювання,мм', 'value' => '510'],
-						['name' => 'Величина регулювання відстані між підштамповою плитою і повзуном,мм', 'value' => '160'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '1000х1000'],
-						['name' => 'Розмір повзуна (ширина х глибина),мм', 'value' => '800'],
-						['name' => 'Ширина вікон в стійках,мм', 'value' => '600'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '43,3'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '3140х3470х5940'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '32000'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		[
-			'slug' => 'kv_2534',
-			'category' => ProductCategory::PRESS_KV,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'kv_2534',
-					'name' => 'ПРЕСС ОДНОШИПНИЙ ЗАКРИТИЙ КВ2534',
-					'description' => '',
-					'characteristics' => [
-						['name' => 'Номінальне зусилля, МН', 'value' => '2500'],
-						['name' => 'Хід повзуна,мм', 'value' => '200'],
-						['name' => 'Частота безперервних ходів повзуна,1/хв', 'value' => '45'],
-						['name' => 'Частота одиночних ходів повзуна,1/хв', 'value' => '24'],
-						['name' => 'Хід повзуна до його крайнього нижнього положення, на якому прес розвиває номіняльне зусилля,мм', 'value' => '12'],
-						['name' => 'Відстань між підштамповою плитою і повзуном в його нижньому положенні при верхньому положенні регулювання,мм', 'value' => '420'],
-						['name' => 'Величина регулювання відстані між підштамповою плитою і повзуном,мм', 'value' => '140'],
-						['name' => 'Розмір стола (ширина х глибина),мм', 'value' => '800х800'],
-						['name' => 'Розмір повзуна (ширина х глибина),мм', 'value' => '670х630'],
-						['name' => 'Ширина вікон в стійках,мм', 'value' => '500'],
-						['name' => 'Потужність головного двигуна,кВт', 'value' => '26,5'],
-						['name' => 'Габаритні розміри преса, мм (довжина,ширина,висота)', 'value' => '2500х2700х4690'],
-						['name' => 'Орієнтовна маса преса,кГ', 'value' => '18000'],
-					],
-					'notes' => [],
+					'seo_title' => 'Купити чан за привабливою ціною Івано-Франківськ, Україна',
+					'seo_description' => 'Замовити чани від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
 				],
 			],
 		],
 		
-		// BRICK_MACHINE
+		// Sewer hatches
 		[
-			'slug' => 'b_80',
-			'category' => ProductCategory::BRICK_MACHINE,
+			'slug' => ProductCategory::SEWER_HATCHES,
+			'category' => ProductCategory::SEWER_HATCHES,
+			'files' => [
+				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/1.jpg'],
+			],
 			'texts' => [
 				[
-					'locale' => 'uk',
-					'sku' => 'b_80',
-					'name' => 'МАШИНА БРИКЕТУВАЛЬНА В-80',
-					'description' => 'Брикетувальна машина В-80 призначена для виготовлення брикетів із тирси, соняшникового лушпиння, а також подрібнених соломи, бадилля квасолі та кукурудзи, відходів переробки льону.',
-					'characteristics' => [
-						['name' => 'Продуктивність для соломи', 'value' => '800 кг/год'],
-						['name' => 'Продуктивність для тирси', 'value' => '1200 кг/год'],
-						['name' => 'Продуктивність для відходів переробки льону', 'value' => '1000 кг/год'],
-						['name' => 'Продуктивність для відходів бадилля квасолі', 'value' => '1000 кг/год'],
-						['name' => 'Продуктивність для соняшникового лушпиння', 'value' => '800 кг/год'],
-						['name' => 'Діаметр брикету,мм', 'value' => '80'],
-						['name' => 'Довжина брикету,мм', 'value' => '5...200'],
-						['name' => 'Частота ходів повзуна,1/хв', 'value' => '218'],
-						['name' => 'Потужність двигуна головного приводу,кВт', 'value' => '30,0'],
-						['name' => 'Потужність двигунів (2 шт) подачі матеріалу,кВт', 'value' => '4,0'],
-						['name' => 'Потужність двигунів (2 шт) відбору матеріалу,кВт', 'value' => '1,1'],
-						['name' => 'Габаритні розміри, мм (довжина,ширина,висота)', 'value' => '2700х2400х1900'],
-						['name' => 'Маса машини без напрямних для брикета,кГ', 'value' => '3600'],
-						['name' => 'Маса напрямних для брикета (15м),кГ', 'value' => '570'],
+					'locale' => Locale::UA,
+					'short_title' => 'Люки каналізаційні від ВЕСТХІМ',
+					'title' => 'Люки каналізаційні від ВЕСТХІМ: там, де надійність важить більше, ніж здається',
+					'description' => '
+					<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми часто не помічаємо їх у місті, селі чи на промисловому об\'єкті. Каналізаційний </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">люк </span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>— це непомітна, але критично важлива деталь інфраструктури. І коли щось іде не так, перше питання — не до зовнішнього вигляду, а до якості.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>ВЕСТХІМ виготовляє люки каналізаційні для різних типів навантаження: від легких декоративних кришок до важких промислових варіантів для транспорту. Ми працюємо з металом понад 10 років і знаємо: люк — це не просто кришка. Це безпека, витривалість і відповідність нормам.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Якщо вам потрібно </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">купити каналізаційний люк</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, який не трісне взимку і не зламається під колесами — ми готові запропонувати перевірене рішення.</span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+					',
+					'sections' => [
+						[
+							'title' => 'Люки — більше, ніж просто кришка',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У ВЕСТХІМ можна </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">купити люк</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> різного призначення: для комунальних систем, приватних дворів, торгових центрів, АЗС, промислових об\'єктів і складів. У нас є:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чавунні </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">каналізаційні люки</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"> — класика, яка витримує високі навантаження.</span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Люки з замками та фіксаторами — для додаткового захисту.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Декоративні люки — для територій, де важлива естетика.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Люки </span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>з іменним логотипом чи маркуванням — за індивідуальним замовленням.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Усі люки каналізаційні виготовляються за ДСТУ, перевіряються на відповідність по класах навантаження. І найголовніше — вони служать довго. Не сезон, не рік — а десятиліттями.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							',
+						],
+						[
+							'title' => 'Що важливо при виборі люка',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Якщо ви хочете </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">купити люк каналізаційний</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, зверніть увагу не лише на ціну чи зовнішній вигляд. Важливо:</span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Матеріал.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Тип монтажу: врівень, з виступом, з рамкою.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Клас навантаження — тобто, що по ньому можна буде їздити або ходити.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Герметичність та фіксація: чи захищає від запахів, чи легко відкривається.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Можливість персоналізації — наприклад, логотип міста чи компанії.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми допомагаємо підібрати оптимальне рішення з урахуванням усіх цих факторів. А наш досвід у виробництві — це не про “як-небудь зробимо”. Ми працюємо надійно, бо розуміємо, яку відповідальність несе люк каналізаційний.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							',
+						],
+						[
+							'title' => 'Люки від виробника — це завжди вигідніше',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Коли ви звертаєтесь до виробника напряму, ви точно знаєте, за що платите. У ВЕСТХІМ:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Немає посередницьких націнок.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Є контроль якості на кожному етапі.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Можна замовити партію під технічну документацію або індивідуальний проєкт.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Можна отримати консультацію від інженера, а не продавця.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Саме тому все більше замовників шукають у Google не просто “</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">люк купити</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">”, а “</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">люки від виробника</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>”. Ми цінуємо цю довіру — і відповідаємо на неї стабільною якістю.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У нас на </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">люк каналізаційний ціна</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> відповідає якості, без “повітря” у кошторисі. Хочете знати, скільки коштує конкретна модель? Ми підготуємо точну пропозицію.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							',
+						],
+						[
+							'title' => 'Працюємо по всій Україні',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Часто шукають “</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">каналізаційні люки ціна Львів</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>” чи “</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">каналізаційні люки купити</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> недорого” — і знаходять нас. Бо ми виготовляємо тут, в Україні, і відправляємо замовлення в будь-який регіон.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наші люки каналізаційні вже працюють на вулицях, у дворах, біля супермаркетів, у промзонах — і витримують українські погодні умови, транспорт і час.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							',
+						],
+						[
+							'title' => 'Коли вам потрібен люк — ми точно знаємо, який',
+							'text' => '
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Купити люк каналізаційний — це не просто закрити отвір. Це про безпеку людей. Про збереження інфраструктури. Про відповідальність перед містом, бізнесом чи своїм двором. І коли вибір стоїть між “дешево” і “надійно” — ми завжди обираємо друге.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Маєте запит? Напишіть або зателефонуйте — підберемо</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span style="background-color:#ffff00"><span><span><span> </span></span></span></span>каналізаційний люк</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, який служитиме довго і без нарікань.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							',
+						]
 					],
-					'notes' => [
-						'Машина працює в комплексі з механізмом подрібнення соломи (бадилля, відходів) або сушкою для тирси і механізмами подачі сировини в зону пресування.',
-					],
+					'seo_title' => 'Купити каналізаційний люк за оптимальною ціною Івано-Франківськ, Україна',
+					'seo_description' => 'Замовити каналізаційні люки від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
 				],
 			],
-		],
-
-		// YVT
-		[
-			'slug' => 'yvt_200',
-			'category' => ProductCategory::YVT,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'yvt_200',
-					'name' => 'УСТАНОВКА ВДАВЛЮЮЧИХ ТЕХНОЛОГІЙ УВТ-200',
-					'description' => "Установки вдавлюючих технологій (УВТ-200 - їх перша модифікація) - це нове високотехнологічне обладнання на будівельному ринку, призначене для безпечного зведення фундаментів, огорож, закріплення грунтових масивів, ін'єктування і ін. На основі статичного занурення і вилучення будівельних елементів. Характеризуються високою надійністю бокового захоплення при великих зусиллях вдавлення і вилучення (номінальне зусилля 200 тонн). Можливість роботи в режимі вдавлення і вилучення дозволяє значно розширити технологічні можливості установок. У деяких випадках використання УВТ не має альтернативи, наприклад, при роботі на грунтах з великими прошарками мулистих грунтів, на заражених грунтах, при зведенні аварійних дамб.",
-					'characteristics' => [
-						['name' => 'Електронна система управління', 'value' => 'ATMEL'],
-						['name' => 'Гусеничний хід', 'value' => 'розбирається'],
-						['name' => 'Зусилля вдавлення, номінальне, кГ', 'value' => '200000'],
-						['name' => 'Зусилля вилучення, номінальне, кГ', 'value' => '200000'],
-						['name' => 'Перетин занурюються елементів до, мм', 'value' => '550'],
-						['name' => 'Електрична потужність, повна, кВт', 'value' => '72'],
-						['name' => 'Електрична потужність, мінімальна, кВт', 'value' => '27'],
-						['name' => 'Габаритні розміри, мм (довжина,ширина,висота)', 'value' => '6000x2450x3100'],
-						['name' => 'Маса установки,кГ', 'value' => '22000'],
-						['name' => 'Маса гусеничного ходу,кГ', 'value' => '30000'],
-					],
-					'notes' => [],
-				],
-			],
-		],
-		
-		// solar
-		[
-			'slug' => 'solar',
-			'category' => ProductCategory::SOLAR_SYSTEMS,
-			'texts' => [
-				[
-					'locale' => 'uk',
-					'sku' => 'solar',
-					'name' => 'ПОВОРОТНІ СОНЯЧНІ БАТАРЕЇ ТА КАРКАСИ',
-					'description' => 'Поворотні сонячні батареї, обладнані приводами з програмним забезпеченням, дозволяють здійснювати електропостачання, використовуючи енергію сонця. ',
-					'characteristics' => [
-						['name' => 'Потужність (Сонячні батареї 160)', 'value' => 'до 30 000 Вт пік'],
-						['name' => 'Потужність (Сонячні батареї 220)', 'value' => 'до 40 000 Вт пік'],
-						['name' => 'Потужність (Сонячні батареї 260)', 'value' => 'до 48 000 Вт пік'],
-						['name' => 'Потужність (Сонячні батареї 300)', 'value' => 'до 53 000 Вт пік'],
-
-						['name' => 'Площа (Сонячні батареї 160)', 'value' => '163 м2'],
-						['name' => 'Площа (Сонячні батареї 220)', 'value' => '212,10 м2'],
-						['name' => 'Площа (Сонячні батареї 260)', 'value' => '247,52 м2'],
-						['name' => 'Площа (Сонячні батареї 300)', 'value' => '287,50 м2'],
-
-						['name' => 'Кут нахилу (Сонячні батареї 160)', 'value' => '350'],
-						['name' => 'Кут нахилу (Сонячні батареї 220)', 'value' => '300'],
-						['name' => 'Кут нахилу (Сонячні батареї 260)', 'value' => '300'],
-						['name' => 'Кут нахилу (Сонячні батареї 300)', 'value' => '300'],
-					],
-					'notes' => [
-						'Необхідні параметри технічного завдання на будівництво станції сонячної генерації:',
-						'Координати розміщення станції.',
-						'Геологія місцевості розміщення станції (топографічна зйомка, геологічна структура, сейсмічність).',
-						'Помісячний інсоляційний режим (сонячне опромінення) поверхні місцевості.',
-						'Загальна площа і конфігурація земельної ділянки (схема генерального плану розміщення), її правовий статус (викопіювання кадастрового плану земель).',
-						'Технічні параметри місцевої електромережі, до якої буде приєднуватися станція.',
-					],
-				],
-			],
-		],
+		]
 	];
 
 	public function run(): void
@@ -964,16 +243,26 @@ class ProductsSeeder extends Seeder
 			$product->category = $productData['category'];
 			$product->save();
 
+			foreach (Arr::get($productData, 'files', []) as $fileData) {
+				$file = new File();
+				$file->path = $fileData['path'];
+				$file->type = $fileData['type'];
+
+				$file->fileable()->associate($product);
+				$file->save();
+			}
+
 			foreach ($productData['texts'] as $text) {
-				$serviceText = new ProductText();
-				$serviceText->locale = $text['locale'];
-				$serviceText->sku = $text['sku'];
-				$serviceText->name = $text['name'];
-				$serviceText->description = $text['description'];
-				$serviceText->characteristics = $text['characteristics'];
-				$serviceText->notes = $text['notes'];
-				$serviceText->product()->associate($product);
-				$serviceText->save();
+				$productText = new ProductText();
+				$productText->locale = $text['locale'];
+				$productText->short_title = $text['short_title'];
+				$productText->title = $text['title'];
+				$productText->description = $text['description'];
+				$productText->seo_title = $text['seo_title'];
+				$productText->seo_description = $text['seo_description'];
+				$productText->sections = $text['sections'];
+				$productText->product()->associate($product);
+				$productText->save();
 			}
 		}
 	}

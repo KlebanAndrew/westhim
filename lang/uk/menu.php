@@ -26,5 +26,5 @@ return [
 	'news_left_sidebar' => 'Новини - правий сайдбар',
 	'news_right_sidebar' => 'Новини лівий сайдбар',
 	'news_single' => 'Одна новина',
-	'contact' => 'Зв\'язатись з нами',
+	'contact' => 'Контакти',
 ];

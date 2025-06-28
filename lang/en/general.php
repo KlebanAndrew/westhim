@@ -1,7 +1,10 @@
 <?php
 
 return [
+	'home' => 'Home',
 	'our_services' => 'Our Services',
+	'services' => 'Services',
+	'products' => 'Products',
 	'contact_us' => 'Contact Us',
 	'industry_name' => 'Metal Industry',
 	'excellence_in' => '17 Years of excellence in',

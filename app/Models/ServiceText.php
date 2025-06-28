@@ -5,6 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
+/**
+ * @property int $id
+ * @property int $service_id
+ * @property string $locale
+ * @property string $short_title
+ * @property string $title
+ * @property string $description
+ * @property array<string, array{title: string, text: string}> $sections
+ * @property string $seo_title
+ * @property string $seo_description
+ * @property-read Service $service
+ */
 class ServiceText extends Model
 {
 	protected $table = 'service_texts';
@@ -12,15 +24,16 @@ class ServiceText extends Model
 	protected $fillable = [
 		'service_id',
 		'locale',
-		'name',
+		'short_title',
+		'title',
 		'description',
-		'characteristics',
-		'prices'
+		'sections',
+		'seo_title',
+		'seo_description',
 	];
-	
+
 	protected $casts = [
-		'characteristics' => 'array',
-		'prices' => 'array',
+		'sections' => 'array',
 	];
 
 	public function service(): BelongsTo

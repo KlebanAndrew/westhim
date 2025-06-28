@@ -1,4 +1,8 @@
-@php use App\Enums\RouteName; @endphp
+@php 
+	use App\Enums\RouteName;
+ /** @var \Illuminate\Support\Collection<\App\Models\Service> $services */
+ /** @var \Illuminate\Support\Collection<\App\Models\Product> $products */
+ @endphp
 <div class="site-navigation">
 	<div class="container">
 		<div class="row">
@@ -15,12 +19,20 @@
 									class="nav-link"
 									href="{{ route(RouteName::HOME) }}">{{ trans('menu.home') }}</a>
 							</li>
-							
-							<li class="nav-item @if(Route::currentRouteName() === RouteName::PRODUCTS) active @endif"><a
-									class="nav-link"
-									href="{{ route(RouteName::PRODUCTS) }}">{{ trans('menu.products') }}</a>
-							</li>
 
+							<li class="nav-item dropdown @if(Route::currentRouteName() === RouteName::PRODUCTS || Route::currentRouteName() === RouteName::PRODUCTS_SINGLE) active @endif">
+								<a href="{{ route(RouteName::PRODUCTS) }}"
+								   class="nav-link dropdown-toggle"
+								>{{ trans('menu.products') }} <i class="fa fa-angle-down"></i></a>
+								<ul class="dropdown-menu" role="menu">
+									@foreach($products as $product)
+										<li>
+											<a href="{{ route(RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug]) }}">{{ $product->singleText->short_title }}</a>
+										</li>
+									@endforeach
+								</ul>
+							</li>
+			
 							<li class="nav-item dropdown @if(Route::currentRouteName() === RouteName::SERVICES || Route::currentRouteName() === RouteName::SERVICES_SINGLE) active @endif">
 								<a href="{{ route(RouteName::SERVICES) }}"
 								   class="nav-link dropdown-toggle"

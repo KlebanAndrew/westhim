@@ -1,7 +1,10 @@
 <?php
 
 return [
+	'home' => 'Головна',
 	'our_services' => 'Сервіси',
+	'services' => 'Послуги',
+	'products' => 'Продукти',
 	'contact_us' => 'Зв\'язатися з нами',
 	'industry_name' => 'Індустрії металообробки',
 	'excellence_in' => '17 років досвіду в',

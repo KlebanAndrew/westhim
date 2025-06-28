@@ -16,11 +16,12 @@ return new class extends Migration
             $table->id();
 			$table->unsignedBigInteger('service_id');
 			$table->string('locale');
-			$table->string('name');
-			$table->text('description');
-			$table->json('characteristics');
-			$table->json('prices');
-			$table->text('price_conditions_text');
+			$table->string('short_title');
+			$table->string('title');
+			$table->mediumText('description');
+			$table->mediumText('seo_title');
+			$table->mediumText('seo_description');
+			$table->json('sections');
             $table->timestamps();
         });
     }

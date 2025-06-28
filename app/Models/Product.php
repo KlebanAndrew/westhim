@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
+/**
+ * @property int $id
+ * @property string $slug
+ * @property string $category
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, ProductText> $texts
+ * @property-read ProductText|null $singleText
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, File> $files
+ */
 class Product extends Model
 {
 	protected $table = 'products';

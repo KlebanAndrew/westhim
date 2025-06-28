@@ -4,28 +4,20 @@ namespace App\Enums;
 
 final class ProductCategory
 {
-	public const PRESS_KC = 'press_kc';
-	public const PRESS_KT = 'press_kt';
-	public const PRESS_KG = 'press_kg';
-	public const PRESS_KY = 'press_ky';
-	public const PRESS_KU = 'press_ku';
-	public const PRESS_KV = 'press_kv';
-	public const BRICK_MACHINE = 'brick_machine';
-	public const YVT = 'yvt';
-	public const SOLAR_SYSTEMS = 'solar_systems';
+	public const BRICK_MACHINES = 'brick_machines';
+	public const MECHANICAL_PRESSES = 'mechanical_presses';
+	public const HYDRAULIC_PRESSES = 'hydraulic_presses';
+	public const VATS = 'vats';
+	public const SEWER_HATCHES = 'sewer_hatches';
 
 	public static function values(): array
 	{
 		return [
-			self::PRESS_KC,
-			self::PRESS_KT,
-			self::PRESS_KG,
-			self::PRESS_KY,
-			self::PRESS_KU,
-			self::PRESS_KV,
-			self::BRICK_MACHINE,
-			self::YVT,
-			self::SOLAR_SYSTEMS,
+			self::BRICK_MACHINES,
+			self::MECHANICAL_PRESSES,
+			self::HYDRAULIC_PRESSES,
+			self::VATS,
+			self::SEWER_HATCHES,
 		];
 	}
 }

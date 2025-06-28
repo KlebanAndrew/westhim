@@ -9,15 +9,15 @@ return [
          * The default configurations to be used by the meta generator.
          */
         'defaults'       => [
-            'title'        => "ПРЕСМАШ Івано-Франківськ", // set false to total remove
+            'title'        => "Виготовлення і ремонт механічних пресів Івано-Франківськ, Україна — ВЕСТХІМ", // set false to total remove
             'titleBefore'  => true, // Put defaults.title before page title, like 'It's Over 9000! - Dashboard'
-            'description'  => 'Пресмаш Івано-Франківськ', // set false to total remove
+            'description'  => 'ВЕСТХІМ спеціалізується на проектуванні, виготовленні і ремонті механічних пресів зусиллям від 250 до 4000 кН відкритого і закритого типів, простої і подвійної дії', // set false to total remove
             'separator'    => ' - ',
             'keywords'     => [
-				'ПРЕСМАШ', 'ПРЕСМАШ', 'прессмаш', 'ПРЕССМАШ', 'Івано-Франківськ', 'Ивано-Франковськ', 'Автоливмашівська',
+				'ВЕСТХІМ', 'ВЕСТХІМ', 'прессмаш', 'ПРЕССМАШ', 'Івано-Франківськ', 'Ивано-Франковськ', 'Автоливмашівська',
 				'Автоливмашевская', '76495', 'presmash', 'pressmash', 'PRESMASH', 'PRESSMASH', 'ghtcvfi', 'ghtccvfi',
-				'GHTCVFI', 'GHTCCVFI', 'прес', 'ПРЕС', 'пресс', 'ПРЕСС', 'ПРЕСМАШ Івано-Франківськ', 'ПРЕССМАШ Івано-Франківськ',
-				'ПРЕСМАШ Ивано-Франковськ', 'ПРЕССМАШ Ивано-Франковськ', 'presmash.if', 'PRESMASH.IF', 'presmash.if.ua',
+				'GHTCVFI', 'GHTCCVFI', 'прес', 'ПРЕС', 'пресс', 'ПРЕСС', 'ВЕСТХІМ Івано-Франківськ', 'ПРЕССМАШ Івано-Франківськ',
+				'ВЕСТХІМ Ивано-Франковськ', 'ПРЕССМАШ Ивано-Франковськ', 'presmash.if', 'PRESMASH.IF', 'presmash.if.ua',
 				'PRESMASH.IF.UA', 'преса', 'ПРЕССА', 'виготовлення', 'ВИГОТОВЛЕННЯ', 'ремонт', 'РЕМОНТ', 'брикетувальних машин',
 				'БРИКЕТУВАЛЬНИХ МАШИН', 'изготовление', 'ИЗГОТОВЛЕНИЕ', 'ремонт', 'РЕМОНТ', 'брикетировочных машин',
 				'БРИКЕТИРОВОЧНЫХ МАШИН', 'виробництво брикетів', 'производство брикетов', 'ремонт прессов', 'ремонт пресів',
@@ -53,8 +53,8 @@ return [
          * The default configurations to be used by the opengraph generator.
          */
         'defaults' => [
-            'title'       => 'ПРЕСМАШ Івано-Франківськ', // set false to total remove
-            'description' => 'ПРЕСМАШ Івано-Франківськ', // set false to total remove
+            'title'       => 'Виготовлення і ремонт механічних пресів Івано-Франківськ, Україна — ВЕСТХІМ', // set false to total remove
+            'description' => 'ВЕСТХІМ спеціалізується на проектуванні, виготовленні і ремонті механічних пресів зусиллям від 250 до 4000 кН відкритого і закритого типів, простої і подвійної дії', // set false to total remove
             'url'         => null, // Set null for using Url::current(), set false to total remove
             'type'        => false,
             'site_name'   => false,
@@ -75,8 +75,8 @@ return [
          * The default configurations to be used by the json-ld generator.
          */
         'defaults' => [
-            'title'       => 'ПРЕСМАШ Івано-Франківськ', // set false to total remove
-            'description' => 'ПРЕСМАШ Івано-Франківськ', // set false to total remove
+            'title'       => 'Виготовлення і ремонт механічних пресів Івано-Франківськ, Україна — ВЕСТХІМ', // set false to total remove
+            'description' => 'ВЕСТХІМ спеціалізується на проектуванні, виготовленні і ремонті механічних пресів зусиллям від 250 до 4000 кН відкритого і закритого типів, простої і подвійної дії', // set false to total remove
             'url'         => 'current', // Set to null or 'full' to use Url::full(), set to 'current' to use Url::current(), set false to total remove
             'type'        => 'WebPage',
             'images'      => [],

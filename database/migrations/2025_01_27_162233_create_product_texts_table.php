@@ -15,11 +15,12 @@ return new class extends Migration
 			$table->id();
 			$table->unsignedBigInteger('product_id');
 			$table->string('locale');
-			$table->string('sku');
-			$table->string('name');
-			$table->text('description');
-			$table->json('characteristics');
-			$table->json('notes');
+			$table->string('short_title');
+			$table->text('title');
+			$table->mediumText('description');
+			$table->mediumText('seo_title');
+			$table->mediumText('seo_description');
+			$table->json('sections');
 			$table->timestamps();
         });
     }
