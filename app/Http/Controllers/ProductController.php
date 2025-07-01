@@ -43,6 +43,10 @@ class ProductController
 			->setDescription($product->singleText->seo_description)
 			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route(RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug])))
 			->setType('website');
+		
+		if ($product->singleText?->seo_keywords) {
+			$this->seo()->metatags()->setKeywords($product->singleText->seo_keywords);
+		}
 
 		return view('pages.product-single', ['product' => $product, 'products' => $products]);
 	}

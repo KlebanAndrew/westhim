@@ -40,7 +40,7 @@
 								<ul class="dropdown-menu" role="menu">
 									@foreach($services as $service)
 										<li>
-											<a href="{{ route(RouteName::SERVICES_SINGLE, ['slug' => $service->slug]) }}">{{ $service->singleText->name }}</a>
+											<a href="{{ route(RouteName::SERVICES_SINGLE, ['slug' => $service->slug]) }}">{{ $service->singleText->short_title }}</a>
 										</li>
 									@endforeach
 								</ul>

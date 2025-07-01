@@ -30,7 +30,7 @@
             <i class="fas fa-map-marker-alt mr-0"></i>
           </span>
 						<div class="ts-service-box-content">
-							<h4>Нага адреса</h4>
+							<h4>Наша адреса</h4>
 							<p>Україна, 76495, м. Івано – Франківськ вул. Автоливмашівська1Б</p>
 						</div>
 					</div>

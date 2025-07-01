@@ -1,3 +1,6 @@
+@php
+/** @var $products \Illuminate\Support\Collection<\App\Models\Product> */
+@endphp
 <div class="row">
 	<div class="col-12">
 		<div class="shuffle-btn-group">
@@ -28,7 +31,7 @@
 						<div class="project-item-info">
 							<div class="project-item-info-content">
 								<h3 class="project-item-title">
-									<a href="{{ route(\App\Enums\RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug]) }}">{{ $product->singleText->name }}</a>
+									<a href="{{ route(\App\Enums\RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug]) }}">{{ $product->singleText->short_title }}</a>
 								</h3>
 								<p class="project-cat">{{ trans("product-categories.$product->category") }}</p>
 							</div>

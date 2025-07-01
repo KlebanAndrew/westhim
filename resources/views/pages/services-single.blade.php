@@ -14,7 +14,7 @@
 		 'breadcrumbItems' => [
 			 ['title' => trans('general.home'), 'link' => route(RouteName::HOME)],
 			 ['title' => trans('general.services'), 'link' => route(RouteName::SERVICES)],
-			 ['title' => $service->singleText->title, 'link' => ''],
+			 ['title' => $service->singleText->short_title, 'link' => ''],
 		]
 	 ]
 	)

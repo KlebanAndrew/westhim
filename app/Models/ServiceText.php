@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @property string $title
  * @property string $description
  * @property array<string, array{title: string, text: string}> $sections
+ * @property array<string> $seo_keywords
  * @property string $seo_title
  * @property string $seo_description
  * @property-read Service $service
@@ -30,10 +31,12 @@ class ServiceText extends Model
 		'sections',
 		'seo_title',
 		'seo_description',
+		'seo_keywords',
 	];
 
 	protected $casts = [
 		'sections' => 'array',
+		'seo_keywords' => 'array',
 	];
 
 	public function service(): BelongsTo

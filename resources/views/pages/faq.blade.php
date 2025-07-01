@@ -1,3 +1,6 @@
+@php
+/** @var \Illuminate\Support\Collection<\App\Models\Product> $products */
+ @endphp
 @extends('layouts.app')
 
 @section('content')
@@ -66,7 +69,7 @@
 							<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
 								 data-parent="#construction-accordion">
 								<div class="card-body">
-									"ПРЕСМАШ"
+									"ВЕСТХІМ"
 									Україна, 76495, м. Івано–Франківськ вул. Автоливмашівська
 									Приймальня:
 									Телефон/факс: +38 (050) 43-32-050, +38 (050) 33-86-509
@@ -91,7 +94,7 @@
 										</div>
 										<div class="post-info">
 											<h4 class="entry-title">
-												<a href="{{ route(\App\Enums\RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug]) }}">{{ $product->singleText->name }}</a>
+												<a href="{{ route(\App\Enums\RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug]) }}">{{ $product->singleText->short_title }}</a>
 											</h4>
 										</div>
 									</li><!-- 1st post end-->

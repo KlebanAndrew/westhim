@@ -9,7 +9,7 @@
 				</div><!-- Col end -->
 				<div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
 					<div class="call-to-action-btn">
-						<a class="btn btn-dark" href="#">Зв'язатись з нами</a>
+						<a class="btn btn-dark" href="{{ route(\App\Enums\RouteName::CONTACT) }}">Зв'язатись з нами</a>
 					</div>
 				</div><!-- col end -->
 			</div><!-- row end -->

@@ -1,3 +1,6 @@
+@php
+/** @var \Illuminate\Support\Collection<\App\Models\Service> $services */
+ @endphp
 @extends('layouts.app')
 
 @section('content')
@@ -27,7 +30,7 @@
 									<img loading="lazy" src="{{ URL::asset("images/icon-image/service-icon$iconIndex.png") }}" alt="service-icon">
 								</div>
 								<div class="ts-service-info">
-									<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => $service->slug]) }}">{{ $service->singleText->name }}</a></h3>
+									<h3 class="service-box-title"><a href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => $service->slug]) }}">{{ $service->singleText->short_title }}</a></h3>
 									<p>{{ $service->singleText->description }}</p>
 									<a class="learn-more d-inline-block" href="{{ route(\App\Enums\RouteName::SERVICES_SINGLE, ['slug' => $service->slug]) }}" aria-label="service-details"><i class="fa fa-caret-right"></i> Перейти</a>
 								</div>

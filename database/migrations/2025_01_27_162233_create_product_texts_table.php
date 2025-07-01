@@ -21,6 +21,7 @@ return new class extends Migration
 			$table->mediumText('seo_title');
 			$table->mediumText('seo_description');
 			$table->json('sections');
+			$table->json('seo_keywords')->nullable(); // Array of strings
 			$table->timestamps();
         });
     }

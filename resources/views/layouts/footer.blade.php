@@ -1,13 +1,16 @@
-@php use App\Enums\RouteName; @endphp
+@php 
+	use App\Enums\RouteName; 
+	/** @var \Illuminate\Support\Collection<\App\Models\Service> $services */
+@endphp
 <footer id="footer" class="footer bg-overlay">
 	<div class="footer-main">
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-lg-4 col-md-6 footer-widget footer-about">
 					<h3 class="widget-title">{{ trans('menu.about_us') }}</h3>
-					<img loading="lazy" class="footer-logo" src="{{ URL::asset('images/footer-logo.png') }}" alt="Пресмаш">
+					<img loading="lazy" class="footer-logo" src="{{ URL::asset('images/footer-logo.png') }}" alt="ВЕСТХІМ">
 					<p>Виготовлення брикетувальних машин, пресів, сонячних батарей та каркасів.</p>
-					<p>"ПРЕСМАШ" спеціалізується на проектуванні, виготовленні і ремонті механічних пресів зусиллям від 250 до 4000 кН відкритого і закритого типів, простої і подвійної дії, призначених для різноманітних операцій холодної штамповки.</p>
+					<p>"ВЕСТХІМ" спеціалізується на проектуванні, виготовленні і ремонті механічних пресів зусиллям від 250 до 4000 кН відкритого і закритого типів, простої і подвійної дії, призначених для різноманітних операцій холодної штамповки.</p>
 					<div class="footer-social">
 						<ul>
 							<li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
@@ -35,7 +38,7 @@
 					<ul class="list-arrow">
 						@foreach($services as $service)
 							<li>
-								<a href="{{ route(RouteName::SERVICES_SINGLE, ['slug' => $service->slug]) }}">{{ $service->singleText->name }}</a>
+								<a href="{{ route(RouteName::SERVICES_SINGLE, ['slug' => $service->slug]) }}">{{ $service->singleText->short_title }}</a>
 							</li>
 						@endforeach
 					</ul>

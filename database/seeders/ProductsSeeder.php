@@ -57,10 +57,30 @@ class ProductsSeeder extends Seeder
 					],
 					'seo_title' => 'Прес для брикетування купити за вигідною ціною Івано-Франківськ, Україна',
 					'seo_description' => 'Замовити брикетувальні преси від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
+					'seo_keywords' => [
+						'прес для брикетування',
+						'прес для паливних брикетів',
+						'прес для виготовлення паливних брикетів',
+						'прес для тирси',
+						'преси для виготовлення паливних брикетів',
+						'преси для тирси',
+						'прес для брикетів',
+						'брикетні станки',
+						'прес брикетувальний',
+						'преси для виготовлення брикетів з тирси',
+						'прес брикетувальний ціна',
+						'прес для виготовлення брикетів ціна',
+						'преси для брикетування тирси',
+						'брекетувальні преси',
+						'брикетувальний прес',
+						'брикетувальні преси',
+						'виготовлення брикетувальних машин',
+						'обладнання для пресування',
+					],
 				],
 			],
 		],
-		
+
 		// Mechanical Presses
 		[
 			'slug' => ProductCategory::MECHANICAL_PRESSES,
@@ -92,10 +112,24 @@ class ProductsSeeder extends Seeder
 					],
 					'seo_title' => 'Механічний прес купити за найкращою ціною Івано-Франківськ, Україна',
 					'seo_description' => 'Замовити механічні преси від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
+					'seo_keywords' => [
+						'механічний прес',
+						'прес механічний',
+						'преси механічні',
+						'виготовлення механічних пресів',
+						'преси механічні ціна',
+						'преси механічні Івано-Франківськ',
+						'преси механічні Україна',
+						'механічні преси купити',
+						'механічні преси ціна',
+						'механічні преси Івано-Франківськ',
+						'механічні преси Україна',
+						'проектування механічних пресів',
+					],
 				],
 			],
 		],
-		
+
 		// Hydraulic Presses
 		[
 			'slug' => ProductCategory::HYDRAULIC_PRESSES,
@@ -121,16 +155,33 @@ class ProductsSeeder extends Seeder
 						[
 							'title' => 'Які преси ми виробляємо',
 							'text' => '
-							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У нашому асортименті базові&nbsp; та індивідуальні моделі. Власне виробництво дозволяє гнучко реагувати на запит замовника, тож у нас можна:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Купити </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">гідравлічний прес </span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>настільний, підлоговий або вбудований.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Замовити прес гідравлічний 40 т, 63 т, 100 т або інше зусилля — залежно від задач.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Встановити електропривод з кнопковим керуванням, педаллю або сенсорною панеллю.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Додати манометр, упори, столик, змінні інструменти.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Отримати </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">прес гідравлічний з електроприводом</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, який працює у напівавтоматичному режимі.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Обрати модель з одноступеневим або двоступеневим циліндром.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми розробляємо </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">гідравлічні преси</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, які підходять до конкретного процесу, матеріалу, бюджету і простору.</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span style="background-color:#ffff00"><span><span><span> </span></span></span></span>Купити прес гідравлічний</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> у ВЕСТХІМ — це отримати рішення, яке не доведеться доробляти самому.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У нашому асортименті базові&nbsp; та індивідуальні моделі. Власне виробництво дозволяє гнучко реагувати на запит замовника, тож у нас можна:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Купити </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">гідравлічний прес </span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>настільний, підлоговий або вбудований.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Замовити прес гідравлічний 40 т, 63 т, 100 т або інше зусилля — залежно від задач.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Встановити електропривод з кнопковим керуванням, педаллю або сенсорною панеллю.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Додати манометр, упори, столик, змінні інструменти.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Отримати </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">прес гідравлічний з електроприводом</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, який працює у напівавтоматичному режимі.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Обрати модель з одноступеневим або двоступеневим циліндром.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми розробляємо </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">гідравлічні преси</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, які підходять до конкретного процесу, матеріалу, бюджету і простору.</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span> </span></span></span></span>Купити прес гідравлічний</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> у ВЕСТХІМ — це отримати рішення, яке не доведеться доробляти самому.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							'
 						]
 					],
 					'seo_title' => 'Купити прес гідравлічний за доступною ціною Івано-Франківськ, Україна',
 					'seo_description' => 'Замовити гідравлічні преси від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
+					'seo_keywords' => [
+						'гідравлічний прес',
+						'прес гідравлічний',
+						'гідравлічні преси',
+						'преси гідравлічні',
+						'купити прес гідравлічний',
+						'прес гідравлічний з електроприводом',
+						'гідравлічні преси ціна',
+						'гідравлічні преси Івано-Франківськ',
+						'гідравлічні преси Україна',
+						'прес гідравлічний купити',
+						'прес гідравлічний ціна',
+						'прес гідравлічний Івано-Франківськ',
+						'прес гідравлічний Україна',
+						'прес гідравлічний для сто',
+						'прес гідравлічний 40 т',
+					],
 				],
 			],
 		],
-		
+
 		// Vats
 		[
 			'slug' => ProductCategory::VATS,
@@ -174,10 +225,20 @@ class ProductsSeeder extends Seeder
 					],
 					'seo_title' => 'Купити чан за привабливою ціною Івано-Франківськ, Україна',
 					'seo_description' => 'Замовити чани від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
+					'seo_keywords' => [
+						'чан',
+						'чани',
+						'купити чан',
+						'чан ціна',
+						'чани купити',
+						'чани ціна',
+						'чани Івано-Франківськ',
+						'чани Україна',
+					],
 				],
 			],
 		],
-		
+
 		// Sewer hatches
 		[
 			'slug' => ProductCategory::SEWER_HATCHES,
@@ -221,12 +282,27 @@ class ProductsSeeder extends Seeder
 						[
 							'title' => 'Коли вам потрібен люк — ми точно знаємо, який',
 							'text' => '
-							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Купити люк каналізаційний — це не просто закрити отвір. Це про безпеку людей. Про збереження інфраструктури. Про відповідальність перед містом, бізнесом чи своїм двором. І коли вибір стоїть між “дешево” і “надійно” — ми завжди обираємо друге.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Маєте запит? Напишіть або зателефонуйте — підберемо</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span style="background-color:#ffff00"><span><span><span> </span></span></span></span>каналізаційний люк</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, який служитиме довго і без нарікань.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
+							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Купити люк каналізаційний — це не просто закрити отвір. Це про безпеку людей. Про збереження інфраструктури. Про відповідальність перед містом, бізнесом чи своїм двором. І коли вибір стоїть між “дешево” і “надійно” — ми завжди обираємо друге.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Маєте запит? Напишіть або зателефонуйте — підберемо</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span> </span></span></span></span>каналізаційний люк</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, який служитиме довго і без нарікань.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 						]
 					],
 					'seo_title' => 'Купити каналізаційний люк за оптимальною ціною Івано-Франківськ, Україна',
 					'seo_description' => 'Замовити каналізаційні люки від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
+					'seo_keywords' => [
+						'каналізаційний люк',
+						'люки каналізаційні',
+						'люки від виробника',
+						'купити люк',
+						'люк купити',
+						'каналізаційні люки ціна',
+						'каналізаційні люки купити',
+						'кришка каналізаційного люка',
+						'каналізаційні люки ціна львів',
+						'люки від виробника',
+						'люк каналізаційний ціна',
+						'люки',
+						'люк'
+					]
 				],
 			],
 		]
@@ -236,7 +312,7 @@ class ProductsSeeder extends Seeder
 	{
 		ProductText::query()->truncate();
 		Product::query()->truncate();
-		
+
 		foreach ($this->products as $productData) {
 			$product = new Product();
 			$product->slug = $productData['slug'];
@@ -261,6 +337,11 @@ class ProductsSeeder extends Seeder
 				$productText->seo_title = $text['seo_title'];
 				$productText->seo_description = $text['seo_description'];
 				$productText->sections = $text['sections'];
+				
+				if (Arr::get($text, 'seo_keywords')) {
+					$productText->seo_keywords = $text['seo_keywords'];
+				}
+
 				$productText->product()->associate($product);
 				$productText->save();
 			}
