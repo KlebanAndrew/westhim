@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Product;
 use App\Models\Service;
 use Illuminate\Support\Collection;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -24,8 +25,15 @@ class ServiceItemService
 			->with([
 				'files',
 				'singleText' => fn($query) => $query->where('locale', $locale),
-				])
-			->when($limit !== null, function ($query) use ($limit) {$query->limit($limit);})
+			])
+			->when($limit !== null, function ($query) use ($limit) {
+				$query->limit($limit);
+			})
 			->get();
+	}
+
+	public function getListWithoutTexts(): Collection
+	{
+		return Service::query()->get();
 	}
 }

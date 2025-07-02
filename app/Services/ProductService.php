@@ -39,4 +39,9 @@ class ProductService
 			])
 			->get();
 	}
+
+	public function getListWithoutTexts(): Collection
+	{
+		return Product::query()->get();
+	}
 }

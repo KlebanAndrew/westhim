@@ -14,22 +14,24 @@ class HomeController
 	use SEOTools;
 
 	public function __construct(
-		protected ServiceItemService  $serviceItemService,
+		protected ServiceItemService $serviceItemService,
 		protected ProductService $productService,
-	)
-	{}
+	) {
+	}
 
 	public function show(): View
 	{
 		$this->seo()
 			->setTitle(trans('seo.home.title'))
 			->setDescription(trans('seo.home.description'))
-			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route(RouteName::HOME)))
+			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(),
+				route(RouteName::HOME)))
 			->setType('website');
 		$this->seo()->metatags()->setKeywords(trans('seo.home.keywords'));
 
 		$services = $this->serviceItemService->getListForLocalization(LaravelLocalization::getCurrentLocale());
-		$products = $this->productService->getListOfRandomElementsForLocalization(LaravelLocalization::getCurrentLocale(), 6);
+		$products = $this->productService->getListOfRandomElementsForLocalization(LaravelLocalization::getCurrentLocale(),
+			6);
 		$categories = $products->pluck('category');
 
 		return view('pages.home', ['services' => $services, 'products' => $products, 'categories' => $categories]);

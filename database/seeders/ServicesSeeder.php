@@ -76,7 +76,7 @@ class ServicesSeeder extends Seeder
 				],
 			],
 		],
-		
+
 		[
 			'slug' => 'laser_pipe_cut',
 			'texts' => [
@@ -134,7 +134,7 @@ class ServicesSeeder extends Seeder
 				['type' => FileType::IMAGE, 'path' => '/images/services/laser_pipe_cut/2.jpg'],
 			]
 		],
-		
+
 		[
 			'slug' => 'metal_bending',
 			'texts' => [
@@ -277,7 +277,7 @@ class ServicesSeeder extends Seeder
 				['type' => FileType::IMAGE, 'path' => '/images/services/powder_coating/2.jpg'],
 			],
 		],
-		
+
 		[
 			'slug' => 'milling',
 			'texts' => [
@@ -348,7 +348,7 @@ class ServicesSeeder extends Seeder
 				['type' => FileType::IMAGE, 'path' => '/images/services/milling/2.webp'],
 			],
 		],
-		
+
 		[
 			'slug' => 'turning_work',
 			'texts' => [
@@ -409,7 +409,7 @@ class ServicesSeeder extends Seeder
 				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/2.webp'],
 			],
 		],
-		
+
 		[
 			'slug' => 'welding',
 			'texts' => [
@@ -485,7 +485,7 @@ class ServicesSeeder extends Seeder
 				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/2.jpg'],
 			],
 		],
-		
+
 		[
 			'slug' => 'electroplating',
 			'texts' => [
@@ -804,7 +804,7 @@ class ServicesSeeder extends Seeder
 			$service = new Service();
 			$service->slug = $serviceData['slug'];
 			$service->save();
-			
+
 			foreach ($serviceData['texts'] as $text) {
 				$serviceText = new ServiceText();
 				$serviceText->locale = $text['locale'];
@@ -822,12 +822,12 @@ class ServicesSeeder extends Seeder
 				$serviceText->service()->associate($service);
 				$serviceText->save();
 			}
-			
+
 			foreach (Arr::get($serviceData, 'files', []) as $fileData) {
 				$file = new File();
 				$file->path = $fileData['path'];
 				$file->type = $fileData['type'];
-				
+
 				$file->fileable()->associate($service);
 				$file->save();
 			}

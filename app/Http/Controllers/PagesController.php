@@ -11,8 +11,8 @@ class PagesController
 {
 	public function __construct(
 		protected ProductService $productService
-	)
-	{}
+	) {
+	}
 
 	public function contact(): View
 	{
@@ -26,7 +26,8 @@ class PagesController
 
 	public function faq(): View
 	{
-		$products = $this->productService->getListOfRandomElementsForLocalization(LaravelLocalization::getCurrentLocale(), 3);
+		$products = $this->productService->getListOfRandomElementsForLocalization(LaravelLocalization::getCurrentLocale(),
+			3);
 
 		return view('pages.faq', ['products' => $products]);
 	}

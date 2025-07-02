@@ -14,19 +14,20 @@ class ProductController
 {
 	use SEOTools;
 
-	public function __construct(protected ProductService  $productService)
+	public function __construct(protected ProductService $productService)
 	{
 	}
 
 	public function index(): View
 	{
 		$products = $this->productService->getListForLocalization(LaravelLocalization::getCurrentLocale());
-		
+
 		// SEO block
 		$this->seo()
 			->setTitle(trans('seo.products.title'))
 			->setDescription(trans('seo.products.description'))
-			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route(RouteName::PRODUCTS)))
+			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(),
+				route(RouteName::PRODUCTS)))
 			->setType('website');
 
 		return view('pages.products', ['products' => $products]);
@@ -41,9 +42,10 @@ class ProductController
 		$this->seo()
 			->setTitle($product->singleText->seo_title)
 			->setDescription($product->singleText->seo_description)
-			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route(RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug])))
+			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(),
+				route(RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug])))
 			->setType('website');
-		
+
 		if ($product->singleText?->seo_keywords) {
 			$this->seo()->metatags()->setKeywords($product->singleText->seo_keywords);
 		}

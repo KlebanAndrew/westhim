@@ -7,6 +7,7 @@ use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -33,5 +34,6 @@ Route::prefix(LaravelLocalization::setLocale())
 	})->name(RouteName::NOT_FOUND);
 });
 
+Route::get('/sitemap.xml', [SitemapController::class, 'sitemap']);
 Route::post('/contact-us', [ContactUsController::class, 'store']);
 Route::post('/newsletter', [NewsletterController::class, 'store']);

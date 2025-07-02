@@ -12,10 +12,9 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 class Menu extends Component
 {
 	public function __construct(
-		protected ServiceItemService  $serviceItemService,
-		protected ProductService  $productService
-	)
-	{
+		protected ServiceItemService $serviceItemService,
+		protected ProductService $productService
+	) {
 	}
 
 	public function render(): View

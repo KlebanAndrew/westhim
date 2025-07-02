@@ -10,10 +10,10 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
  *
  * Represents a file that can be associated with various models.
  *
- * @property int $id
- * @property string $path
- * @property string $type
- * @property string|null $alter_text
+ * @property int                                      $id
+ * @property string                                   $path
+ * @property string                                   $type
+ * @property string|null                              $alter_text
  * @property-read \Illuminate\Database\Eloquent\Model $fileable
  */
 class File extends Model

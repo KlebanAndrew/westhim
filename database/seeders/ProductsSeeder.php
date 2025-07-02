@@ -337,7 +337,7 @@ class ProductsSeeder extends Seeder
 				$productText->seo_title = $text['seo_title'];
 				$productText->seo_description = $text['seo_description'];
 				$productText->sections = $text['sections'];
-				
+
 				if (Arr::get($text, 'seo_keywords')) {
 					$productText->seo_keywords = $text['seo_keywords'];
 				}

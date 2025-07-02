@@ -10,7 +10,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 class Footer extends Component
 {
-	public function __construct(protected ServiceItemService  $serviceItemService)
+	public function __construct(protected ServiceItemService $serviceItemService)
 	{
 	}
 

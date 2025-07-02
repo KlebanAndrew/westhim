@@ -13,7 +13,7 @@ class ServiceController
 {
 	use SEOTools;
 
-	public function __construct(protected ServiceItemService  $serviceItemService)
+	public function __construct(protected ServiceItemService $serviceItemService)
 	{
 	}
 
@@ -22,7 +22,8 @@ class ServiceController
 		$this->seo()
 			->setTitle(trans('seo.services.title'))
 			->setDescription(trans('seo.services.description'))
-			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route(RouteName::HOME)))
+			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(),
+				route(RouteName::HOME)))
 			->setType('website');
 
 		$services = $this->serviceItemService->getListForLocalization(LaravelLocalization::getCurrentLocale(), 6);
@@ -33,14 +34,15 @@ class ServiceController
 	public function show(string $slug): View
 	{
 		$services = $this->serviceItemService->getListForLocalization(LaravelLocalization::getCurrentLocale());
-		
+
 		$service = $this->serviceItemService->getBySlug($slug);
 
 		// SEO block
 		$this->seo()
 			->setTitle($service->singleText->seo_title)
 			->setDescription($service->singleText->seo_description)
-			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(), route(RouteName::SERVICES_SINGLE, ['slug' => $service->slug])))
+			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(),
+				route(RouteName::SERVICES_SINGLE, ['slug' => $service->slug])))
 			->setType('website');
 
 		if ($service->singleText?->seo_keywords) {
