@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enums\ProductCategory;
 use App\Enums\RouteName;
+use App\Services\PageService;
 use App\Services\ProductService;
 use App\Services\ServiceItemService;
 use Artesaos\SEOTools\Traits\SEOTools;
@@ -14,12 +15,16 @@ class ProductController
 {
 	use SEOTools;
 
-	public function __construct(protected ProductService $productService)
+	public function __construct(
+		protected ProductService $productService,
+		protected PageService $pageService,
+	)
 	{
 	}
 
 	public function index(): View
 	{
+		$page = $this->pageService->getBySlug('products');
 		$products = $this->productService->getListForLocalization(LaravelLocalization::getCurrentLocale());
 
 		// SEO block
@@ -30,7 +35,7 @@ class ProductController
 				route(RouteName::PRODUCTS)))
 			->setType('website');
 
-		return view('pages.products', ['products' => $products]);
+		return view('pages.products', ['products' => $products, 'page' => $page]);
 	}
 
 	public function show(string $slug): View

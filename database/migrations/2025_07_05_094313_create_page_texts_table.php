@@ -10,12 +10,12 @@ return new class extends Migration {
 	 */
 	public function up(): void
 	{
-		Schema::create('product_texts', function (Blueprint $table) {
+		Schema::create('page_texts', function (Blueprint $table) {
 			$table->id();
-			$table->unsignedBigInteger('product_id');
+			$table->unsignedBigInteger('page_id');
 			$table->string('locale');
 			$table->string('short_title');
-			$table->text('title');
+			$table->string('title');
 			$table->mediumText('description');
 			$table->mediumText('seo_title');
 			$table->mediumText('seo_description');
@@ -30,6 +30,6 @@ return new class extends Migration {
 	 */
 	public function down(): void
 	{
-		Schema::dropIfExists('product_texts');
+		Schema::dropIfExists('page_texts');
 	}
 };

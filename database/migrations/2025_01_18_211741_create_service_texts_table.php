@@ -5,15 +5,14 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        Schema::create('service_texts', function (Blueprint $table) {
-            $table->id();
+return new class extends Migration {
+	/**
+	 * Run the migrations.
+	 */
+	public function up(): void
+	{
+		Schema::create('service_texts', function (Blueprint $table) {
+			$table->id();
 			$table->unsignedBigInteger('service_id');
 			$table->string('locale');
 			$table->string('short_title');
@@ -23,15 +22,15 @@ return new class extends Migration
 			$table->mediumText('seo_description');
 			$table->json('sections');
 			$table->json('seo_keywords')->nullable(); // Array of strings
-            $table->timestamps();
-        });
-    }
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('service_texts');
-    }
+	/**
+	 * Reverse the migrations.
+	 */
+	public function down(): void
+	{
+		Schema::dropIfExists('service_texts');
+	}
 };

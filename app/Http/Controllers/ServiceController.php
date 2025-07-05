@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Enums\RouteName;
 use App\Models\Service;
+use App\Services\PageService;
 use App\Services\ServiceItemService;
 use Artesaos\SEOTools\Traits\SEOTools;
 use Illuminate\View\View;
@@ -13,22 +14,26 @@ class ServiceController
 {
 	use SEOTools;
 
-	public function __construct(protected ServiceItemService $serviceItemService)
-	{
+	public function __construct(
+		protected ServiceItemService $serviceItemService,
+		protected PageService $pageService
+	) {
 	}
 
 	public function index(): View
 	{
+		$page = $this->pageService->getBySlug('services');
+
 		$this->seo()
-			->setTitle(trans('seo.services.title'))
-			->setDescription(trans('seo.services.description'))
+			->setTitle($page->singleText?->seo_title)
+			->setDescription($page->singleText?->seo_description)
 			->opengraph()->setUrl(LaravelLocalization::getLocalizedURL(LaravelLocalization::getCurrentLocale(),
 				route(RouteName::HOME)))
 			->setType('website');
 
 		$services = $this->serviceItemService->getListForLocalization(LaravelLocalization::getCurrentLocale(), 6);
 
-		return view('pages.services', ['services' => $services]);
+		return view('pages.services', ['services' => $services, 'page' => $page]);
 	}
 
 	public function show(string $slug): View
