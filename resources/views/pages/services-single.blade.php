@@ -53,7 +53,7 @@
 								@foreach($service->singleText->sections as $section)
 									<h3>{{ \Illuminate\Support\Arr::get($section, 'title', '') }}</h3>
 									{!! \Illuminate\Support\Arr::get($section, 'text', '') !!}
-									<p><img style="width: 100%" alt="" data-cke-saved-src="https://cdn.explorecams.com/storage/photos/xlPmJcfWwB_1600.jpg" src="https://cdn.explorecams.com/storage/photos/xlPmJcfWwB_1600.jpg"><br></p>
+{{--									<p><img style="width: 100%" alt="" data-cke-saved-src="https://cdn.explorecams.com/storage/photos/xlPmJcfWwB_1600.jpg" src="https://cdn.explorecams.com/storage/photos/xlPmJcfWwB_1600.jpg"><br></p>--}}
 								@endforeach
 							</div><!-- col end -->
 						</div><!-- 1st row end-->
