@@ -3,7 +3,7 @@
 return [
 	'contact_us' => [
 		'call_us' => 'Наш телефон',
-		'phone' => '050 33-86-509',
+		'phone' => '099 20-24-697',
 		'email_us' => 'Поштова адреса',
 		'email' => 'office@westhim.com',
 		'global_certificate' => 'Глобальний сертифікат',

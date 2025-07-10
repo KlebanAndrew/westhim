@@ -55,7 +55,7 @@
           </span>
 						<div class="ts-service-box-content">
 							<h4>Телефон</h4>
-							<p>+38 050 33-86-509</p>
+							<p>+38 099 20-24-697</p>
 						</div>
 					</div>
 				</div><!-- Col 3 end -->

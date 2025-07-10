@@ -13,13 +13,10 @@
 					<p>"ВЕСТХІМ" спеціалізується на проектуванні, виготовленні і ремонті механічних пресів зусиллям від 250 до 4000 кН відкритого і закритого типів, простої і подвійної дії, призначених для різноманітних операцій холодної штамповки.</p>
 					<div class="footer-social">
 						<ul>
-							<li><a href="https://facebook.com/themefisher" aria-label="Facebook"><i
+							<li><a href="https://facebook.com" aria-label="Facebook"><i
 										class="fab fa-facebook-f"></i></a></li>
-							<li><a href="https://twitter.com/themefisher" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-							</li>
-							<li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
+							<li><a href="https://instagram.com" aria-label="Instagram"><i
 										class="fab fa-instagram"></i></a></li>
-							<li><a href="https://github.com/themefisher" aria-label="Github"><i class="fab fa-github"></i></a></li>
 						</ul>
 					</div><!-- Footer social end -->
 				</div><!-- Col end -->
@@ -27,9 +24,9 @@
 				<div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
 					<h3 class="widget-title">Замовити калькуляцію</h3>
 					<div class="working-hours">
-						Телефонуйте за вказаними номерами  +38 (050) 33-86-509 або заповнюйте електронну форму онлайн і ми вам зателефонуємо самі.
-						<br><br> Пн - Пт: <span class="text-right">10:00 - 16:00 </span>
-						<br> Сб: <span class="text-right">12:00 - 15:00</span>
+						Телефонуйте за вказаними номерами  +38 (099) 20-24-697 або заповнюйте електронну форму онлайн і ми вам зателефонуємо самі.
+						<br><br> Пн - Пт: <span class="text-right">09:00 - 18:00 </span>
+						<br> Сб: <span class="text-right">09:00 - 16:00</span>
 					</div>
 				</div><!-- Col end -->
 
