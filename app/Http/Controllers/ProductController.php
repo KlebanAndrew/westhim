@@ -18,8 +18,7 @@ class ProductController
 	public function __construct(
 		protected ProductService $productService,
 		protected PageService $pageService,
-	)
-	{
+	) {
 	}
 
 	public function index(): View
