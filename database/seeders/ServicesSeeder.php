@@ -765,8 +765,6 @@ class ServicesSeeder extends Seeder
 			'slug' => 'loan',
 			'files' => [
 				['type' => FileType::IMAGE, 'path' => '/images/services/loan/orenda.jpg'],
-				['type' => FileType::IMAGE, 'path' => '/images/services/loan/orenda-ceh.jpg'],
-				['type' => FileType::IMAGE, 'path' => '/images/services/loan/orenda-zavod.jpg'],
 			],
 			'texts' => [
 				[
