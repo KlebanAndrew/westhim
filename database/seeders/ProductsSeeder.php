@@ -13,19 +13,19 @@ use Illuminate\Support\Arr;
 
 class ProductsSeeder extends Seeder
 {
-	public $products = [
-		0 =>
+	public array $products = [
+		
 			[
 				'slug' => 'brick_machines',
 				'category' => 'brick_machines',
 				'files' =>
 					[
-						0 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/brick_machines/press_briketirovochnyiy-_udarno_mehanicheskiy-_dyal_proizvodstva_briketov.jpg',
 							],
-						1 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/brick_machines/udarno_mehanicheskiy_press_dlya_proizvodstva_briketov_i_pellet.jpg',
@@ -33,9 +33,9 @@ class ProductsSeeder extends Seeder
 					],
 				'texts' =>
 					[
-						0 =>
+						
 							[
-								'locale' => 'uk',
+								'locale' => Locale::UA,
 								'short_title' => 'Брикетувальні преси від ВЕСТХІМ',
 								'title' => 'Брикетувальні преси від ВЕСТХІМ: рішення для тих, хто працює з відходами',
 								'description' => '
@@ -43,28 +43,28 @@ class ProductsSeeder extends Seeder
 					',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Технічні характеристики',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наші преси для виготовлення паливних брикетів проєктуються інженерами з реальним досвідом роботи в галузі. Ми враховуємо:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Фракцію сировини (дрібна тирса чи змішана стружка).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Початкову та кінцеву вологість.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Рівень тиску, що забезпечує міцність брикету.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Оптимальну температуру та швидкість пресування.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Форму та розміри брикетів (циліндричні, прямокутні, PINI-KAY тощо).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Систему охолодження та обслуговування.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Потужність та енергоефективність.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Прес брикетувальний</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> повинен бути не просто потужним — а точним, стабільним і безпечним. І саме такі преси виготовляє ВЕСТХІМ.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Для кого наші преси:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Пилорами, меблеві виробництва, столярні цехи.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Аграрні підприємства з великою кількістю рослинних залишків.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Компанії, що продають паливні брикети на внутрішньому чи європейському ринку.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Промислові об’єкти з деревною або металічною стружкою.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Організації, які прагнуть перейти на енергоефективне опалення.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наявність преса для паливних брикетів — це прямий шлях до оптимізації простору, зниження витрат і створення нового продукту з залишків.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чому це вигідно:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Менше витрат на утилізацію відходів.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Економія простору на складі.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Створення додаткового товару — паливних брикетів.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Потенціал для продажу чи опалення власних приміщень.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Швидка окупність преса — від 6 місяців.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми допоможемо підібрати </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>прес для виготовлення брикетів (ціна</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> + характеристики) відповідно до ваших завдань. Працюємо прозоро: ви точно знаєте, що купуєте.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Ціни та комплектація',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми не використовуємо модель “один прес — одна ціна”. Для нас важливо створити оптимальний брикетувальний прес, а не просто продати типове рішення.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Ціна на прес брикетувальний залежить </span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>від:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Типу сировини.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Продуктивності.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Складності управління.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наявності систем охолодження.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Бажаної форми брикету.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Умов доставки й пуску.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Для кожного клієнта готуємо персональний кошторис із чіткими цифрами. Без прихованих платежів.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
 							',
 											],
-										2 =>
+										
 											[
 												'title' => 'Як ми працюємо',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ви залишаєте заявку. Ми зв’язуємось і з’ясовуємо технічні параметри. Підбираємо або проєктуємо прес брикетувальний. Узгоджуємо строки та вартість</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Виготовляємо, тестуємо, доставляємо та запускаємо в експлуатацію.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У вас не просто буде </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>прес для брикетів</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>. У вас буде рішення, яке працює.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
 							',
 											],
-										3 =>
+										
 											[
 												'title' => 'ВЕСТХІМ — український виробник, який знає свою справу',
 												'text' => '
@@ -76,29 +76,29 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Замовити брикетувальні преси від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
 								'seo_keywords' =>
 									[
-										0 => 'прес для брикетування',
-										1 => 'прес для паливних брикетів',
-										2 => 'прес для виготовлення паливних брикетів',
-										3 => 'прес для тирси',
-										4 => 'преси для виготовлення паливних брикетів',
-										5 => 'преси для тирси',
-										6 => 'прес для брикетів',
-										7 => 'брикетні станки',
-										8 => 'прес брикетувальний',
-										9 => 'преси для виготовлення брикетів з тирси',
-										10 => 'прес брикетувальний ціна',
-										11 => 'прес для виготовлення брикетів ціна',
-										12 => 'преси для брикетування тирси',
-										13 => 'брекетувальні преси',
-										14 => 'брикетувальний прес',
-										15 => 'брикетувальні преси',
-										16 => 'виготовлення брикетувальних машин',
-										17 => 'обладнання для пресування',
+										 'прес для брикетування',
+										 'прес для паливних брикетів',
+										 'прес для виготовлення паливних брикетів',
+										 'прес для тирси',
+										 'преси для виготовлення паливних брикетів',
+										 'преси для тирси',
+										 'прес для брикетів',
+										 'брикетні станки',
+										 'прес брикетувальний',
+										 'преси для виготовлення брикетів з тирси',
+										 'прес брикетувальний ціна',
+										 'прес для виготовлення брикетів ціна',
+										 'преси для брикетування тирси',
+										 'брекетувальні преси',
+										 'брикетувальний прес',
+										 'брикетувальні преси',
+										 'виготовлення брикетувальних машин',
+										 'обладнання для пресування',
 									],
 							],
-						1 =>
+						
 							[
-								'locale' => 'en',
+								'locale' => Locale::EN,
 								'short_title' => 'Briquetting presses from WESTHIM',
 								'title' => 'Briquetting presses from WESTHIM: solutions for those working with waste',
 								'description' => '
@@ -108,28 +108,28 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Order briquetting presses from the manufacturer in Ivano-Frankivsk and Ukraine ✔️ Short production times ⭐ Best price ⚡ Individual selection',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Technical specifications',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Our fuel briquette presses are designed by engineers with real-world experience in the industry. We take into account:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Raw material fraction (fine sawdust or mixed shavings).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Initial and final humidity.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>The pressure level that ensures the strength of the briquette.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Optimal pressing temperature and speed.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>The shape and size of the briquettes (cylindrical, rectangular, PINI-KAY, etc.).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Cooling system and maintenance.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Power and energy efficiency.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>A briquetting press</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>must not only be powerful, but also precise, stable, and safe. And it is precisely such presses that WESTHIM manufactures.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Who are our presses for:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Sawmills, furniture factories, carpentry shops.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Agricultural enterprises with a large amount of crop residues.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Companies selling fuel briquettes on the domestic or European market.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Industrial facilities with wood or metal shavings.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Organizations seeking to transition to energy-efficient heating.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Having a fuel briquette press is a direct path to optimizing space, reducing costs, and creating a new product from leftovers.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Why is it beneficial:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Less waste disposal costs.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Saving space in the warehouse.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Creation of an additional product - fuel briquettes.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Potential for sale or heating your own premises.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Quick payback for the press - from 6 months.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>We will help you choose</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>a briquette press (price</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>+ specifications) according to your tasks. We work transparently: you know exactly what you are buying.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Prices and equipment',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>We do not use the “one press, one price” model. It is important for us to create the optimal briquetting press, not just sell a typical solution.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>The price of a briquetting press depends</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>on:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Type of raw material.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Productivity.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Management complexities.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Availability of cooling systems.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>The desired shape of the briquette.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Delivery and commissioning conditions.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>We prepare a personal estimate for each client with clear figures. No hidden fees.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
 							',
 											],
-										2 =>
+										
 											[
 												'title' => 'How we work',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>You leave a request. We contact you and clarify the technical parameters. We select or design a briquetting press. We agree on terms and cost</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>We manufacture, test, deliver and put into operation.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>You won&#39;t just have</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>a briquette press</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>. You&#39;ll have a solution that works.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
 							',
 											],
-										3 =>
+										
 											[
 												'title' => 'WESTHIM is a Ukrainian manufacturer that knows its business',
 												'text' => '
@@ -139,29 +139,29 @@ class ProductsSeeder extends Seeder
 									],
 								'seo_keywords' =>
 									[
-										0 => 'briquetting press',
-										1 => 'fuel briquette press',
-										2 => 'press for making fuel briquettes',
-										3 => 'sawdust press',
-										4 => 'presses for making fuel briquettes',
-										5 => 'sawdust presses',
-										6 => 'briquette press',
-										7 => 'briquette machines',
-										8 => 'briquetting press',
-										9 => 'sawdust briquette presses',
-										10 => 'briquetting press price',
-										11 => 'briquette press price',
-										12 => 'sawdust briquetting presses',
-										13 => 'bracketing presses',
-										14 => 'briquetting press',
-										15 => 'briquetting presses',
-										16 => 'manufacturing of briquetting machines',
-										17 => 'pressing equipment',
+										 'briquetting press',
+										 'fuel briquette press',
+										 'press for making fuel briquettes',
+										 'sawdust press',
+										 'presses for making fuel briquettes',
+										 'sawdust presses',
+										 'briquette press',
+										 'briquette machines',
+										 'briquetting press',
+										 'sawdust briquette presses',
+										 'briquetting press price',
+										 'briquette press price',
+										 'sawdust briquetting presses',
+										 'bracketing presses',
+										 'briquetting press',
+										 'briquetting presses',
+										 'manufacturing of briquetting machines',
+										 'pressing equipment',
 									],
 							],
-						2 =>
+						
 							[
-								'locale' => 'ru',
+								'locale' => Locale::RU,
 								'short_title' => 'Брикетирующие прессы от Вестхим',
 								'title' => 'Брикетировочные прессы от Вестхим: решения для тех, кто работает с отходами',
 								'description' => '
@@ -171,28 +171,28 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Заказать брикетировочные прессы от производителя в Ивано-Франковске и Украине ✔️ Краткие сроки изготовления ⭐ Лучшая цена ⚡ Индивидуальный подбор',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Технические характеристики',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наши прессы для производства топливных брикетов проектируются инженерами с реальным опытом работы в отрасли. Мы учитываем:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Фракцию сырья (мелкие опилки или смешанная стружка).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Начальная и конечная влажность.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Уровень давления, обеспечивающий прочность брикета.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Оптимальная температура и скорость прессования.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Форма и размеры брикетов (цилиндрические, прямоугольные, PINI-KAY и т.п.).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Система охлаждения и обслуживания.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Мощность и энергоэффективность.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Пресс брикетировочный</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>должен быть не просто мощным – а точным, стабильным и безопасным. И именно такие прессы производит Вестхим.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Для кого наши прессы:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Пилорамы, мебельные производства, столярные цеха.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Аграрные предприятия с большим количеством растительных остатков.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Компании, продающие топливные брикеты на внутреннем или европейском рынке.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Промышленные объекты с древесной или металлической стружкой.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Организации, стремящиеся перейти на энергоэффективное отопление.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наличие пресса для топливных брикетов – это прямой путь к оптимизации пространства, снижению затрат и созданию нового продукта из остатков.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Почему это выгодно:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Меньше затрат на утилизацию отходов.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Экономия пространства на складе.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Создание дополнительного товара – топливных брикетов.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Потенциал для продажи или отопления помещений.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Быстрая окупаемость пресса – от 6 месяцев.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Мы поможем подобрать</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>пресс для изготовления брикетов (цена</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>+характеристики) в соответствии с вашими задачами. Работаем прозрачно: вы точно знаете, что приобретаете.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Цены и комплектация',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Мы не используем модель &quot;один пресс – одна цена&quot;. Для нас важно создать оптимальный брикетировочный пресс, а не просто продать типичное решение.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>Цена на пресс брикетировочный зависит</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>от:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Тип сырья.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Производительность.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Сложности управления.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наличия систем охлаждения.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Желательной формы брикета.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Условия доставки и пуска.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Для каждого клиента готовим персональную смету с четкими цифрами. Без скрытых платежей.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
 							',
 											],
-										2 =>
+										
 											[
 												'title' => 'Как мы работаем',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Вы оставляете заявку. Мы связываемся и выясняем технические параметры. Подбираем или проектируем пресс брикетировочный. Согласуем сроки и стоимость</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Производим, тестируем, доставляем и запускаем в эксплуатацию.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У вас не просто будет</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span ><span><span><span>пресс для брикетов</span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>. У вас будет работающее решение.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span></span></span></span></span></span></span>
 							',
 											],
-										3 =>
+										
 											[
 												'title' => 'Вестхим — украинский производитель, знающий свое дело',
 												'text' => '
@@ -202,29 +202,29 @@ class ProductsSeeder extends Seeder
 									],
 								'seo_keywords' =>
 									[
-										0 => 'пресс для брикетирования',
-										1 => 'пресс для топливных брикетов',
-										2 => 'пресс для изготовления топливных брикетов',
-										3 => 'пресс для опилок',
-										4 => 'прессы для изготовления топливных брикетов',
-										5 => 'прессы для опилок',
-										6 => 'пресс для брикетов',
-										7 => 'брикетные станки',
-										8 => 'пресс брикетировочный',
-										9 => 'прессы для изготовления брикетов из опилок',
-										10 => 'пресс брикетировочная цена',
-										11 => 'пресс для изготовления брикетов.',
-										12 => 'прессы для брикетирования опилок',
-										13 => 'брекетировочные прессы',
-										14 => 'брикетировочный пресс',
-										15 => 'брикетировочные прессы',
-										16 => 'изготовление брикетировочных машин',
-										17 => 'оборудование для прессования',
+										 'пресс для брикетирования',
+										 'пресс для топливных брикетов',
+										 'пресс для изготовления топливных брикетов',
+										 'пресс для опилок',
+										 'прессы для изготовления топливных брикетов',
+										 'прессы для опилок',
+										 'пресс для брикетов',
+										 'брикетные станки',
+										 'пресс брикетировочный',
+										 'прессы для изготовления брикетов из опилок',
+										 'пресс брикетировочная цена',
+										 'пресс для изготовления брикетов.',
+										 'прессы для брикетирования опилок',
+										 'брекетировочные прессы',
+										 'брикетировочный пресс',
+										 'брикетировочные прессы',
+										 'изготовление брикетировочных машин',
+										 'оборудование для прессования',
 									],
 							],
 					],
 			],
-		1 =>
+		
 			[
 				'slug' => 'mechanical_presses',
 				'category' => 'mechanical_presses',
@@ -233,9 +233,9 @@ class ProductsSeeder extends Seeder
 					],
 				'texts' =>
 					[
-						0 =>
+						
 							[
-								'locale' => 'uk',
+								'locale' => Locale::UA,
 								'short_title' => 'Механічні преси від ВЕСТХІМ',
 								'title' => 'Механічні преси від ВЕСТХІМ: потужність, яка працює на вас',
 								'description' => '
@@ -243,14 +243,14 @@ class ProductsSeeder extends Seeder
 					',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Проектування — наша сильна сторона',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Механіка — це розрахунки, динаміка, навантаження, температурні режими та умови експлуатації. Тому ми починаємо з головного — </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">проектування механічних пресів</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, яке виконується нашими інженерами з урахуванням наступниого:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>типу операції (штампування, гнуття, вирубка, пробивання);</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>характеристик матеріалу;</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>умов роботи (температура, вологість, зміна навантаження);</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>потреби у швидкості та точності;</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>можливості інтеграції в діюче виробництво.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми створюємо рішення, які відповідають вашим технічним та економічним вимогам. Тому, коли ви звертаєтесь до ВЕСТХІМ, ви отримуєте механічний прес, що працює, а не просто «прес по каталогу».</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><br></span></span></span></span></span></span></p>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Чому обирають нас',
 												'text' => '
@@ -262,23 +262,23 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Замовити механічні преси від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
 								'seo_keywords' =>
 									[
-										0 => 'механічний прес',
-										1 => 'прес механічний',
-										2 => 'преси механічні',
-										3 => 'виготовлення механічних пресів',
-										4 => 'преси механічні ціна',
-										5 => 'преси механічні Івано-Франківськ',
-										6 => 'преси механічні Україна',
-										7 => 'механічні преси купити',
-										8 => 'механічні преси ціна',
-										9 => 'механічні преси Івано-Франківськ',
-										10 => 'механічні преси Україна',
-										11 => 'проектування механічних пресів',
+										 'механічний прес',
+										 'прес механічний',
+										 'преси механічні',
+										 'виготовлення механічних пресів',
+										 'преси механічні ціна',
+										 'преси механічні Івано-Франківськ',
+										 'преси механічні Україна',
+										 'механічні преси купити',
+										 'механічні преси ціна',
+										 'механічні преси Івано-Франківськ',
+										 'механічні преси Україна',
+										 'проектування механічних пресів',
 									],
 							],
-						1 =>
+						
 							[
-								'locale' => 'en',
+								'locale' => Locale::EN,
 								'short_title' => 'Mechanical presses from WESTHIM',
 								'title' => 'Mechanical presses from WESTHIM: power that works for you',
 								'description' => '
@@ -288,14 +288,14 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Order mechanical presses from the manufacturer in Ivano-Frankivsk and Ukraine ✔️ Short production times ⭐ Best price ⚡ Individual selection',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Design is our strength',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Mechanics is calculations, dynamics, loads, temperature regimes and operating conditions. Therefore, we start with the main thing -</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">the design of mechanical presses</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, which is carried out by our engineers taking into account the following:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>type of operation (stamping, bending, cutting, punching);</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>material characteristics;</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>operating conditions (temperature, humidity, load change);</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>the need for speed and accuracy;</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>possibilities of integration into existing production.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>We create solutions that meet your technical and economic requirements. That&#39;s why when you turn to WESTHIM, you get a mechanical press that works, not just a &quot;catalog press.&quot;</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><br></span></span></span></span></span></span></p>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Why choose us?',
 												'text' => '
@@ -305,23 +305,23 @@ class ProductsSeeder extends Seeder
 									],
 								'seo_keywords' =>
 									[
-										0 => 'mechanical press',
-										1 => 'mechanical press',
-										2 => 'mechanical presses',
-										3 => 'manufacturing of mechanical presses',
-										4 => 'mechanical presses price',
-										5 => 'mechanical presses Ivano-Frankivsk',
-										6 => 'mechanical presses Ukraine',
-										7 => 'mechanical presses to buy',
-										8 => 'mechanical presses price',
-										9 => 'mechanical presses Ivano-Frankivsk',
-										10 => 'mechanical presses Ukraine',
-										11 => 'design of mechanical presses',
+										 'mechanical press',
+										 'mechanical press',
+										 'mechanical presses',
+										 'manufacturing of mechanical presses',
+										 'mechanical presses price',
+										 'mechanical presses Ivano-Frankivsk',
+										 'mechanical presses Ukraine',
+										 'mechanical presses to buy',
+										 'mechanical presses price',
+										 'mechanical presses Ivano-Frankivsk',
+										 'mechanical presses Ukraine',
+										 'design of mechanical presses',
 									],
 							],
-						2 =>
+						
 							[
-								'locale' => 'ru',
+								'locale' => Locale::RU,
 								'short_title' => 'Механические прессы от Вестхим',
 								'title' => 'Механические прессы от ВЕСТХИМ: мощность, работающая на вас',
 								'description' => '
@@ -331,14 +331,14 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Заказать механические прессы от производителя в Ивано-Франковске и Украине ✔️ Краткие сроки изготовления ⭐ Лучшая цена ⚡ Индивидуальный подбор',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Проектирование – наша сильная сторона',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Механика – это расчеты, динамика, нагрузка, температурные режимы и условия эксплуатации. Поэтому мы начинаем с главного —</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">проектирование механических прессов</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>, которое выполняется нашими инженерами с учетом следующего:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>типа операции (штамповка, гибка, вырубка, пробивка);</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>характеристик материала;</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>условий работы (температура, влажность, изменение нагрузки);</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>потребности в скорости и точности;</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>возможности интеграции в действующее производство</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Мы создаем решения, отвечающие вашим техническим и экономическим требованиям. Поэтому, когда вы обращаетесь к ВЕСТХИМ, вы получаете работающий механический пресс, а не просто «пресс по каталогу».</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span><br></span></span></span></span></span></span></p>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Почему выбирают нас',
 												'text' => '
@@ -348,23 +348,23 @@ class ProductsSeeder extends Seeder
 									],
 								'seo_keywords' =>
 									[
-										0 => 'механический пресс',
-										1 => 'пресс механический',
-										2 => 'прессы механические',
-										3 => 'изготовление механических прессов',
-										4 => 'прессы механические цена',
-										5 => 'прессы механические Ивано-Франковск',
-										6 => 'прессы механические Украина',
-										7 => 'механические прессы купить',
-										8 => 'механические прессы цена',
-										9 => 'механические прессы Ивано-Франковск',
-										10 => 'механические прессы Украина',
-										11 => 'проектирование механических прессов',
+										 'механический пресс',
+										 'пресс механический',
+										 'прессы механические',
+										 'изготовление механических прессов',
+										 'прессы механические цена',
+										 'прессы механические Ивано-Франковск',
+										 'прессы механические Украина',
+										 'механические прессы купить',
+										 'механические прессы цена',
+										 'механические прессы Ивано-Франковск',
+										 'механические прессы Украина',
+										 'проектирование механических прессов',
 									],
 							],
 					],
 			],
-		2 =>
+		
 			[
 				'slug' => 'hydraulic_presses',
 				'category' => 'hydraulic_presses',
@@ -373,9 +373,9 @@ class ProductsSeeder extends Seeder
 					],
 				'texts' =>
 					[
-						0 =>
+						
 							[
-								'locale' => 'uk',
+								'locale' => Locale::UA,
 								'short_title' => 'Гідравлічні преси від ВЕСТХІМ',
 								'title' => 'Гідравлічні преси від ВЕСТХІМ: коли потрібно зусилля, що не підведе',
 								'description' => '
@@ -383,14 +383,14 @@ class ProductsSeeder extends Seeder
 					',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Для чого потрібен гідравлічний прес',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У гідравліці головне — сила і керованість. Там, де механічний привід дає ударне навантаження, прес гідравлічний забезпечує рівномірний і потужний тиск упродовж усього циклу. Це ідеальне рішення для:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Випробування деталей під навантаженням.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Формування, гнуття, вирівнювання, спресування.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Робіт на СТО — встановлення/зняття підшипників, сайлентблоків, шківів.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Виробничих процесів, де потрібна велика сила при малому зусиллі оператора.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Тому</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"> прес гідравлічний для СТО</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> — це не розкіш, а мастхев для кожної майстерні. А електрогідравлічні моделі — це рівень вище: автоматизація, швидкість, зручність.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Які преси ми виробляємо',
 												'text' => '
@@ -402,26 +402,26 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Замовити гідравлічні преси від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
 								'seo_keywords' =>
 									[
-										0 => 'гідравлічний прес',
-										1 => 'прес гідравлічний',
-										2 => 'гідравлічні преси',
-										3 => 'преси гідравлічні',
-										4 => 'купити прес гідравлічний',
-										5 => 'прес гідравлічний з електроприводом',
-										6 => 'гідравлічні преси ціна',
-										7 => 'гідравлічні преси Івано-Франківськ',
-										8 => 'гідравлічні преси Україна',
-										9 => 'прес гідравлічний купити',
-										10 => 'прес гідравлічний ціна',
-										11 => 'прес гідравлічний Івано-Франківськ',
-										12 => 'прес гідравлічний Україна',
-										13 => 'прес гідравлічний для сто',
-										14 => 'прес гідравлічний 40 т',
+										 'гідравлічний прес',
+										 'прес гідравлічний',
+										 'гідравлічні преси',
+										 'преси гідравлічні',
+										 'купити прес гідравлічний',
+										 'прес гідравлічний з електроприводом',
+										 'гідравлічні преси ціна',
+										 'гідравлічні преси Івано-Франківськ',
+										 'гідравлічні преси Україна',
+										 'прес гідравлічний купити',
+										 'прес гідравлічний ціна',
+										 'прес гідравлічний Івано-Франківськ',
+										 'прес гідравлічний Україна',
+										 'прес гідравлічний для сто',
+										 'прес гідравлічний 40 т',
 									],
 							],
-						1 =>
+						
 							[
-								'locale' => 'en',
+								'locale' => Locale::EN,
 								'short_title' => 'Hydraulic presses from WESTHIM',
 								'title' => 'Hydraulic presses from WESTHIM: when you need a force that won&#39;t let you down',
 								'description' => '
@@ -431,14 +431,14 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Order hydraulic presses from the manufacturer in Ivano-Frankivsk and Ukraine ✔️ Short production times ⭐ Best price ⚡ Individual selection',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'What is a hydraulic press for?',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>In hydraulics, power and control are the key. Where a mechanical drive provides shock loading, a hydraulic press provides uniform and powerful pressure throughout the entire cycle. It is the ideal solution for:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Testing parts under load.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Forming, bending, straightening, pressing.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Work at the service station - installation/removal of bearings, silent blocks, pulleys.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Production processes that require high force with little operator effort.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Therefore,</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">a hydraulic press for a service station</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>is not a luxury, but a must-have for every workshop. And electro-hydraulic models are a level higher: automation, speed, convenience.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'What presses do we produce?',
 												'text' => '
@@ -448,26 +448,26 @@ class ProductsSeeder extends Seeder
 									],
 								'seo_keywords' =>
 									[
-										0 => 'hydraulic press',
-										1 => 'hydraulic press',
-										2 => 'hydraulic presses',
-										3 => 'hydraulic presses',
-										4 => 'buy a hydraulic press',
-										5 => 'hydraulic press with electric drive',
-										6 => 'hydraulic presses price',
-										7 => 'hydraulic presses Ivano-Frankivsk',
-										8 => 'hydraulic presses Ukraine',
-										9 => 'buy hydraulic press',
-										10 => 'hydraulic press price',
-										11 => 'hydraulic press Ivano-Frankivsk',
-										12 => 'hydraulic press Ukraine',
-										13 => 'hydraulic press for a hundred',
-										14 => 'hydraulic press 40 t',
+										 'hydraulic press',
+										 'hydraulic press',
+										 'hydraulic presses',
+										 'hydraulic presses',
+										 'buy a hydraulic press',
+										 'hydraulic press with electric drive',
+										 'hydraulic presses price',
+										 'hydraulic presses Ivano-Frankivsk',
+										 'hydraulic presses Ukraine',
+										 'buy hydraulic press',
+										 'hydraulic press price',
+										 'hydraulic press Ivano-Frankivsk',
+										 'hydraulic press Ukraine',
+										 'hydraulic press for a hundred',
+										 'hydraulic press 40 t',
 									],
 							],
-						2 =>
+						
 							[
-								'locale' => 'ru',
+								'locale' => Locale::RU,
 								'short_title' => 'Гидравлические прессы от Вестхим',
 								'title' => 'Гидравлические прессы от Вестхим: когда нужно усилие, которое не подведет',
 								'description' => '
@@ -477,14 +477,14 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Заказать гидравлические прессы от производителя в Ивано-Франковске и Украине ✔️ Краткие сроки изготовления ⭐ Лучшая цена ⚡ Индивидуальный подбор',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Для чего нужен гидравлический пресс',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>В гидравлике главное – сила и управляемость. Там, где механический привод дает ударную нагрузку, гидравлический пресс обеспечивает равномерное и мощное давление на протяжении всего цикла. Это идеальное решение для:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Испытание деталей под погрузкой.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Формирование, гибка, выравнивание, спрессование.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Работ на СТО – установка/снятие подшипников, сайлентблоков, шкивов.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Производственных процессов, где требуется большая сила при малом усилии оператора.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Поэтому</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">пресс гидравлический для СТО</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>– это не роскошь, а мастхев для каждой мастерской. А электрогидравлические модели – это уровень выше: автоматизация, скорость, удобство.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Какие прессы мы производим',
 												'text' => '
@@ -494,62 +494,62 @@ class ProductsSeeder extends Seeder
 									],
 								'seo_keywords' =>
 									[
-										0 => 'гидравлический пресс',
-										1 => 'пресс гидравлический',
-										2 => 'гидравлические прессы',
-										3 => 'прессы гидравлические',
-										4 => 'купить пресс гидравлический',
-										5 => 'пресс гидравлический с электроприводом',
-										6 => 'гидравлические прессы цена',
-										7 => 'гидравлические прессы Ивано-Франковск',
-										8 => 'гидравлические прессы.',
-										9 => 'пресс гидравлический купить',
-										10 => 'пресс гидравлическая цена',
-										11 => 'пресс гидравлический Ивано-Франковск',
-										12 => 'пресс гидравлический Украина',
-										13 => 'пресс гидравлический для сто',
-										14 => 'пресс гидравлический 40 т',
+										 'гидравлический пресс',
+										 'пресс гидравлический',
+										 'гидравлические прессы',
+										 'прессы гидравлические',
+										 'купить пресс гидравлический',
+										 'пресс гидравлический с электроприводом',
+										 'гидравлические прессы цена',
+										 'гидравлические прессы Ивано-Франковск',
+										 'гидравлические прессы.',
+										 'пресс гидравлический купить',
+										 'пресс гидравлическая цена',
+										 'пресс гидравлический Ивано-Франковск',
+										 'пресс гидравлический Украина',
+										 'пресс гидравлический для сто',
+										 'пресс гидравлический 40 т',
 									],
 							],
 					],
 			],
-		3 =>
+		
 			[
 				'slug' => 'vats',
 				'category' => 'vats',
 				'files' =>
 					[
-						0 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/vats/chan-cavun.jpg',
 							],
-						1 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/vats/chan-na-drovah.jpg',
 							],
-						2 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/vats/chan-pogruzka.jpg',
 							],
-						3 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/vats/chanu-karpaty.jpg',
 							],
-						4 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/vats/chany-frankivsk.jpg',
 							],
-						5 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/vats/shema-chan.jpg',
 							],
-						6 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/vats/shema-chany.jpg',
@@ -557,9 +557,9 @@ class ProductsSeeder extends Seeder
 					],
 				'texts' =>
 					[
-						0 =>
+						
 							[
-								'locale' => 'uk',
+								'locale' => Locale::UA,
 								'short_title' => 'Чани від ВЕСТХІМ',
 								'title' => 'Чани від ВЕСТХІМ: метал, що дарує тепло і відновлення',
 								'description' => '
@@ -567,28 +567,28 @@ class ProductsSeeder extends Seeder
 					',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Навіщо вам чан',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Звичка доглядати за собою — це не про розкіш, а про здоров’я. Чан із гарячою водою на дровах — це:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Природна термотерапія: покращує кровообіг, знижує м’язову напругу.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Глибоке розслаблення — без шуму, хімії й зайвого.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ідеальний варіант відпочинку взимку, восени й навесні.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Унікальний досвід для гостей приватних садиб, готелів, SPA-комплексів.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Простота у догляді та використанні.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Недарма сього</span></span></span></span>дн</span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif">і чани купити</span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"> хочут<span style="color:#000000"><span><span><span>ь не лише власники готелів у Карпатах. Вони з’являються біля дач, на задньому дворі, в заміських будинках, біля лазень і саун по всій Україні. Це працює. І це справді подобається людям.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Які чани ми виготовляємо',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми створюємо чани, які поєднують продуману форму, якісні матеріали та функціональність. Пропонуємо:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Класичні круглі чани з вогнищем знизу.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Овальні та шестигранні варіанти — для незвичного дизайну.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чани на компанію від 2 до 10 осіб.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чани з обшивкою (дерев’яною, композитною, кам’яною).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чани з виносною топкою — для безпечного підігріву.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Інтеграцію з SPA-зоною або сауною.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Варіанти обробки — від шліфованої сталі до декоративної ковки. При потребі можемо підготувати чан під ключ: з ізоляцією, драбинкою, лавками, підсвічуванням і готовою основою</span></span></span></span></span></span><br></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										2 =>
+										
 											[
 												'title' => 'Надійність металу — наша перевага',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми працюємо з металом щодня — не як художники, а як інженери. Тому можемо гарантувати:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Якісне зварювання, яке витримає не один сезон.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Оптимальну товщину металу для рівномірного прогрівання.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Антикорозійний захист для тривалого використання.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Зручну ергономіку: плавний захід, комфортне сидіння, правильна глибина.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Мінімальне теплове споживання за рахунок точного розрахунку об’єму.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Багато виробників економлять на матеріалах. Ми — ні. Для нас чан — це виріб, який повинен прослужити роками, а не сезон. Саме тому ті, хто вже мав досвід, повертаються до нас, щоб замовити наступний.</span></span></span></span></span></span>&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;<br></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										3 =>
+										
 											[
 												'title' => 'Купити чан — вигідно',
 												'text' => '
@@ -600,19 +600,19 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Замовити чани від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
 								'seo_keywords' =>
 									[
-										0 => 'чан',
-										1 => 'чани',
-										2 => 'купити чан',
-										3 => 'чан ціна',
-										4 => 'чани купити',
-										5 => 'чани ціна',
-										6 => 'чани Івано-Франківськ',
-										7 => 'чани Україна',
+										 'чан',
+										 'чани',
+										 'купити чан',
+										 'чан ціна',
+										 'чани купити',
+										 'чани ціна',
+										 'чани Івано-Франківськ',
+										 'чани Україна',
 									],
 							],
-						1 =>
+						
 							[
-								'locale' => 'en',
+								'locale' => Locale::EN,
 								'short_title' => 'Tanks from WESTHIM',
 								'title' => 'WESTHIM vats: metal that gives warmth and renewal',
 								'description' => '
@@ -622,28 +622,28 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Order vats from the manufacturer in Ivano-Frankivsk and Ukraine ✔️ Short production times ⭐ Best price ⚡ Individual selection',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Why do you need a vat?',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>The habit of taking care of yourself is not about luxury, but about health. A wood-fired hot water tank is:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Natural thermotherapy: improves blood circulation, reduces muscle tension.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Deep relaxation - without noise, chemicals, or anything else.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>An ideal option for a vacation in winter, autumn and spring.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>A unique experience for guests of private estates, hotels, and SPA complexes.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Easy to care for and use.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>It&#39;s no wonder that these</span></span></span></span> days</span></span> , it&#39;s not just hotel owners in the Carpathians who want <span style="font-size:11pt"><span style="font-family:Arial,sans-serif">to buy these hot tubs</span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>. They&#39;re popping up near dachas, in backyards, in country houses, near bathhouses and saunas all over Ukraine. It works. And people really like it.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'What vats do we produce?',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>We create vats that combine thoughtful design, quality materials, and functionality. We offer:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Classic round vats with a fire pit at the bottom.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Oval and hexagonal options for an unusual design.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Vats for a company of 2 to 10 people.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Tanks with lining (wooden, composite, stone).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Tanks with a remote firebox - for safe heating.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Integration with a SPA area or sauna.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Finishing options range from polished steel to decorative forging. If necessary, we can prepare a turnkey vat: with insulation, ladder, benches, lighting and a ready-made base.</span></span></span></span></span></span><br></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										2 =>
+										
 											[
 												'title' => 'Reliability of metal is our advantage',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>We work with metal every day — not as artists, but as engineers. Therefore, we can guarantee:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>High-quality welding that will last more than one season.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Optimal metal thickness for uniform heating.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Anti-corrosion protection for long-term use.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Convenient ergonomics: smooth descent, comfortable seat, correct depth.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Minimum heat consumption due to accurate volume calculation.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Many manufacturers save on materials. We don’t. For us, a vat is a product that should last for years, not just a season. That’s why those who have already had experience come back to us to order the next one.</span></span></span></span></span></span><br></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										3 =>
+										
 											[
 												'title' => 'Buy a vat - it&#39;s profitable',
 												'text' => '
@@ -653,19 +653,19 @@ class ProductsSeeder extends Seeder
 									],
 								'seo_keywords' =>
 									[
-										0 => 'good',
-										1 => 'cups',
-										2 => 'buy a chan',
-										3 => 'vat price',
-										4 => 'buy vats',
-										5 => 'vats price',
-										6 => 'vats Ivano-Frankivsk',
-										7 => 'vats Ukraine',
+										 'good',
+										 'cups',
+										 'buy a chan',
+										 'vat price',
+										 'buy vats',
+										 'vats price',
+										 'vats Ivano-Frankivsk',
+										 'vats Ukraine',
 									],
 							],
-						2 =>
+						
 							[
-								'locale' => 'ru',
+								'locale' => Locale::RU,
 								'short_title' => 'Чаны от Вестхим',
 								'title' => 'Чаны от ВЕСТХИМ: дающий тепло и восстановление металл',
 								'description' => '
@@ -675,28 +675,28 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Заказать чаны от производителя в Ивано-Франковске и Украине ✔️ Краткие сроки изготовления ⭐ Лучшая цена ⚡ Индивидуальный подбор',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Зачем вам чан',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Привычка ухаживать за собой – это не о роскоши, а о здоровье. Чан с горячей водой на дровах:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Естественная термотерапия: улучшает кровообращение, снижает мышечное напряжение.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Глубокое расслабление – без шума, химии и лишнего.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Идеальный вариант отдыха зимой, осенью и весной.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Уникальный опыт для гостей частных усадеб, гостиниц, SPA-комплексов.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Простота в уходе и использовании.</span></span></span></span></span></span></li></ul><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Недаром</span></span></span></span> сегодня</span></span> <span style="font-size:11pt"><span style="font-family:Arial,sans-serif">и чаны купить</span></span> <span style="font-size:11pt"><span style="font-family:Arial,sans-serif">хотят <span style="color:#000000"><span><span><span>не только владельцы гостиниц в Карпатах. Они появляются у дач, на заднем дворе, в загородных домах, у бань и саун по всей Украине. Это работает. И это действительно нравится людям.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Какие чаны мы производим',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Мы создаем чаны, объединяющие продуманную форму, качественные материалы и функциональность. Предлагаем:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Классические круглые чаны с костром снизу.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Овальные и шестигранные варианты – для необычного дизайна.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чаны на компанию от 2 до 10 человек.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чаны с обшивкой (деревянной, композитной, каменной).</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чаны с выносной топкой – для безопасного подогрева.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Интеграцию со SPA-зоной или сауной.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Варианты отделки – от шлифованной стали до декоративной ковки. При необходимости можем подготовить чан под ключ: с изоляцией, стремянкой, скамейками, подсветкой и готовым основанием.</span></span></span></span></span></span><br></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										2 =>
+										
 											[
 												'title' => 'Надежность металла – наше преимущество',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Мы работаем с металлом каждый день – не как художники, а как инженеры. Поэтому можем гарантировать:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Качественная сварка, которая выдержит не один сезон.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Оптимальная толщина металла для равномерного прогрева.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Антикоррозионная защита для продолжительного использования.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Удобная эргономика: плавное мероприятие, комфортное сиденье, правильная глубина.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Минимальное тепловое потребление за счет точного расчета объема.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Многие производители экономят на материалах. Мы – нет. Для нас чан – это изделие, которое должно прослужить годами, а не сезон. Именно поэтому те, кто уже имел опыт, возвращаются к нам, чтобы заказать следующий.</span></span></span></span></span></span><br></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										3 =>
+										
 											[
 												'title' => 'Купить чан – выгодно',
 												'text' => '
@@ -706,35 +706,35 @@ class ProductsSeeder extends Seeder
 									],
 								'seo_keywords' =>
 									[
-										0 => 'хороший',
-										1 => 'чашки',
-										2 => 'купить чан',
-										3 => 'чан цена',
-										4 => 'чаны купить',
-										5 => 'чаны цена',
-										6 => 'чаны Ивано-Франковск',
-										7 => 'чаны Украина',
+										 'хороший',
+										 'чашки',
+										 'купить чан',
+										 'чан цена',
+										 'чаны купить',
+										 'чаны цена',
+										 'чаны Ивано-Франковск',
+										 'чаны Украина',
 									],
 							],
 					],
 			],
-		4 =>
+		
 			[
 				'slug' => 'sewer_hatches',
 				'category' => 'sewer_hatches',
 				'files' =>
 					[
-						0 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/sewer_hatches/liuku_kanalizacia.jpg',
 							],
-						1 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/sewer_hatches/luk_kanalizacia.jpg',
 							],
-						2 =>
+						
 							[
 								'type' => 'image',
 								'path' => '/images/products/sewer_hatches/lyki-kiev.jpg',
@@ -742,9 +742,9 @@ class ProductsSeeder extends Seeder
 					],
 				'texts' =>
 					[
-						0 =>
+						
 							[
-								'locale' => 'uk',
+								'locale' => Locale::UA,
 								'short_title' => 'Люки каналізаційні від ВЕСТХІМ',
 								'title' => 'Люки каналізаційні від ВЕСТХІМ: там, де надійність важить більше, ніж здається',
 								'description' => '
@@ -752,35 +752,35 @@ class ProductsSeeder extends Seeder
 					',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Люки — більше, ніж просто кришка',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У ВЕСТХІМ можна </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">купити люк</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> різного призначення: для комунальних систем, приватних дворів, торгових центрів, АЗС, промислових об\'єктів і складів. У нас є:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чавунні </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">каналізаційні люки</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"> — класика, яка витримує високі навантаження.</span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Люки з замками та фіксаторами — для додаткового захисту.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Декоративні люки — для територій, де важлива естетика.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Люки </span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>з іменним логотипом чи маркуванням — за індивідуальним замовленням.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Усі люки каналізаційні виготовляються за ДСТУ, перевіряються на відповідність по класах навантаження. І найголовніше — вони служать довго. Не сезон, не рік — а десятиліттями.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Що важливо при виборі люка',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Якщо ви хочете </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">купити люк каналізаційний</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, зверніть увагу не лише на ціну чи зовнішній вигляд. Важливо:</span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Матеріал.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Тип монтажу: врівень, з виступом, з рамкою.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Клас навантаження — тобто, що по ньому можна буде їздити або ходити.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Герметичність та фіксація: чи захищає від запахів, чи легко відкривається.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Можливість персоналізації — наприклад, логотип міста чи компанії.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Ми допомагаємо підібрати оптимальне рішення з урахуванням усіх цих факторів. А наш досвід у виробництві — це не про “як-небудь зробимо”. Ми працюємо надійно, бо розуміємо, яку відповідальність несе люк каналізаційний.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										2 =>
+										
 											[
 												'title' => 'Люки від виробника — це завжди вигідніше',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Коли ви звертаєтесь до виробника напряму, ви точно знаєте, за що платите. У ВЕСТХІМ:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Немає посередницьких націнок.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Є контроль якості на кожному етапі.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Можна замовити партію під технічну документацію або індивідуальний проєкт.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Можна отримати консультацію від інженера, а не продавця.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Саме тому все більше замовників шукають у Google не просто “</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">люк купити</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">”, а “</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">люки від виробника</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>”. Ми цінуємо цю довіру — і відповідаємо на неї стабільною якістю.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У нас на </span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">люк каналізаційний ціна</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> відповідає якості, без “повітря” у кошторисі. Хочете знати, скільки коштує конкретна модель? Ми підготуємо точну пропозицію.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										3 =>
+										
 											[
 												'title' => 'Працюємо по всій Україні',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Часто шукають “</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">каналізаційні люки ціна Львів</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>” чи “</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">каналізаційні люки купити</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span> недорого” — і знаходять нас. Бо ми виготовляємо тут, в Україні, і відправляємо замовлення в будь-який регіон.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наші люки каналізаційні вже працюють на вулицях, у дворах, біля супермаркетів, у промзонах — і витримують українські погодні умови, транспорт і час.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										4 =>
+										
 											[
 												'title' => 'Коли вам потрібен люк — ми точно знаємо, який',
 												'text' => '
@@ -792,24 +792,24 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Замовити каналізаційні люки від виробника в Івано-Франківську та Україні ✔️ Стислі терміни виготовлення ⭐ Найкраща ціна ⚡ Індивідуальний підбір',
 								'seo_keywords' =>
 									[
-										0 => 'каналізаційний люк',
-										1 => 'люки каналізаційні',
-										2 => 'люки від виробника',
-										3 => 'купити люк',
-										4 => 'люк купити',
-										5 => 'каналізаційні люки ціна',
-										6 => 'каналізаційні люки купити',
-										7 => 'кришка каналізаційного люка',
-										8 => 'каналізаційні люки ціна львів',
-										9 => 'люки від виробника',
-										10 => 'люк каналізаційний ціна',
-										11 => 'люки',
-										12 => 'люк',
+										 'каналізаційний люк',
+										 'люки каналізаційні',
+										 'люки від виробника',
+										 'купити люк',
+										 'люк купити',
+										 'каналізаційні люки ціна',
+										 'каналізаційні люки купити',
+										 'кришка каналізаційного люка',
+										 'каналізаційні люки ціна львів',
+										 'люки від виробника',
+										 'люк каналізаційний ціна',
+										 'люки',
+										 'люк',
 									],
 							],
-						1 =>
+						
 							[
-								'locale' => 'en',
+								'locale' => Locale::EN,
 								'short_title' => 'Sewerage hatches from WESTHIM',
 								'title' => 'Sewerage hatches from WESTHIM: where reliability matters more than it seems',
 								'description' => '
@@ -819,35 +819,35 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Order sewer hatches from the manufacturer in Ivano-Frankivsk and Ukraine ✔️ Short production times ⭐ Best price ⚡ Individual selection',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Hatches are more than just a cover',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>At WESTHIM you can</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">buy a hatch</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>for various purposes: for utility systems, private yards, shopping centers, gas stations, industrial facilities and warehouses. We have:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Cast iron</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">sewer manholes</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">are a classic that can withstand high loads.</span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Hatches with locks and latches for additional protection.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Decorative hatches are for areas where aesthetics are important.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Hatches</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>with a personalized logo or marking are available on individual order.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>All sewer hatches are manufactured according to DSTU, tested for compliance with load classes. And most importantly, they last a long time. Not a season, not a year, but decades.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'What is important when choosing a hatch',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>If you want</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">to buy a sewer hatch</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, pay attention not only to the price or appearance. Important:</span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Material.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Installation type: flush, with protrusion, with frame.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Load class means that it can be driven or walked on.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Tightness and fixation: does it protect against odors and is it easy to open?</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Possibility of personalization - for example, a city or company logo.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>We help you choose the best solution, taking into account all these factors. And our experience in production is not about “we’ll do it somehow.” We work reliably because we understand the responsibility of a sewer hatch.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										2 =>
+										
 											[
 												'title' => 'Hatches from the manufacturer are always more profitable',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>When you deal directly with the manufacturer, you know exactly what you are paying for. AT WESTHIM:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>There are no intermediary markups.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>There is quality control at every stage.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>You can order a batch for technical documentation or an individual project.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>You can get advice from an engineer, not a salesperson.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>That is why more and more customers are searching Google not just for “</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">manufacturer&#39;s hatch</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">”, but for “</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">manufacturer&#39;s hatches</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>”. We value this trust - and we respond to it with stable quality.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Our</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">sewer manhole price</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>corresponds to the quality, without “air” in the estimate. Want to know how much a specific model costs? We will prepare an accurate offer.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										3 =>
+										
 											[
 												'title' => 'We work throughout Ukraine',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>People often search for “</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">sewer hatches price Lviv</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>” or “</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">sewer hatches buy</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>cheap” — and they find us. Because we manufacture here, in Ukraine, and send orders to any region.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Our sewer manholes are already working on streets, in yards, near supermarkets, in industrial zones - and they withstand Ukrainian weather conditions, transport, and time.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										4 =>
+										
 											[
 												'title' => 'When you need a sunroof, we know exactly which one',
 												'text' => '
@@ -857,24 +857,24 @@ class ProductsSeeder extends Seeder
 									],
 								'seo_keywords' =>
 									[
-										0 => 'manhole',
-										1 => 'sewer hatches',
-										2 => 'hatches from the manufacturer',
-										3 => 'buy a hatch',
-										4 => 'buy a hatch',
-										5 => 'sewer manholes price',
-										6 => 'sewer hatches to buy',
-										7 => 'manhole cover',
-										8 => 'sewer manholes price in Lviv',
-										9 => 'hatches from the manufacturer',
-										10 => 'sewer hatch price',
-										11 => 'hatches',
-										12 => 'Luke',
+										 'manhole',
+										 'sewer hatches',
+										 'hatches from the manufacturer',
+										 'buy a hatch',
+										 'buy a hatch',
+										 'sewer manholes price',
+										 'sewer hatches to buy',
+										 'manhole cover',
+										 'sewer manholes price in Lviv',
+										 'hatches from the manufacturer',
+										 'sewer hatch price',
+										 'hatches',
+										 'Luke',
 									],
 							],
-						2 =>
+						
 							[
-								'locale' => 'ru',
+								'locale' => Locale::RU,
 								'short_title' => 'Люки канализационные от Вестхим',
 								'title' => 'Люки канализационные от Вестхим: там, где надежность весит больше, чем кажется',
 								'description' => '
@@ -884,35 +884,35 @@ class ProductsSeeder extends Seeder
 								'seo_description' => 'Заказать канализационные люки от производителя в Ивано-Франковске и Украине ✔️ Краткие сроки изготовления ⭐ Лучшая цена ⚡ Индивидуальный подбор',
 								'sections' =>
 									[
-										0 =>
+										
 											[
 												'title' => 'Люки больше, чем просто крышка',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>В ВЕСТХИМ можно</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">купить люк</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>разного назначения: для коммунальных систем, частных дворов, торговых центров, АЗС, промышленных объектов и складов.</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Чугунные</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">канализационные люки</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">– классика, которая выдерживает высокие нагрузки.</span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Люки с замками и фиксаторами – для дополнительной защиты.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Декоративные люки – для территорий, где важна эстетика.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Люки</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>с именным логотипом или маркировкой – по индивидуальному заказу.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Все канализационные люки изготавливаются по ДСТУ, проверяются на соответствие по классам нагрузки. И самое главное — они служат долго.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										1 =>
+										
 											[
 												'title' => 'Что важно при выборе люка',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Если вы хотите</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">купить канализационный люк</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, обратите внимание не только на цену или внешний вид. Важно:</span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Материал.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Тип монтажа: заподлицо, с выступом, с рамкой.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Класс нагрузки – то есть, что по нему можно будет ездить или ходить.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Герметичность и фиксация: защищает ли от запахов или легко открывается.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Возможность персонализации – например, логотип города или компании.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Мы помогаем подобрать оптимальное решение с учетом всех этих факторов. А наш опыт в производстве – это не о &quot;как-нибудь сделаем&quot;. Мы работаем надежно, потому что понимаем, какую ответственность несет канализационный люк.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										2 =>
+										
 											[
 												'title' => 'Люки от производителя – это всегда выгоднее',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Когда вы обращаетесь к производителю напрямую, вы точно знаете, за что платите. В ВЕСТИХЕ:</span></span></span></span></span></span></p><ul><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Нет посреднических наценок.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Имеется контроль качества на каждом этапе.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Партию можно заказать под техническую документацию или индивидуальный проект.</span></span></span></span></span></span></li><li style="list-style-type:disc"><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Можно получить консультацию от инженера, а не продавца.</span></span></span></span></span></span></li></ul><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Именно поэтому все больше заказчиков ищут у Google не просто &quot;</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">люк купить</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&quot;, а &quot;</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">люки от производителя</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>&quot;. Мы ценим это доверие — и отвечаем на него стабильным качеством.</span></span></span></span></span></span></p><p><br><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>У нас на</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">канализационный люк цена</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>соответствует качеству, без &quot;воздуха&quot; в смете. Хотите знать, сколько стоит конкретная модель? Мы подготовим точное предложение.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										3 =>
+										
 											[
 												'title' => 'Работаем по всей Украине',
 												'text' => '
 							<span style="font-size:20pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Часто ищут</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">канализационные люки цена Львов</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>или</span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">канализационные люки купить</span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>недорого — и находят нас. Потому что мы производим здесь, в Украине, и отправляем заказы в любой регион.</span></span></span></span></span></span></p><p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span>Наши канализационные люки уже работают на улицах, во дворах, возле супермаркетов, в промзонах — и выдерживают украинские погодные условия, транспорт и время.</span></span></span></span></span></span></p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><span><span><span></span></span></span></span></span></span>
 							',
 											],
-										4 =>
+										
 											[
 												'title' => 'Когда вам нужен люк – мы точно знаем, какой',
 												'text' => '
@@ -922,19 +922,19 @@ class ProductsSeeder extends Seeder
 									],
 								'seo_keywords' =>
 									[
-										0 => 'канализационный люк',
-										1 => 'люки канализационные',
-										2 => 'люки от производителя',
-										3 => 'купить люк',
-										4 => 'люк купить',
-										5 => 'канализационные люки цена',
-										6 => 'канализационные люки купить',
-										7 => 'крышка канализационного люка',
-										8 => 'канализационные люки цена львов',
-										9 => 'люки от производителя',
-										10 => 'люк канализационный цена',
-										11 => 'люки',
-										12 => 'люк',
+										 'канализационный люк',
+										 'люки канализационные',
+										 'люки от производителя',
+										 'купить люк',
+										 'люк купить',
+										 'канализационные люки цена',
+										 'канализационные люки купить',
+										 'крышка канализационного люка',
+										 'канализационные люки цена львов',
+										 'люки от производителя',
+										 'люк канализационный цена',
+										 'люки',
+										 'люк',
 									],
 							],
 					],
