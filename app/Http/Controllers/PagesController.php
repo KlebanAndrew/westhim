@@ -24,6 +24,11 @@ class PagesController
 		return view('pages.contact');
 	}
 
+	public function feedback(): View
+	{
+		return view('pages.feedback-success');
+	}
+
 	public function about(): View
 	{
 		$page = $this->pageService->getBySlug('about');

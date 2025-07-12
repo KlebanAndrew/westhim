@@ -27,6 +27,7 @@ Route::prefix(LaravelLocalization::setLocale())
 	Route::get('/products/{slug}', [ProductController::class, 'show'])->name(RouteName::PRODUCTS_SINGLE);
 
 	Route::get('/contact', [PagesController::class, 'contact'])->name(RouteName::CONTACT);
+	Route::get('/contact-success', [PagesController::class, 'feedback'])->name(RouteName::CONTACT_SUCCESS);
 	Route::get('/about', [PagesController::class, 'about'])->name(RouteName::ABOUT);
 	Route::get('/faq', [PagesController::class, 'faq'])->name(RouteName::FAQ);
 
