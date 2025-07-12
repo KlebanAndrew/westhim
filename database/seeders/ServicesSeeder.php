@@ -425,12 +425,12 @@ class ServicesSeeder extends Seeder
 		[
 			'slug' => 'welding',
 			'files' => [
-				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/1.webp'],
-				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/2.jpg'],
-				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/zvarka.jpg'],
-				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/Zvarka-Frankivsk.jpg'],
-				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/zvarka-poslugu.jpg'],
-				['type' => FileType::IMAGE, 'path' => '/images/services/turning_work/Zvarka_frankivsk.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/welding/1.webp'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/welding/2.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/welding/zvarka.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/welding/Zvarka-Frankivsk.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/welding/zvarka-poslugu.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/services/welding/Zvarka_frankivsk.jpg'],
 			],
 			'texts' => [
 				[
