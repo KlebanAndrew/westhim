@@ -12,7 +12,7 @@
 				<div class="ts-newsletter row align-items-center">
 					<div class="col-md-5 newsletter-introtext">
 						<h4 class="text-white mb-0">Зв'язатись з нами</h4>
-						<a href="mailto:office@westhim.com" class="text-white">office@westhim.com</a>
+						<a href="mailto:info@westhim.com" class="text-white">info@westhim.com</a>
 					</div>
 
 					<div class="col-md-7 newsletter-form">

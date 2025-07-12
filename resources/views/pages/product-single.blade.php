@@ -51,9 +51,13 @@
 							<div class="col-md-12">
 								{!! $product->singleText->description !!}
 								
-								@foreach($product->singleText->sections as $section)
+								@foreach($product->singleText->sections as $key => $section)
 									<h3>{{ \Illuminate\Support\Arr::get($section, 'title', '') }}</h3>
 									{!! \Illuminate\Support\Arr::get($section, 'text', '') !!}
+								
+									@if($product->files->get($key))
+											<img alt="{{ \Illuminate\Support\Arr::get($section, 'title', '') }}" src="{{ URL::asset($product->files->get($key)?->path) }}" style="width: 100%;">
+									@endif
 								@endforeach
 							</div><!-- col end -->
 						</div><!-- 1st row end-->

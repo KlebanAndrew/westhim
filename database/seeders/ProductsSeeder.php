@@ -19,7 +19,14 @@ class ProductsSeeder extends Seeder
 			'slug' => ProductCategory::BRICK_MACHINES,
 			'category' => ProductCategory::BRICK_MACHINES,
 			'files' => [
-				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/1.jpg'],
+				[
+					'type' => FileType::IMAGE,
+					'path' => '/images/products/brick_machines/press_briketirovochnyiy-_udarno_mehanicheskiy-_dyal_proizvodstva_briketov.jpg'
+				],
+				[
+					'type' => FileType::IMAGE,
+					'path' => '/images/products/brick_machines/udarno_mehanicheskiy_press_dlya_proizvodstva_briketov_i_pellet.jpg'
+				],
 			],
 			'texts' => [
 				[
@@ -86,7 +93,14 @@ class ProductsSeeder extends Seeder
 			'slug' => ProductCategory::MECHANICAL_PRESSES,
 			'category' => ProductCategory::MECHANICAL_PRESSES,
 			'files' => [
-				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/2.jpg'],
+				[
+					'type' => FileType::IMAGE,
+					'path' => '/images/products/mechanical_presses/Mechanical-Power-Press-Punching-Machine.webp'
+				],
+				[
+					'type' => FileType::IMAGE,
+					'path' => '/images/products/mechanical_presses/Mechanical-Press-Machine-100-Ton-Power.webp'
+				],
 			],
 			'texts' => [
 				[
@@ -135,7 +149,9 @@ class ProductsSeeder extends Seeder
 			'slug' => ProductCategory::HYDRAULIC_PRESSES,
 			'category' => ProductCategory::HYDRAULIC_PRESSES,
 			'files' => [
-				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/1.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/hydraulic_presses/hydraulic-press.png'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/hydraulic_presses/hydraulic-press-machine.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/hydraulic_presses/hydraulic-press-ukraine.jpg'],
 			],
 			'texts' => [
 				[
@@ -187,7 +203,13 @@ class ProductsSeeder extends Seeder
 			'slug' => ProductCategory::VATS,
 			'category' => ProductCategory::VATS,
 			'files' => [
-				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/1.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/vats/chan-cavun.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/vats/chan-na-drovah.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/vats/chan-pogruzka.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/vats/chanu-karpaty.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/vats/chany-frankivsk.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/vats/shema-chan.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/vats/shema-chany.jpg'],
 			],
 			'texts' => [
 				[
@@ -244,7 +266,9 @@ class ProductsSeeder extends Seeder
 			'slug' => ProductCategory::SEWER_HATCHES,
 			'category' => ProductCategory::SEWER_HATCHES,
 			'files' => [
-				['type' => FileType::IMAGE, 'path' => '/images/services/laser_cut/1.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/sewer_hatches/liuku_kanalizacia.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/sewer_hatches/luk_kanalizacia.jpg'],
+				['type' => FileType::IMAGE, 'path' => '/images/products/sewer_hatches/lyki-kiev.jpg'],
 			],
 			'texts' => [
 				[

@@ -1,5 +1,5 @@
 <div class="banner-carousel banner-carousel-1 mb-0">
-	<div class="banner-carousel-item" style="background-image:url({{ URL::asset('images/slider-main/bg1.jpg') }})">
+	<div class="banner-carousel-item" style="background-image:url({{ URL::asset('images/slider-main/bg2.jpg') }})">
 		<div class="slider-content">
 			<div class="container h-100">
 				<div class="row align-items-center h-100">
@@ -16,7 +16,7 @@
 		</div>
 	</div>
 
-	<div class="banner-carousel-item" style="background-image:url({{ URL::asset('images/slider-main/bg2.jpg') }})">
+	<div class="banner-carousel-item" style="background-image:url({{ URL::asset('images/slider-main/bg1.webp') }})">
 		<div class="slider-content text-left">
 			<div class="container h-100">
 				<div class="row align-items-center h-100">

@@ -43,7 +43,7 @@
           </span>
 						<div class="ts-service-box-content">
 							<h4>Емейл</h4>
-							<p>office@westhim.com</p>
+							<p>info@westhim.com</p>
 						</div>
 					</div>
 				</div><!-- Col 2 end -->

@@ -50,10 +50,12 @@
 							<div class="col-md-12">
 								{!! $service->singleText->description !!}
 
-								@foreach($service->singleText->sections as $section)
+								@foreach($service->singleText->sections as $key => $section)
 									<h3>{{ \Illuminate\Support\Arr::get($section, 'title', '') }}</h3>
 									{!! \Illuminate\Support\Arr::get($section, 'text', '') !!}
-{{--									<p><img style="width: 100%" alt="" data-cke-saved-src="https://cdn.explorecams.com/storage/photos/xlPmJcfWwB_1600.jpg" src="https://cdn.explorecams.com/storage/photos/xlPmJcfWwB_1600.jpg"><br></p>--}}
+									@if($service->files->get($key))
+										<img alt="{{ \Illuminate\Support\Arr::get($section, 'title', '') }}" src="{{ URL::asset($service->files->get($key)?->path) }}" style="width: 100%;">
+									@endif
 								@endforeach
 							</div><!-- col end -->
 						</div><!-- 1st row end-->
