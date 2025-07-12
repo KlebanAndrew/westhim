@@ -90,7 +90,11 @@
 								@foreach($products as $product)
 									<li class="d-flex align-items-center">
 										<div class="posts-thumb">
-											<a href="{{ route(\App\Enums\RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug]) }}"><img loading="lazy" alt="news-image" src="{{ URL::asset('images/news/news1.jpg') }}"></a>
+											<a href="{{ route(\App\Enums\RouteName::PRODUCTS_SINGLE, ['slug' => $product->slug]) }}">
+												@if($product->files->first())
+													<img loading="lazy" alt="news-image" src="{{ URL::asset($product->files->first()?->path) }}">
+												@endif
+											</a>
 										</div>
 										<div class="post-info">
 											<h4 class="entry-title">

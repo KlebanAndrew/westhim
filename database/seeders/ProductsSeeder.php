@@ -92,16 +92,7 @@ class ProductsSeeder extends Seeder
 		[
 			'slug' => ProductCategory::MECHANICAL_PRESSES,
 			'category' => ProductCategory::MECHANICAL_PRESSES,
-			'files' => [
-				[
-					'type' => FileType::IMAGE,
-					'path' => '/images/products/mechanical_presses/Mechanical-Power-Press-Punching-Machine.webp'
-				],
-				[
-					'type' => FileType::IMAGE,
-					'path' => '/images/products/mechanical_presses/Mechanical-Press-Machine-100-Ton-Power.webp'
-				],
-			],
+			'files' => [],
 			'texts' => [
 				[
 					'locale' => Locale::UA,
@@ -148,11 +139,7 @@ class ProductsSeeder extends Seeder
 		[
 			'slug' => ProductCategory::HYDRAULIC_PRESSES,
 			'category' => ProductCategory::HYDRAULIC_PRESSES,
-			'files' => [
-				['type' => FileType::IMAGE, 'path' => '/images/products/hydraulic_presses/hydraulic-press.png'],
-				['type' => FileType::IMAGE, 'path' => '/images/products/hydraulic_presses/hydraulic-press-machine.jpg'],
-				['type' => FileType::IMAGE, 'path' => '/images/products/hydraulic_presses/hydraulic-press-ukraine.jpg'],
-			],
+			'files' => [],
 			'texts' => [
 				[
 					'locale' => Locale::UA,
