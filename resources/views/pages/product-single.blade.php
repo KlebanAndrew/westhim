@@ -11,10 +11,10 @@
 	@include(
 	'sections.banner-area',
 	 [
-		 'title' => trans('menu.products'),
+		 'title' => trans('general.products'),
 		 'breadcrumbItems' => [
-			 ['title' => trans('menu.home'), 'link' => route(RouteName::HOME)],
-			 ['title' => trans('menu.products'), 'link' => route(RouteName::PRODUCTS)],
+			 ['title' => trans('general.home'), 'link' => route(RouteName::HOME)],
+			 ['title' => trans('general.products'), 'link' => route(RouteName::PRODUCTS)],
 			 ['title' => $product->singleText->short_title, 'link' => ''],
 		]
 	 ]

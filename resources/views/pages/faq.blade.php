@@ -9,8 +9,8 @@
 	 [
 		 'title' => 'Питання і відповіді',
 		 'breadcrumbItems' => [
-			 ['title' => 'Домашня', 'link' => route(\App\Enums\RouteName::HOME)],
-			 ['title' => 'Питання і відповіді', 'link' => ''],
+			 ['title' => trans('general.home'), 'link' => route(\App\Enums\RouteName::HOME)],
+			 ['title' => trans('general.faq'), 'link' => ''],
 		]
 	 ]
 	)
@@ -20,7 +20,7 @@
 
 			<div class="row">
 				<div class="col-lg-8">
-					<h3 class="border-title border-left mar-t0">Питання і відповіді</h3>
+					<h3 class="border-title border-left mar-t0">{{ trans('general.faq') }}</h3>
 
 					<div class="accordion accordion-group accordion-classic" id="construction-accordion">
 						<div class="card">
@@ -28,7 +28,7 @@
 								<h2 class="mb-0">
 									<button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
 											aria-expanded="true" aria-controls="collapseOne">
-										Чи можна замовити калькуляцію?
+										{{ trans('pages.faq.questions.1.question') }}
 									</button>
 								</h2>
 							</div>
@@ -36,7 +36,7 @@
 							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
 								 data-parent="#construction-accordion">
 								<div class="card-body">
-									Так можна. Безкоштовна калькуляція виробництва, нового обладнання або ремонтних чи модернізаційних робіт ковальсько-пресового та металорізального обладнання.
+									{{ trans('pages.faq.questions.1.answer') }}
 								</div>
 							</div>
 						</div>
@@ -45,15 +45,14 @@
 								<h2 class="mb-0">
 									<button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
 											data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-										Як з вами зв'язатись?
+										{{ trans('pages.faq.questions.2.question') }}
 									</button>
 								</h2>
 							</div>
 							<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#construction-accordion">
 								<div class="card-body">
-									Телефонуйте за вказаними номерами  +38 (050) 33-86-509 або заповнюйте електронну форму онлайн і ми вам зателефонуємо самі.
-									Додатвкову інформаціб можна знайти тут - 
-									<a style="color: blue; text-decoration:underline" href="{{ route(\App\Enums\RouteName::CONTACT) }}">Контакти</a>
+									{{ trans('pages.faq.questions.2.answer') }} 
+									<a style="color: blue; text-decoration:underline" href="{{ route(\App\Enums\RouteName::CONTACT) }}">{{ trans('general.contacts') }}</a>
 								</div>
 							</div>
 						</div>
@@ -62,17 +61,14 @@
 								<h2 class="mb-0">
 									<button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
 											data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-										Ваші реквізити?
+										{{ trans('pages.faq.questions.3.question') }}
 									</button>
 								</h2>
 							</div>
 							<div id="collapseThree" class="collapse" aria-labelledby="headingThree"
 								 data-parent="#construction-accordion">
 								<div class="card-body">
-									"ВЕСТХІМ"
-									Україна, 76495, м. Івано–Франківськ вул. Автоливмашівська
-									Приймальня:
-									Телефон/факс: +38 (050) 43-32-050, +38 (050) 33-86-509
+									{{ trans('pages.faq.questions.3.answer') }}
 								</div>
 							</div>
 						</div>
@@ -85,7 +81,7 @@
 
 					<div class="sidebar sidebar-right">
 						<div class="widget recent-posts">
-							<h3 class="widget-title">Наші продукти</h3>
+							<h3 class="widget-title">{{ trans('general.our_products') }}</h3>
 							<ul class="list-unstyled">
 								@foreach($products as $product)
 									<li class="d-flex align-items-center">

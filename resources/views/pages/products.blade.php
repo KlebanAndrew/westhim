@@ -4,10 +4,10 @@
 	@include(
 	'sections.banner-area',
 	 [
-		 'title' => 'Продукти',
+		 'title' => trans('general.products'),
 		 'breadcrumbItems' => [
-			 ['title' => trans('menu.home'), 'link' => route(\App\Enums\RouteName::HOME)],
-			 ['title' => trans('menu.products'), 'link' => ''],
+			 ['title' => trans('general.home'), 'link' => route(\App\Enums\RouteName::HOME)],
+			 ['title' => trans('general.products'), 'link' => ''],
 		]
 	 ]
 	)

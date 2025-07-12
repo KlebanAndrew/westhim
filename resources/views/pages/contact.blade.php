@@ -4,10 +4,10 @@
 	@include(
 	'sections.banner-area',
 	 [
-		 'title' => 'Контакти',
+		 'title' => trans('general.contacts'),
 		 'breadcrumbItems' => [
-			 ['title' => 'Домашня', 'link' => route(\App\Enums\RouteName::HOME)],
-			 ['title' => 'Контакти', 'link' => ''],
+			 ['title' => trans('general.home'), 'link' => route(\App\Enums\RouteName::HOME)],
+			 ['title' => trans('general.contacts'), 'link' => ''],
 		]
 	 ]
 	)
@@ -17,8 +17,8 @@
 
 			<div class="row text-center">
 				<div class="col-12">
-					<h2 class="section-title">Наші контакти</h2>
-					<h3 class="section-sub-title">Зв'язатися з нами</h3>
+					<h2 class="section-title">{{ trans('pages.contacts.our_information') }}</h2>
+					<h3 class="section-sub-title">{{ trans('pages.contacts.feedback') }}</h3>
 				</div>
 			</div>
 			<!--/ Title row end -->
@@ -30,8 +30,8 @@
             <i class="fas fa-map-marker-alt mr-0"></i>
           </span>
 						<div class="ts-service-box-content">
-							<h4>Наша адреса</h4>
-							<p>Україна, 76495, м. Івано – Франківськ вул. Автоливмашівська1Б</p>
+							<h4>{{ trans('pages.contacts.our_address') }}</h4>
+							<p>{{ trans('pages.contacts.address') }}</p>
 						</div>
 					</div>
 				</div><!-- Col 1 end -->
@@ -42,8 +42,8 @@
             <i class="fa fa-envelope mr-0"></i>
           </span>
 						<div class="ts-service-box-content">
-							<h4>Емейл</h4>
-							<p>info@westhim.com</p>
+							<h4>{{ trans('pages.contacts.email') }}</h4>
+							<p>{{ trans('general.email') }}</p>
 						</div>
 					</div>
 				</div><!-- Col 2 end -->
@@ -54,8 +54,8 @@
             <i class="fa fa-phone-square mr-0"></i>
           </span>
 						<div class="ts-service-box-content">
-							<h4>Телефон</h4>
-							<p>+38 099 20-24-697</p>
+							<h4>{{ trans('pages.contacts.our_phone') }}</h4>
+							<p>{{ trans('general.phone') }}</p>
 						</div>
 					</div>
 				</div><!-- Col 3 end -->
@@ -72,38 +72,38 @@
 
 			<div class="row">
 				<div class="col-md-12">
-					<h3 class="column-title">Зв'язатись з нами</h3>
+					<h3 class="column-title">{{ trans('pages.contacts.feedback') }}</h3>
 					<form id="contact-form" action="/contact-us" method="post" role="form">
 						<div class="error-container"></div>
 						<div class="row">
 							<div class="col-md-4">
 								<div class="form-group">
-									<label>Ім'я</label>
+									<label>{{ trans('pages.contacts.name') }}</label>
 									<input class="form-control form-control-name" name="name" id="name" placeholder="" type="text" required>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label>Емейл</label>
+									<label>{{ trans('pages.contacts.email') }}</label>
 									<input class="form-control form-control-email" name="email" id="email" placeholder="" type="email"
 										   required>
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label>Телефон</label>
+									<label>{{ trans('pages.contacts.our_phone') }}</label>
 									<input class="form-control form-control-subject" name="subject" id="subject" placeholder="" required>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
-							<label>Повідомлення</label>
+							<label>{{ trans('pages.contacts.message') }}</label>
 							<textarea class="form-control form-control-message" name="message" id="message" placeholder="" rows="10"
 									  required></textarea>
 						</div>
 						<div class="text-right"><br>
 							<input type="hidden" name="_token" value="{{ csrf_token() }}" />
-							<button class="btn btn-primary solid blank" type="submit">Надіслати</button>
+							<button class="btn btn-primary solid blank" type="submit">{{ trans('pages.contacts.send') }}</button>
 						</div>
 					</form>
 				</div>

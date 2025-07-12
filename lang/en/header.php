@@ -2,11 +2,11 @@
 
 return [
 	'contact_us' => [
-		'call_us' => 'Call Us',
-		'phone' => '(+9) 847-291-4353',
-		'email_us' => 'Email Us',
+		'call_us' => 'Our phone',
+		'phone' => '099 20-24-697',
+		'email_us' => 'Email',
 		'email' => 'info@westhim.com',
-		'global_certificate' => 'Global Certificate',
+		'global_certificate' => 'Global certificate',
 		'iso_certificate_name' => 'ISO 9001:2018',
 	],
 ];

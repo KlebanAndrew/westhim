@@ -1,0 +1,28 @@
+<?php
+
+return [
+	'home' => 'Главная',
+	'company' => 'Наша компания',
+	'about_us' => 'О нас',
+	'our_people' => 'Мы',
+	'testimonials' => 'Отзывы',
+	'faq' => 'Вопросы/Ответы',
+	'pricing' => 'Цены',
+	'projects' => 'Проекты',
+	'projects_all' => 'Все проекты',
+	'products' => 'Продукты',
+	'projects_single' => 'Один проект',
+	'services' => 'Услуги',
+	'services_all' => 'Все услуги',
+	'services_single' => 'Одна услуга',
+	'features' => 'Фичи',
+	'typography' => 'Типография',
+	'404' => '404',
+	'parent_menu' => 'Родительское меню',
+	'child_menu' => 'Дочернее меню',
+	'news' => 'Новости',
+	'news_left_sidebar' => 'Новости - правый сайдбар',
+	'news_right_sidebar' => 'Новости - левый сайдбар',
+	'news_single' => 'Одна новость',
+	'contact' => 'Контакты',
+];

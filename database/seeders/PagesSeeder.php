@@ -6,7 +6,6 @@ use App\Enums\Locale;
 use App\Models\File;
 use App\Models\Page;
 use App\Models\PageText;
-use App\Models\Service;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Arr;
 

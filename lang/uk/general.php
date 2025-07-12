@@ -14,4 +14,10 @@ return [
 	'learn_more' => 'Дізнатися більше',
 	'meet_our_engineers' => 'Потрібна консультація?',
 	'get_consultation' => 'Зв\'яжіться з нами і ми вам допоможемо',
+	'contacts' => 'Контакти',
+	'email' => 'info@westhim.com',
+	'phone' => '+38 099 20-24-697',
+	'about_us' => 'Про нас',
+	'faq' => 'Питання і відповіді',
+	'our_products' => 'Наші продукти'
 ];

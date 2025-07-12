@@ -7,8 +7,8 @@
 	 [
 		 'title' => 'Про нас',
 		 'breadcrumbItems' => [
-			 ['title' => 'Домашня', 'link' => route(\App\Enums\RouteName::HOME)],
-			 ['title' => 'Про нас', 'link' => ''],
+			 ['title' => trans('general.home'), 'link' => route(\App\Enums\RouteName::HOME)],
+			 ['title' => trans('general.about_us'), 'link' => ''],
 		]
 	 ]
 	)

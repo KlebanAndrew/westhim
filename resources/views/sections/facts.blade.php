@@ -8,7 +8,7 @@
 					</div>
 					<div class="ts-facts-content">
 						<h2 class="ts-facts-num"><span class="counterUp" data-count="127">0</span></h2>
-						<h3 class="ts-facts-title">Виконаних проектів</h3>
+						<h3 class="ts-facts-title">{{ trans('pages.home.facts.done_projects') }}</h3>
 					</div>
 				</div><!-- Col end -->
 
@@ -18,7 +18,7 @@
 					</div>
 					<div class="ts-facts-content">
 						<h2 class="ts-facts-num"><span class="counterUp" data-count="89">0</span></h2>
-						<h3 class="ts-facts-title">Працівників</h3>
+						<h3 class="ts-facts-title">{{ trans('pages.home.facts.workers') }}</h3>
 					</div>
 				</div><!-- Col end -->
 
@@ -28,7 +28,7 @@
 					</div>
 					<div class="ts-facts-content">
 						<h2 class="ts-facts-num"><span class="counterUp" data-count="39">0</span></h2>
-						<h3 class="ts-facts-title">Продуктів і послуг</h3>
+						<h3 class="ts-facts-title">{{ trans('pages.home.facts.products_and_services') }}</h3>
 					</div>
 				</div><!-- Col end -->
 
@@ -38,7 +38,7 @@
 					</div>
 					<div class="ts-facts-content">
 						<h2 class="ts-facts-num"><span class="counterUp" data-count="19">0</span></h2>
-						<h3 class="ts-facts-title">Країн</h3>
+						<h3 class="ts-facts-title">{{ trans('pages.home.facts.countries') }}</h3>
 					</div>
 				</div><!-- Col end -->
 

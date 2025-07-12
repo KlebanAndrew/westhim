@@ -44,7 +44,7 @@
 									</li>
 								@endforeach
 							</ul>
-							<a class="btn btn-primary" href="{{ route(\App\Enums\RouteName::CONTACT) }}">Контакти</a>
+							<a class="btn btn-primary" href="{{ route(\App\Enums\RouteName::CONTACT) }}">{{ trans('general.contacts') }}</a>
 						</li>
 					</ul><!-- Ul end -->
 				</div><!-- header right end -->

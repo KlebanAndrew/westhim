@@ -3,9 +3,9 @@
 use App\Enums\ProductCategory;
 
 return [
-	ProductCategory::BRICK_MACHINES => 'BRICK MACHINES',
-	ProductCategory::MECHANICAL_PRESSES => 'MECHANICAL PRESSES',
-	ProductCategory::HYDRAULIC_PRESSES => 'HYDRAULIC PRESSES',
-	ProductCategory::VATS => 'VATS',
-	ProductCategory::SEWER_HATCHES => 'SEWER HATCHES',
+	ProductCategory::BRICK_MACHINES => 'Briquetting Machines',
+	ProductCategory::MECHANICAL_PRESSES => 'Mechanical Presses',
+	ProductCategory::HYDRAULIC_PRESSES => 'Hydraulic Presses',
+	ProductCategory::VATS => 'Vats',
+	ProductCategory::SEWER_HATCHES => 'Sewer Hatches',
 ];

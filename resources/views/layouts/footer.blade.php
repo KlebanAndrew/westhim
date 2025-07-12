@@ -9,8 +9,8 @@
 				<div class="col-lg-4 col-md-6 footer-widget footer-about">
 					<h3 class="widget-title">{{ trans('menu.about_us') }}</h3>
 					<img loading="lazy" class="footer-logo" src="{{ URL::asset('images/footer-logo.png') }}" alt="ВЕСТХІМ">
-					<p>Виготовлення брикетувальних машин, пресів, сонячних батарей та каркасів.</p>
-					<p>"ВЕСТХІМ" спеціалізується на проектуванні, виготовленні і ремонті механічних пресів зусиллям від 250 до 4000 кН відкритого і закритого типів, простої і подвійної дії, призначених для різноманітних операцій холодної штамповки.</p>
+					<p>{{ trans('footer.about_first') }}</p>
+					<p>{{ trans('footer.about_second') }}</p>
 					<div class="footer-social">
 						<ul>
 							<li><a href="https://facebook.com" aria-label="Facebook"><i
@@ -22,11 +22,9 @@
 				</div><!-- Col end -->
 
 				<div class="col-lg-4 col-md-6 footer-widget mt-5 mt-md-0">
-					<h3 class="widget-title">Замовити калькуляцію</h3>
+					<h3 class="widget-title">{{ trans('footer.get_price') }}</h3>
 					<div class="working-hours">
-						Телефонуйте за вказаними номерами  +38 (099) 20-24-697 або заповнюйте електронну форму онлайн і ми вам зателефонуємо самі.
-						<br><br> Пн - Пт: <span class="text-right">09:00 - 18:00 </span>
-						<br> Сб: <span class="text-right">09:00 - 16:00</span>
+						{!! trans('footer.working_hours') !!}
 					</div>
 				</div><!-- Col end -->
 

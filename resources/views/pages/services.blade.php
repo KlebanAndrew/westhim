@@ -12,8 +12,8 @@
 	 [
 		 'title' => trans('general.services'),
 		 'breadcrumbItems' => [
-			 ['title' => 'Домашня', 'link' => route(\App\Enums\RouteName::HOME)],
-			 ['title' => 'Послуги', 'link' => ''],
+			 ['title' => trans('general.home'), 'link' => route(\App\Enums\RouteName::HOME)],
+			 ['title' => trans('general.services'), 'link' => ''],
 		]
 	 ]
 	)

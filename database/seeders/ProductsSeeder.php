@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Enums\FileType;
 use App\Enums\Locale;
-use App\Enums\ProductCategory;
 use App\Models\File;
 use App\Models\Product;
 use App\Models\ProductText;

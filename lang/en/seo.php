@@ -2,22 +2,22 @@
 
 return [
 	'home' => [
-		'title' => 'Виготовлення і ремонт механічних пресів Івано-Франківськ, Україна — ВЕСТХІМ',
-		'description' => 'ВЕСТХІМ спеціалізується на проектуванні, виготовленні і ремонті механічних пресів зусиллям від 250 до 4000 кН відкритого і закритого типів, простої і подвійної дії',
+		'title' => 'Manufacturing and Repair of Mechanical Presses Ivano-Frankivsk, Ukraine — WESTHIM',
+		'description' => 'WESTHIM specializes in the design, manufacturing, and repair of mechanical presses with a force from 250 to 4000 kN, open and closed types, single and double action',
 		'keywords' => [
-			'проектування механічних пресів',
-			'виготовлення механічних пресів',
-			'ремонт механічних пресів',
-			'виготовлення брикетувальних машин',
-			'виготовлення каркасів',
+			'mechanical press design',
+			'mechanical press manufacturing',
+			'mechanical press repair',
+			'briquetting machine manufacturing',
+			'frame manufacturing',
 		],
 	],
 	'products' => [
-		'title' => 'Наші Продукти — ВЕСТХІМ',
-		'description' => 'ВЕСТХІМ спеціалізується на проектуванні, виготовленні і ремонті механічних пресів ✔️ Брекетувальні преси ✔️ Механічні преси ✔️ Гідравлічні преси ✔️ Люки каналізаційні',
+		'title' => 'Our Products — WESTHIM',
+		'description' => 'WESTHIM specializes in the design, manufacturing, and repair of mechanical presses ✔️ Briquetting presses ✔️ Mechanical presses ✔️ Hydraulic presses ✔️ Sewer hatches',
 	],
 	'services' => [
-		'title' => 'Наші Послуги — ВЕСТХІМ',
-		'description' => 'ВЕСТХІМ надає повний комплекс послуг ✔️ Фрезувальні роботи ✔️ Токарні роботи ✔️ Зварювальні роботи ✔️ Виготовлення деталей любої складності',
+		'title' => 'Our Services — WESTHIM',
+		'description' => 'WESTHIM provides a full range of services ✔️ Milling works ✔️ Turning works ✔️ Welding works ✔️ Manufacturing of parts of any complexity',
 	]
 ];
