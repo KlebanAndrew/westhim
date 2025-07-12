@@ -8,7 +8,7 @@
 					</a>
 				</div><!-- logo end -->
 
-				<div class="col-lg-9 header-right">
+				<div class="col-lg-6 header-right">
 					<ul class="top-info-box">
 						<li>
 							<div class="info-box">
@@ -34,20 +34,23 @@
 								</div>
 							</div>
 						</li>
-						<li class="header-get-a-quote">
-							<ul>
-								@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-									<li>
-										<a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-											{{ $properties['native'] }}
-										</a>
-									</li>
-								@endforeach
-							</ul>
-							<a class="btn btn-primary" href="{{ route(\App\Enums\RouteName::CONTACT) }}">{{ trans('general.contacts') }}</a>
-						</li>
 					</ul><!-- Ul end -->
 				</div><!-- header right end -->
+				<div class="col-lg-2 header-right">
+						<ul style="list-style: none; padding: 0; margin: 0; display: flex; justify-content: center;">
+							@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+								<li>
+									<a class="lang-flag {{ $localeCode }}"
+									   rel="alternate" hreflang="{{ $localeCode }}"
+									   href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}"
+									></a>
+								</li>
+							@endforeach
+						</ul>
+				</div>
+				<div class="col-lg-1 header-right">
+					<a class="btn btn-primary" href="{{ route(\App\Enums\RouteName::CONTACT) }}">{{ trans('general.contacts') }}</a>
+				</div>
 			</div><!-- logo area end -->
 
 		</div><!-- Row end -->

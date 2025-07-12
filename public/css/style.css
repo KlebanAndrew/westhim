@@ -3006,6 +3006,20 @@ label {
   font-weight: 400;
 }
 
+.lang-flag {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  border-radius: 2px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.lang-flag.en { background-image: url('/images/flags/en.png'); }
+.lang-flag.ru { background-image: url('/images/flags/ru.png'); }
+.lang-flag.uk { background-image: url('/images/flags/ua.png'); }
+
 /* Contact page 2 */
 .ts-service-box.text-center .ts-service-icon.icon-squre i {
   float: none;
