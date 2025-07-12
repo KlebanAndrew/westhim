@@ -51,7 +51,7 @@ return [
 		],
 		'subscribe' => [
 			'call_to_us' => 'Contact us',
-			'phone' => '<h4>+38 (050) 43-32-050</h4>',
+			'phone' => '<h4>+38 099 20-24-697</h4>',
 			'leave_email' => 'Leave email',
 		],
 	],
