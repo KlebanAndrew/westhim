@@ -31,5 +31,6 @@
 <!-- End Meta Pixel Code -->
 
 @include('layouts.google-analytics')
+@include('layouts.tiktok-analytics')
 
 @include('layouts.includes.css')
