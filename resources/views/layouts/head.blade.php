@@ -30,4 +30,6 @@
 	/></noscript>
 <!-- End Meta Pixel Code -->
 
+@include('layouts.google-analytics')
+
 @include('layouts.includes.css')

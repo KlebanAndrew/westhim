@@ -3,7 +3,6 @@
 <head>
 @include('layouts.head')
 </head>
-@include('layouts.google-analytics')
 <body>
 <div class="body-inner">
 @section('top-bar')
